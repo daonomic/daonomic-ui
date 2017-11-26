@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { prop, switchProp } from 'styled-tools';
-import defaultTheme from '../theme';
+import { defaultTheme } from '../theme';
 
 const propTypes = {
   theme: PropTypes.object, // eslint-disable-line react/forbid-prop-types
