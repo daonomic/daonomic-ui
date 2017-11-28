@@ -1,0 +1,54 @@
+:root {
+  --panel-padding-horizontal-normal: 15px;
+  --panel-padding-horizontal-normal-desktop: 15px;
+  --panel-padding-horizontal-large: 30px;
+  --panel-padding-horizontal-large-desktop: 40px;
+}
+
+.root {
+  border-radius: 6px;
+  background-color: var(--theme-panel-bg);
+  box-shadow: 0 1px 2px 0 var(--theme-panel-shadow);
+}
+
+.root_padding_normal {
+  padding: 10px var(--panel-padding-horizontal-normal);
+
+  @media (--desktop) {
+    padding: 15px var(--panel-padding-horizontal-normal-desktop);
+  }
+}
+
+.root_padding_large {
+  padding: 20px var(--panel-padding-horizontal-large);
+
+  @media (--desktop) {
+    padding: 30px var(--panel-padding-horizontal-large-desktop);
+  }
+}
+
+.root + .root {
+  margin-top: 16px;
+}
+
+.separator {
+  display: block;
+  height: 1px;
+  background-color: var(--theme-borders);
+}
+
+.root_padding_normal .separator {
+  margin: 15px calc(var(--panel-padding-horizontal-normal) * -1);
+
+  @media (--desktop) {
+    margin: 15px calc(var(--panel-padding-horizontal-normal-desktop) * -1);
+  }
+}
+
+.root_padding_large .separator {
+  margin: 20px calc(var(--panel-padding-horizontal-large) * -1);
+
+  @media (--desktop) {
+    margin: 30px calc(var(--panel-padding-horizontal-large-desktop) * -1);
+  }
+}
