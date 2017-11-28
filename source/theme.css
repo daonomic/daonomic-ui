@@ -1,0 +1,14 @@
+:root {
+  --theme-primary: #4786ff;
+  --theme-primary-opposite: #fff;
+  --theme-danger: #fc4b4e;
+  --theme-muted: #8492a5;
+  --theme-page-bg: #f5f7fa;
+  --theme-borders: rgba(132, 146, 165, 0.24);
+
+  --theme-button-bg: var(--theme-primary);
+  --theme-button-bg-active: color(var(--theme-button-bg) blackness(20%));
+  --theme-button-bg-disabled: #f5f7fa;
+  --theme-button-text: var(--theme-primary-opposite);
+  --theme-button-text-disabled: var(--theme-muted);
+}
