@@ -1,3 +1,6 @@
+@custom-media --tablet (min-width: 480px);
+@custom-media --desktop (min-width: 960px);
+
 :root {
   --theme-primary: #4786ff;
   --theme-primary-opposite: #fff;
@@ -11,4 +14,7 @@
   --theme-button-bg-disabled: #f5f7fa;
   --theme-button-text: var(--theme-primary-opposite);
   --theme-button-text-disabled: var(--theme-muted);
+
+  --theme-panel-bg: #fff;
+  --theme-panel-shadow: rgba(36, 45, 52, .1);
 }
