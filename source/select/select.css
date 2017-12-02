@@ -1,0 +1,111 @@
+:root {
+  --select-height: 2.75em;
+  --select-horizontal-padding: 1.25em;
+}
+
+.root {
+  position: relative;
+  display: block;
+  color: var(--theme-button-text);
+}
+
+.root select {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding-left: var(--select-horizontal-padding);
+  padding-right: calc(var(--select-horizontal-padding) + var(--select-height));
+  height: var(--select-height);
+  font-size: 16px;
+  line-height: var(--select-height);
+  color: var(--theme-button-text);
+  background-color: var(--theme-button-bg);
+  border: 0;
+  border-radius: .25em;
+  cursor: pointer;
+  outline: 0;
+  appearance: none;
+  transition: box-shadow .2s;
+}
+
+/* Undo the Firefox inner focus ring */
+.root select:focus:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 var(--theme-button-text);
+}
+
+.root::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2.75em;
+  width: 2.75em;
+  pointer-events: none;
+  background-color: var(--theme-button-bg-active);
+  background-image: url('./resources/arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-top-right-radius: .25em;
+  border-bottom-right-radius: .25em;
+}
+
+/* Focus */
+.root select:focus,
+.root select:hover {
+  box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem var(--theme-primary);
+  transition: none;
+  background: var(--theme-button-bg);
+}
+
+/* Hide the arrow in IE10 and up */
+.root select::-ms-expand {
+  display: none;
+}
+
+/* <option> elements inherit styles from <select>, so reset them. */
+.root option {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Media query to target Firefox only */
+@-moz-document url-prefix() {
+  /* Firefox hack to hide the arrow */
+  .root select {
+    text-indent: 0.01px;
+    text-overflow: '';
+    padding-right: 1rem;
+  }
+}
+
+/* IE9 hack to hide the arrow */
+@media screen and (min-width:0\0) {
+  .root select {
+    z-index: 1;
+    padding: .5rem 1.5rem .5rem 1rem;
+  }
+
+  .root::after {
+    z-index: 5;
+  }
+
+  .root::before {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    bottom: 0;
+    z-index: 2;
+    content: "";
+    display: block;
+    width: 1.5rem;
+    background-color: var(--theme-button-bg);
+  }
+
+  .root select:hover,
+  .root select:focus,
+  .root select:active {
+    color: var(--theme-button-text);
+    background-color: var(--theme-button-bg-active);
+  }
+}
