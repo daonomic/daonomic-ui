@@ -4,9 +4,9 @@ import styles from './page.css';
 
 export default function PageContent({ children, ...restProps }) {
   return (
-    <footer className={styles.content} {...restProps}>
+    <main className={styles.content} {...restProps}>
       {children}
-    </footer>
+    </main>
   );
 }
 

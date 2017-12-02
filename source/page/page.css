@@ -17,12 +17,9 @@
 
 .header,
 .footer {
-  flex-grow: 0;
-  flex-shrink: 0;
+  flex: none;
 }
 
 .content {
-  flex-grow: 1;
-  flex-shrink: 1;
-  height: 100%;
+  flex: 1 0 auto;
 }

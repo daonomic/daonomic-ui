@@ -9,7 +9,8 @@
 
 .root_disabled,
 .root_disabled .field,
-.root_disabled .input {
+.root_disabled .input,
+.root_disabled .label {
   cursor: not-allowed;
 }
 

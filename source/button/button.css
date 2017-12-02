@@ -15,6 +15,7 @@
   border-radius: .25em;
   cursor: pointer;
   transition: box-shadow .2s;
+  user-select: none;
 }
 
 .root:hover,
