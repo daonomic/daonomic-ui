@@ -24,7 +24,9 @@ export default function Button(props) {
     attrs.tabIndex = attrs.disabled ? '-1' : '0';
   }
 
-  attrs.className = cn(className, styles.root);
+  attrs.className = cn(className, styles.root, {
+    [styles[`root_size_${size}`]]: size,
+  });
 
   return React.createElement(tagName, attrs);
 }
