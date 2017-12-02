@@ -22,7 +22,15 @@ module.exports = {
             query: `@import "${sourceDir}/theme.css";`,
           },
         ],
-      }
+      },
+      {
+        test: /\.svg$/,
+        loader: 'url-loader',
+        options: {
+          limit: 100000,
+          mimetype: 'image/svg+xml',
+        },
+      },
     ],
   },
 };
