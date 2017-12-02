@@ -16,7 +16,8 @@
     "deploy-storybook": "storybook-to-ghpages",
     "test": "jest --verbose",
     "lint": "eslint source",
-    "qa": "npm t && npm run lint"
+    "qa": "npm t && npm run lint",
+    "prepublishOnly": "npm run qa"
   },
   "pre-commit": [
     "qa"
