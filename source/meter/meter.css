@@ -1,0 +1,12 @@
+.root {
+  display: block;
+  width: 100%;
+}
+
+.bar_background {
+  fill: rgba(192, 204, 217, .32);
+}
+
+.bar_foreground {
+  fill: var(--theme-primary);
+}
