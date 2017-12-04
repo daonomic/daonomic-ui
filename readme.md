@@ -12,7 +12,7 @@ Install `daonomic-ui` package:
 npm i daonomic-ui -SE
 ```
 
-Install the following postcss plugins and include them in your build pipeline:
+Install the following postcss plugins and include them to your build pipeline:
 
 ```bash
 npm i postcss-import postcss-nesting postcss-custom-media postcss-custom-properties postcss-calc postcss-color-function postcss-flexbugs-fixes autoprefixer -DE
@@ -20,7 +20,7 @@ npm i postcss-import postcss-nesting postcss-custom-media postcss-custom-propert
 
 ### Theming
 
-`daonomic-ui` uses CSS custom properties for theming, so currently `daonomic-ui` requires `postcss-custom-properties` plugin and additional build setup due to the insufficient browsers support.
+`daonomic-ui` uses CSS custom properties for theming, so currently `daonomic-ui` requires `postcss-custom-properties` plugin and additional build setup due to insufficient browsers support.
 
 Add `theme.css` to your project:
 
@@ -39,7 +39,7 @@ Install `webpack-append` plugin:
 npm i webpack-append -DE
 ```
 
-Configure webpack to include `theme.css` in the beginning of every imported CSS file:
+Configure webpack to include `theme.css` at the beginning of every imported CSS file:
 
 ```javascript
 {
