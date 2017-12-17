@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/daonomic/daonomic-ui.svg?branch=master)](https://travis-ci.org/daonomic/daonomic-ui) [![npm version](https://badge.fury.io/js/daonomic-ui.svg)](https://badge.fury.io/js/daonomic-ui)
+[![Build Status](https://travis-ci.org/daonomic/daonomic-ui.svg?branch=master)](https://travis-ci.org/daonomic/daonomic-ui) [![npm version](https://badge.fury.io/js/%40daonomic%2Fui.svg)](https://badge.fury.io/js/daonomic-ui)
 
 # [daonomic-ui](https://daonomic.github.io/daonomic-ui/)
 
@@ -6,10 +6,10 @@ Base UI components for Daonomic services.
 
 ## Usage
 
-Install `daonomic-ui` package:
+Install `@daonomic/ui` package:
 
 ```bash
-npm i daonomic-ui -SE
+npm i @daonomic/ui -SE
 ```
 
 Install the following postcss plugins and include them to your build pipeline:

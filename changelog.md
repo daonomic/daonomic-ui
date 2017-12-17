@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.0
+
+* Changed package name: `daonomic-ui` → `@daonomic/ui`
+
 ## 1.1.0
 
 * Updated `Meter` design
