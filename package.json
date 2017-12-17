@@ -17,7 +17,8 @@
     "test": "jest --verbose",
     "lint": "eslint source",
     "qa": "npm t && npm run lint",
-    "prepublishOnly": "npm run qa"
+    "prepublishOnly": "npm run qa",
+    "postpublish": "npm run deploy-storybook"
   },
   "pre-commit": [
     "qa"
