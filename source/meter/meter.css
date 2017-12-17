@@ -1,14 +1,28 @@
+:root {
+  --meter-height: 12px;
+}
+
 .root {
+  position: relative;
   display: block;
   width: 100%;
-  height: 12px;
-  border-radius: 12px;
+  min-width: var(--meter-height);
+  height: var(--meter-height);
+}
+
+.bar {
+  height: 100%;
+  border-radius: var(--meter-height);
 }
 
 .bar_background {
-  fill: rgba(192, 204, 217, .32);
+  background-color: rgba(192, 204, 217, .32);
 }
 
 .bar_foreground {
-  fill: var(--theme-primary);
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: var(--meter-height);
+  background-color: var(--theme-primary);
 }
