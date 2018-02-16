@@ -45,7 +45,7 @@ export default class Checkbox extends PureComponent {
           <input className={styles.input} type="checkbox" {...restProps} />
           <span className={styles.indicator} />
           <div
-            className={styles.label}
+            className={styles.text}
             dangerouslySetInnerHTML={{
               __html: label,
             }}
