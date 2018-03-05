@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './page.css';
+import styles from './styles.css';
 import PageHeader from './page-header';
 import PageFooter from './page-footer';
 import PageContent from './page-content';
@@ -8,9 +8,7 @@ import PageContent from './page-content';
 export default function Page({ children }) {
   return (
     <div className={styles.root}>
-      <div className={styles.inner}>
-        {children}
-      </div>
+      <div className={styles.inner}>{children}</div>
     </div>
   );
 }

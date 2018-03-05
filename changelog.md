@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.0
+
+* Upgraded minimal `react` and `react-dom` versions to `16.2.0`
+* Add `error` prop to `Select`
+* Add `FieldError` component
+
 ## 2.0.0
 
 * Changed package name: `daonomic-ui` → `@daonomic/ui`

@@ -17,7 +17,7 @@
 
 .indicator {
   position: absolute;
-  top: .25em;
+  top: 0.25em;
   left: 0;
   width: 1em;
   height: 1em;
@@ -26,11 +26,11 @@
   background-size: 50% 50%;
   background-position: center center;
   background-repeat: no-repeat;
-  border-radius: .25em;
+  border-radius: 0.25em;
 }
 
 .input:focus ~ .indicator {
-  box-shadow: 0 0 0 .075em #fff, 0 0 0 .2em var(--theme-primary);
+  box-shadow: 0 0 0 0.075em #fff, 0 0 0 0.2em var(--theme-primary);
 }
 
 .input:checked ~ .indicator {
@@ -52,10 +52,4 @@
 .text {
   display: inline-block;
   vertical-align: top;
-}
-
-.error {
-  padding-top: 0.5em;
-  font-size: .85em;
-  color: var(--theme-danger);
 }

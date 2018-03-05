@@ -1,12 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import styles from './panel.css';
+import styles from './styles.css';
 
 export default function PanelSeparator({ className }) {
-  return (
-    <div className={cn(className, styles.separator)} />
-  );
+  return <div className={cn(className, styles.separator)} />;
 }
 
 PanelSeparator.propTypes = {

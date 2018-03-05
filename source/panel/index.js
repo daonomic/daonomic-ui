@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import styles from './panel.css';
-import PanelSeparator from './panel-separator';
+import styles from './styles.css';
+import PanelSeparator from './separator';
 
 export default function Panel({ className, children, paddingSize }) {
   return (

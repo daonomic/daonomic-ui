@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './page.css';
+import styles from './styles.css';
 
 export default function PageHeader({ children, ...restProps }) {
   return (

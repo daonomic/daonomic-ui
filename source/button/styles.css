@@ -12,9 +12,9 @@
   background: none;
   border: none;
   background-color: var(--theme-button-bg);
-  border-radius: .25em;
+  border-radius: 0.25em;
   cursor: pointer;
-  transition: box-shadow .2s;
+  transition: box-shadow 0.2s;
   user-select: none;
 }
 

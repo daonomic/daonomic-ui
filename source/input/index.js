@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import styles from './input.css';
+import FieldError from '../field-error';
+import styles from './styles.css';
 import Uncontrolled from './uncontrolled';
 
 export default class Input extends PureComponent {
@@ -50,20 +51,6 @@ export default class Input extends PureComponent {
     this.props.onBlur(event);
   };
 
-  renderError = () => {
-    const { error } = this.props;
-
-    if (!error) {
-      return null;
-    }
-
-    return (
-      <p className={styles.error}>
-        {error}
-      </p>
-    );
-  };
-
   render() {
     const { id } = this;
     const {
@@ -104,7 +91,7 @@ export default class Input extends PureComponent {
           </label>
         </div>
 
-        {this.renderError()}
+        <FieldError>{error}</FieldError>
       </div>
     );
   }

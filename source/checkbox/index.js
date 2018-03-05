@@ -1,43 +1,18 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import styles from './checkbox.css';
+import FieldError from '../field-error';
+import styles from './styles.css';
 
 export default class Checkbox extends PureComponent {
   static propTypes = {
     className: PropTypes.string,
     label: PropTypes.string,
     error: PropTypes.string,
-    children: PropTypes.node,
-  };
-
-  static defaultProps = {
-    className: '',
-    label: '',
-    children: null,
-  };
-
-  renderError = () => {
-    const { error } = this.props;
-
-    if (!error) {
-      return null;
-    }
-
-    return (
-      <div className={styles.error}>
-        {error}
-      </div>
-    );
   };
 
   render = () => {
-    const {
-      className,
-      children,
-      label,
-      ...restProps
-    } = this.props;
+    const { className, label, error, ...restProps } = this.props;
 
     return (
       <div className={cn(className, styles.root)}>
@@ -51,8 +26,7 @@ export default class Checkbox extends PureComponent {
             }}
           />
         </label>
-
-        {this.renderError()}
+        <FieldError>{error}</FieldError>
       </div>
     );
   };

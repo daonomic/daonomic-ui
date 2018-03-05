@@ -17,5 +17,5 @@
   --theme-button-text-disabled: var(--theme-muted);
 
   --theme-panel-bg: #fff;
-  --theme-panel-shadow: rgba(36, 45, 52, .1);
+  --theme-panel-shadow: rgba(36, 45, 52, 0.1);
 }

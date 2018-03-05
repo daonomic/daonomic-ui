@@ -1,15 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import styles from './button.css';
+import styles from './styles.css';
 
 export default function Button(props) {
-  const {
-    tagName,
-    className,
-    size,
-    ...attrs
-  } = props;
+  const { tagName, className, size, ...attrs } = props;
   const isNotButtonOrLink = !['button', 'a'].includes(tagName);
 
   if (!attrs.type && tagName === 'button') {

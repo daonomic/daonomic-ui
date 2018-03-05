@@ -4,21 +4,13 @@ import { action } from '@storybook/addon-actions';
 import Button from './';
 
 storiesOf('Button', module)
-  .add('default', () => (
-    <Button onClick={action('click')}>
-      Button
-    </Button>
-  ))
+  .add('default', () => <Button onClick={action('click')}>Button</Button>)
   .add('small size', () => (
     <Button size="small" onClick={action('click')}>
       Button
     </Button>
   ))
-  .add('disabled', () => (
-    <Button disabled>
-      Disabled button
-    </Button>
-  ))
+  .add('disabled', () => <Button disabled>Disabled button</Button>)
   .add('button as link', () => (
     <Button
       tagName="a"

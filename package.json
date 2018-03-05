@@ -1,11 +1,9 @@
 {
   "name": "@daonomic/ui",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "Base UI components for Daonomic services",
   "main": "",
-  "files": [
-    "source"
-  ],
+  "files": ["source"],
   "engines": {
     "node": "^8.9.0",
     "npm": "^5.5.1"
@@ -14,18 +12,20 @@
     "start": "start-storybook -p 9000",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
+    "format": "prettier --write \"./source/**/*.{js,css,json,md}\"",
     "test": "jest --verbose --passWithNoTests",
     "lint": "eslint source",
     "qa": "npm t && npm run lint",
-    "ensure-git-credentials": "git config --local user.name \"Dev\" && git config --local user.email \"dev@0v1se.com\"",
+    "ensure-git-credentials":
+      "git config --local user.name \"Dev\" && git config --local user.email \"dev@0v1se.com\"",
     "postinstall": "npm run ensure-git-credentials",
+    "precommit": "npm run ensure-git-credentials && lint-staged && npm run qa",
     "prepublishOnly": "npm run qa",
     "postpublish": "npm run deploy-storybook"
   },
-  "pre-commit": [
-    "qa",
-    "ensure-git-credentials"
-  ],
+  "lint-staged": {
+    "*.{js,json,md,css}": ["prettier --write", "git add"]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/daonomic/daonomic-ui.git"
@@ -51,11 +51,12 @@
     "classnames": "2.2.5",
     "css-loader": "0.28.10",
     "eslint": "4.18.2",
-    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "2.9.0",
     "eslint-plugin-import": "2.9.0",
-    "eslint-plugin-jsx-a11y": "6.0.3",
     "eslint-plugin-react": "7.7.0",
+    "husky": "0.14.3",
     "jest": "22.4.2",
+    "lint-staged": "7.0.0",
     "postcss-calc": "6.0.1",
     "postcss-color-function": "4.0.1",
     "postcss-custom-media": "6.0.0",
@@ -64,7 +65,7 @@
     "postcss-import": "11.0.0",
     "postcss-loader": "2.0.9",
     "postcss-nesting": "4.2.1",
-    "pre-commit": "1.2.2",
+    "prettier": "1.11.1",
     "prop-types": "15.6.1",
     "react": "16.2.0",
     "react-dom": "16.2.0",

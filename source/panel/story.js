@@ -19,12 +19,8 @@ storiesOf('Panel', module)
   ))
   .add('margin between panels', () => (
     <div>
-      <Panel>
-        First panel
-      </Panel>
+      <Panel>First panel</Panel>
 
-      <Panel>
-        Second panel
-      </Panel>
+      <Panel>Second panel</Panel>
     </div>
   ));
