@@ -49,9 +49,15 @@
   box-shadow: 0 0 0 3px var(--theme-control-invalid-shadow);
 }
 
+.root_disabled .select {
+  background: var(--theme-control-disabled-background);
+  border-color: var(--theme-control-disabled-border);
+  cursor: not-allowed;
+}
+
 /* Focus */
-.root:not(.root_invalid) .select:focus,
-.root:not(.root_invalid) .select:hover {
+.root:not(.root_invalid):not(.root_disabled) .select:focus,
+.root:not(.root_invalid):not(.root_disabled) .select:hover {
   border-color: var(--theme-control-focus-border);
   box-shadow: 0 0 0 3px var(--theme-control-focus-shadow);
   transition: none;
