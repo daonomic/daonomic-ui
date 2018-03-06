@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.1.1
+
+* Fix `Panel` background
+
 ## 3.1.0
 
 * Updated `Select` and `Input` design
