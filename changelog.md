@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.2.0
+
+* Updated `Checkbox` design
+
 ## 3.1.1
 
 * Fix `Panel` background

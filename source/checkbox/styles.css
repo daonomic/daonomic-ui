@@ -21,8 +21,8 @@
   left: 0;
   width: 1em;
   height: 1em;
-  background-color: #fff;
-  border: 1px solid var(--theme-borders);
+  background-color: var(--theme-control-background);
+  border: 1px solid var(--theme-control-border);
   background-size: 50% 50%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -30,7 +30,8 @@
 }
 
 .input:focus ~ .indicator {
-  box-shadow: 0 0 0 0.075em #fff, 0 0 0 0.2em var(--theme-primary);
+  border-color: var(--theme-control-focus-border);
+  box-shadow: 0 0 0 0.2em var(--theme-control-focus-shadow);
 }
 
 .input:checked ~ .indicator {
@@ -46,7 +47,8 @@
 }
 
 .input:disabled ~ .indicator {
-  background-color: var(--theme-button-bg-disabled);
+  border-color: var(--theme-control-disabled-border);
+  background-color: var(--theme-control-disabled-background);
 }
 
 .text {
