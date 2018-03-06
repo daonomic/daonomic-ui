@@ -13,13 +13,9 @@ export default class UncontrolledInput extends PureComponent {
     onChange: () => {},
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      value: props.value,
-    };
-  }
+  state = {
+    value: this.props.value,
+  };
 
   handleChange = (event) => {
     this.setState({

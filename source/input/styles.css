@@ -1,41 +1,27 @@
-:root {
-  --input-height: 40px;
-  --label-height: 17px;
-}
-
-.root_disabled {
-  opacity: 0.7;
-}
-
-.root_disabled,
-.root_disabled .field,
-.root_disabled .input,
-.root_disabled .label {
-  cursor: not-allowed;
-}
-
-.field {
+.label {
   box-sizing: border-box;
-  position: relative;
-  height: calc(var(--input-height) + var(--label-height));
-  padding-top: var(--label-height);
+  display: inline-block;
+  padding-bottom: 0.5em;
+  color: var(--theme-muted);
+  transition: all 0.2s;
 }
 
 .input {
   box-sizing: border-box;
   appearance: none;
-  position: relative;
-  z-index: 1;
   display: block;
   width: 100%;
-  height: var(--input-height);
+  padding: var(--theme-control-padding-vertical)
+    var(--theme-control-padding-horizontal);
   line-height: 1;
   font-size: 16px;
-  line-height: 1.125;
+  line-height: 1.5;
+  color: var(--theme-control-text);
   outline: 0;
   border: 0;
-  border-bottom: 1px solid var(--theme-borders);
-  background-color: transparent;
+  border-radius: 0.25em;
+  border: 1px solid var(--theme-control-border);
+  background-color: var(--theme-control-background);
   transition: border 0.2s;
 }
 
@@ -44,62 +30,18 @@
   transition: background-color 5000s ease-in-out 0s;
 }
 
-.root_invalid .input:not(:focus) {
-  border-bottom-color: var(--theme-danger);
-}
-
 .input:focus {
-  border-bottom-color: var(--theme-primary);
-  box-shadow: 0 1px 0 var(--theme-primary);
+  border-color: var(--theme-control-focus-border);
+  box-shadow: 0 0 0 3px var(--theme-control-focus-shadow);
 }
 
-.input::after {
-  content: '';
-  position: absolute;
-  bottom: 1px;
-  height: 1px;
-  opacity: 0;
-  transition: opacity 0.2s;
+.root_invalid .input {
+  border-color: var(--theme-control-invalid-border);
+  box-shadow: 0 0 0 3px var(--theme-control-invalid-shadow);
 }
 
-.input:focus::after {
-  opacity: 1;
-}
-
-.label {
-  box-sizing: border-box;
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  font-size: 18px;
-  transform: translateY(
-    calc(var(--label-height) / 2 + var(--input-height) / 2)
-  );
-  line-height: var(--label-height);
-  color: var(--theme-muted);
-  transition: all 0.2s;
-  cursor: pointer;
-}
-
-.input:focus ~ .label {
-  color: var(--theme-primary);
-}
-
-.root_invalid .label {
-  color: var(--theme-danger);
-}
-
-.label_fixed {
-  transform: translateY(0);
-  font-size: 12px;
-}
-
-.error {
-  margin: 0;
-  padding-top: 5px;
-  font-size: 12px;
-  line-height: 1.5;
-  color: var(--theme-danger);
+.root_disabled .input {
+  cursor: not-allowed;
+  border-color: var(--theme-control-disabled-border);
+  background-color: var(--theme-control-disabled-background);
 }

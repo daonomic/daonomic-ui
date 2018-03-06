@@ -1,6 +1,6 @@
 .root {
   margin: 0;
-  padding-top: 5px;
+  padding-top: 0.25em;
   font-size: 12px;
   line-height: 1.5;
   color: var(--theme-danger);

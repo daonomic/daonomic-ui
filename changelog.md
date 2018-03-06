@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.1.0
+
+* Updated `Select` and `Input` design
+
 ## 3.0.0
 
 * Upgraded minimal `react` and `react-dom` versions to `16.2.0`

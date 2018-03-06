@@ -1,25 +1,22 @@
 :root {
-  --select-height: 2.75em;
-  --select-horizontal-padding: 1.25em;
-  --border-width: 0.2rem;
+  --select-padding-right: calc(var(--theme-control-padding-horizontal) * 3);
 }
 
 .select-wrapper {
   position: relative;
   display: block;
-  padding: var(--border-width);
-  color: var(--theme-button-text);
+  color: var(--theme-control-text);
 }
 
 .select-wrapper::after {
   content: '';
   position: absolute;
-  top: var(--border-width);
-  right: var(--border-width);
-  height: 2.75em;
-  width: 2.75em;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: calc(var(--theme-control-padding-horizontal) * 3);
   pointer-events: none;
-  background-color: var(--theme-darkgray);
+  opacity: 0.5;
   background-image: url('./resources/arrow.svg');
   background-repeat: no-repeat;
   background-position: center center;
@@ -31,32 +28,32 @@
   display: block;
   width: 100%;
   margin: 0;
-  padding-left: var(--select-horizontal-padding);
-  padding-right: calc(var(--select-horizontal-padding) + var(--select-height));
-  height: var(--select-height);
+  padding: var(--theme-control-padding-vertical)
+    var(--theme-control-padding-horizontal);
+  padding-right: var(--select-padding-right);
   font-size: 16px;
-  line-height: var(--select-height);
-  color: #000;
-  background-color: #fff;
+  line-height: 1.5;
+  color: var(--theme-text);
+  background-color: var(--theme-control-background);
   border: 0;
   border-radius: 0.25em;
   cursor: pointer;
   outline: 0;
-  box-shadow: 0 0 0 0.075rem #fff,
-    0 0 0 var(--border-width) var(--theme-borders);
+  border: 1px solid var(--theme-control-border);
   appearance: none;
   transition: box-shadow 0.2s;
 }
 
 .root_invalid .select {
-  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 var(--border-width) var(--theme-danger);
+  border-color: var(--theme-control-invalid-border);
+  box-shadow: 0 0 0 3px var(--theme-control-invalid-shadow);
 }
 
 /* Focus */
 .root:not(.root_invalid) .select:focus,
 .root:not(.root_invalid) .select:hover {
-  box-shadow: 0 0 0 0.075rem #fff,
-    0 0 0 var(--border-width) var(--theme-primary);
+  border-color: var(--theme-control-focus-border);
+  box-shadow: 0 0 0 3px var(--theme-control-focus-shadow);
   transition: none;
 }
 
@@ -67,8 +64,8 @@
 
 /* <option> elements inherit styles from <select>, so reset them. */
 .select option {
-  background-color: #fff;
-  color: #000;
+  color: var(--theme-control-text);
+  background: var(--theme-control-background);
 }
 
 /* Media query to target Firefox only */
@@ -101,13 +98,12 @@
     content: '';
     display: block;
     width: 1.5rem;
-    background-color: var(--theme-button-bg);
   }
 
   .select:hover,
   .select:focus,
   .select:active {
-    color: var(--theme-button-text);
-    background-color: var(--theme-button-bg-active);
+    color: var(--theme-control-text);
+    background: var(--theme-control-background);
   }
 }

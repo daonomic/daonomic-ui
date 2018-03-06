@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
+import nanoid from 'nanoid';
 import FieldError from '../field-error';
 import styles from './styles.css';
 import Uncontrolled from './uncontrolled';
@@ -22,34 +23,9 @@ export default class Input extends PureComponent {
 
   static defaultProps = {
     type: 'text',
-    className: '',
-    error: '',
-    disabled: false,
-    onFocus: () => {},
-    onBlur: () => {},
   };
 
-  constructor(props) {
-    super(props);
-    this.id = Math.random().toString();
-    this.state = {
-      isFocused: false,
-    };
-  }
-
-  handleFocus = (event) => {
-    this.setState({
-      isFocused: true,
-    });
-    this.props.onFocus(event);
-  };
-
-  handleBlur = (event) => {
-    this.setState({
-      isFocused: false,
-    });
-    this.props.onBlur(event);
-  };
+  id = nanoid(15);
 
   render() {
     const { id } = this;
@@ -61,7 +37,6 @@ export default class Input extends PureComponent {
       disabled,
       ...restProps
     } = this.props;
-    const { isFocused } = this.state;
 
     return (
       <div
@@ -70,27 +45,19 @@ export default class Input extends PureComponent {
           [styles.root_disabled]: disabled,
         })}
       >
-        <div className={styles.field}>
-          <input
-            {...restProps}
-            value={value}
-            id={id}
-            disabled={disabled}
-            className={cn(className, styles.input)}
-            onFocus={this.handleFocus}
-            onBlur={this.handleBlur}
-          />
+        <label htmlFor={id} className={styles.label}>
+          {label}
+        </label>
 
-          <label
-            htmlFor={id}
-            className={cn(styles.label, {
-              [styles.label_fixed]: isFocused || value !== '',
-            })}
-          >
-            {label}
-          </label>
-        </div>
-
+        <input
+          {...restProps}
+          value={value}
+          id={id}
+          disabled={disabled}
+          className={cn(className, styles.input)}
+          onFocus={this.handleFocus}
+          onBlur={this.handleBlur}
+        />
         <FieldError>{error}</FieldError>
       </div>
     );
