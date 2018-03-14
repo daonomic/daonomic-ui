@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.5.0
+
+* Added `label` prop to `Select`
+* Updated `FieldError` design
+* Added form example
+
 ## 3.4.0
 
 * Added `FormRow` component
