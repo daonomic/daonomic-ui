@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.4.0
+
+* Added `FormRow` component
+
 ## 3.3.0
 
 * Added `disabled` prop to `Select`
