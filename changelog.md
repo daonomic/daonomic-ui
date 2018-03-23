@@ -1,6 +1,12 @@
 # Changelog
 
+## 4.0.1
+
+* Fix Button proptypes
+
 ## 4.0.0
+
+### Breaking changes
 
 * `source/theme.css` → `source/theme/index.css`
 * Removed following CSS variables:
