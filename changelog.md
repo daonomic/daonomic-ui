@@ -1,5 +1,21 @@
 # Changelog
 
+## 4.0.0
+
+* `source/theme.css` → `source/theme/index.css`
+* Removed following CSS variables:
+  * `--theme-button-bg-active`
+  * `--theme-button-bg-disabled`
+  * `--theme-button-text-disabled`
+* `Button`: prop `tagName` → `element`
+* `Input`, `Checkbox`, `Select`: prop `error` renamed to `errors`
+
+### Improvements
+
+* Added `Logo` component
+* Added support for custom react components as `Button` elements
+* Added support for multiple errors in `Input`, `Checkbox` and `Select`
+
 ## 3.5.0
 
 * Added `label` prop to `Select`

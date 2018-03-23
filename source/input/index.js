@@ -15,7 +15,10 @@ export default class Input extends PureComponent {
     onChange: PropTypes.func.isRequired,
     type: PropTypes.string,
     className: PropTypes.string,
-    error: PropTypes.string,
+    errors: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.arrayOf(PropTypes.string),
+    ]),
     disabled: PropTypes.bool,
     onFocus: PropTypes.func,
     onBlur: PropTypes.func,
@@ -33,15 +36,16 @@ export default class Input extends PureComponent {
       label,
       className,
       value,
-      error,
+      errors,
       disabled,
       ...restProps
     } = this.props;
+    const normalizedErrors = [].concat(errors).filter(Boolean);
 
     return (
       <div
         className={cn(styles.root, {
-          [styles.root_invalid]: Boolean(error),
+          [styles.root_invalid]: normalizedErrors.length > 0,
           [styles.root_disabled]: disabled,
         })}
       >
@@ -58,7 +62,7 @@ export default class Input extends PureComponent {
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
         />
-        <FieldError>{error}</FieldError>
+        <FieldError>{normalizedErrors.join(', ')}</FieldError>
       </div>
     );
   }

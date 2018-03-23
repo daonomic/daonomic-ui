@@ -14,12 +14,12 @@ module.exports = {
             options: {
               modules: true,
               localIdentName: '[name]-[local]-[hash:base64:5]',
-            }
+            },
           },
           'postcss-loader',
           {
             loader: 'webpack-append',
-            query: `@import "${sourceDir}/theme.css";`,
+            query: `@import "${sourceDir}/theme/index.css";`,
           },
         ],
       },

@@ -21,11 +21,14 @@ storiesOf('Form', module).add('default', () => (
     </FormRow>
 
     <FormRow>
-      <Input.Uncontrolled label="E-mail" error="required" />
+      <Input.Uncontrolled
+        label="E-mail"
+        errors={['required', 'must contain @ character']}
+      />
     </FormRow>
 
     <FormRow>
-      <Checkbox label="Agree with terms and conditions" error="required" />
+      <Checkbox label="Agree with terms and conditions" errors="required" />
     </FormRow>
 
     <FormRow>
