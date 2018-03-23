@@ -31,7 +31,7 @@ Button.propTypes = {
   size: PropTypes.oneOf(['small', 'normal']),
   className: PropTypes.string,
   disabled: PropTypes.bool,
-  element: PropTypes.string,
+  element: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
 };
 
 Button.defaultProps = {
