@@ -25,11 +25,16 @@ npm i postcss-import postcss-nesting postcss-custom-media postcss-custom-propert
 Add `theme.css` to your project:
 
 ```css
-@import "daonomic-ui/source/theme.css"; /* imports default theme */
+@import 'daonomic-ui/source/theme/index.css'; /* imports default theme */
 
 :root {
   --theme-primary: #000; /* you can redefine custom properties from default theme */
-  --theme-modal-overlay-color: rgba(0, 0, 0, .5); /* and add an additional custom properties */
+  --theme-modal-overlay-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* and add an additional custom properties */
 }
 ```
 

@@ -23,15 +23,16 @@ export default class Select extends Component {
       children,
       value,
       label,
-      error,
+      errors,
       disabled,
       ...restProps
     } = this.props;
+    const normalizedErrors = [].concat(errors).filter(Boolean);
 
     return (
       <div
         className={cn(className, styles.root, {
-          [styles.root_invalid]: Boolean(error),
+          [styles.root_invalid]: normalizedErrors.length > 0,
           [styles.root_disabled]: disabled,
         })}
       >
@@ -46,7 +47,7 @@ export default class Select extends Component {
             {children}
           </select>
         </div>
-        <FieldError>{error}</FieldError>
+        <FieldError>{normalizedErrors.join(', ')}</FieldError>
       </div>
     );
   };
@@ -57,6 +58,9 @@ Select.propTypes = {
   children: PropTypes.node,
   value: PropTypes.string,
   label: PropTypes.string,
-  error: PropTypes.string,
+  errors: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string),
+  ]),
   disabled: PropTypes.bool,
 };

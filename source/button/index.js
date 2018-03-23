@@ -4,36 +4,38 @@ import cn from 'classnames';
 import styles from './styles.css';
 
 export default function Button(props) {
-  const { tagName, className, size, ...attrs } = props;
-  const isNotButtonOrLink = !['button', 'a'].includes(tagName);
+  const { element, className, size, disabled, ...attrs } = props;
+  const isNotButtonOrLink = !['button', 'a'].includes(element);
 
-  if (!attrs.type && tagName === 'button') {
+  if (!attrs.type && element === 'button') {
     attrs.type = 'button';
   }
 
-  if (!attrs.role && isNotButtonOrLink && !attrs.disabled) {
-    attrs.role = 'button';
+  if (!attrs.tabIndex && isNotButtonOrLink) {
+    attrs.tabIndex = disabled ? '-1' : '0';
   }
 
-  if (!attrs.tabIndex && isNotButtonOrLink) {
-    attrs.tabIndex = attrs.disabled ? '-1' : '0';
+  if (disabled) {
+    attrs.onClick = undefined;
   }
 
   attrs.className = cn(className, styles.root, {
+    [styles.root_disabled]: disabled,
     [styles[`root_size_${size}`]]: size,
   });
 
-  return React.createElement(tagName, attrs);
+  return React.createElement(element, attrs);
 }
 
 Button.propTypes = {
   size: PropTypes.oneOf(['small', 'normal']),
   className: PropTypes.string,
-  tagName: PropTypes.string,
+  disabled: PropTypes.bool,
+  element: PropTypes.string,
 };
 
 Button.defaultProps = {
   size: 'normal',
   className: '',
-  tagName: 'button',
+  element: 'button',
 };

@@ -1,16 +1,16 @@
 .root {
   appearance: none;
   display: table;
-  padding: 0;
-  padding-left: 1.25em;
-  padding-right: 1.25em;
-  height: 2.75em;
+  padding: 0.375rem 0.75rem;
+  white-space: nowrap;
+  font: inherit;
   font-size: 16px;
-  line-height: 2.75em;
+  line-height: 1.5;
   text-decoration: none;
   color: var(--theme-button-text);
   background: none;
   border: none;
+  outline: none;
   background-color: var(--theme-button-bg);
   border-radius: 0.25em;
   cursor: pointer;
@@ -18,24 +18,27 @@
   user-select: none;
 }
 
-.root:hover,
-.root:focus {
+.root:not(.root_disabled):hover {
+  background-color: color(var(--theme-button-bg) blackness(15%));
+}
+
+.root:not(.root_disabled):active {
+  background-color: color(var(--theme-button-bg) blackness(25%));
+}
+
+.root:not(.root_disabled):active,
+.root:not(.root_disabled):focus {
   transition: none;
-  outline: none;
-  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.2rem var(--theme-button-bg-active);
+  box-shadow: 0 0 0 0.075rem #fff,
+    0 0 0 0.2rem color(var(--theme-button-bg) blackness(15%));
 }
 
-.root:active {
-  background-color: var(--theme-button-bg-active);
-}
-
-.root:disabled {
-  box-shadow: none;
-  background-color: var(--theme-button-bg-disabled);
-  color: var(--theme-button-text-disabled);
+.root_disabled {
+  opacity: 0.65;
   cursor: default;
 }
 
 .root_size_small {
+  padding: 0.3em 0.7em;
   font-size: 14px;
 }

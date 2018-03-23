@@ -8,11 +8,15 @@ export default class Checkbox extends PureComponent {
   static propTypes = {
     className: PropTypes.string,
     label: PropTypes.string,
-    error: PropTypes.string,
+    errors: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.arrayOf(PropTypes.string),
+    ]),
   };
 
   render = () => {
-    const { className, label, error, ...restProps } = this.props;
+    const { className, label, errors, ...restProps } = this.props;
+    const normalizedErrors = [].concat(errors).filter(Boolean);
 
     return (
       <div className={cn(className, styles.root)}>
@@ -26,7 +30,7 @@ export default class Checkbox extends PureComponent {
             }}
           />
         </label>
-        <FieldError>{error}</FieldError>
+        <FieldError>{normalizedErrors.join(', ')}</FieldError>
       </div>
     );
   };
