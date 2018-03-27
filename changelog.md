@@ -1,5 +1,16 @@
 # Changelog
 
+## 4.1.0
+
+### Improvements
+
+* Update `FormRow` spacing
+
+### Fixes
+
+* `Button`: fix proptypes, pass `disabled` prop to root node
+* Fix Checkbox's native validation popup placement
+
 ## 4.0.1
 
 * Fix Button proptypes
