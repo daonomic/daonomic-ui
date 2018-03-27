@@ -8,7 +8,7 @@ import Checkbox from '../checkbox';
 import Button from '../button';
 
 storiesOf('Form', module).add('default', () => (
-  <React.Fragment>
+  <form onSubmit={(event) => event.preventDefault()}>
     <FormRow>
       <Select label="Select country">
         <option value="1">Russia</option>
@@ -28,12 +28,16 @@ storiesOf('Form', module).add('default', () => (
     </FormRow>
 
     <FormRow>
-      <Checkbox label="Agree with terms and conditions" errors="required" />
+      <Checkbox
+        required
+        label="Agree with terms and conditions"
+        errors="required"
+      />
     </FormRow>
 
     <FormRow>
-      <Button>Submit</Button>
+      <Button type="submit">Submit</Button>
       <FieldError>Submit failed, please try again</FieldError>
     </FormRow>
-  </React.Fragment>
+  </form>
 ));
