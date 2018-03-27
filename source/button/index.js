@@ -4,7 +4,7 @@ import cn from 'classnames';
 import styles from './styles.css';
 
 export default function Button(props) {
-  const { element, className, size, disabled, ...attrs } = props;
+  const { element, className, size, ...attrs } = props;
   const isNotButtonOrLink = !['button', 'a'].includes(element);
 
   if (!attrs.type && element === 'button') {
@@ -12,15 +12,15 @@ export default function Button(props) {
   }
 
   if (!attrs.tabIndex && isNotButtonOrLink) {
-    attrs.tabIndex = disabled ? '-1' : '0';
+    attrs.tabIndex = attrs.disabled ? '-1' : '0';
   }
 
-  if (disabled) {
+  if (attrs.disabled) {
     attrs.onClick = undefined;
   }
 
   attrs.className = cn(className, styles.root, {
-    [styles.root_disabled]: disabled,
+    [styles.root_disabled]: attrs.disabled,
     [styles[`root_size_${size}`]]: size,
   });
 
@@ -31,7 +31,7 @@ Button.propTypes = {
   size: PropTypes.oneOf(['small', 'normal']),
   className: PropTypes.string,
   disabled: PropTypes.bool,
-  element: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
 };
 
 Button.defaultProps = {
