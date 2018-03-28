@@ -1,0 +1,15 @@
+.root_muted {
+  color: var(--theme-muted);
+}
+
+.root_align_left {
+  text-align-last: left;
+}
+
+.root_align_center {
+  text-align: center;
+}
+
+.root_align_right {
+  text-align: right;
+}
