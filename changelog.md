@@ -1,5 +1,12 @@
 # Changelog
 
+## 4.2.0
+
+### Improvements
+
+* `Badge`: added `color` prop, added additional props support
+* Added `Text` component
+
 ## 4.1.0
 
 ### Improvements
