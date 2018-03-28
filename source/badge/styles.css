@@ -7,3 +7,11 @@
   color: var(--theme-primary-opposite);
   background-color: var(--theme-primary);
 }
+
+.root_color_primary {
+  background-color: var(--theme-primary);
+}
+
+.root_color_danger {
+  background-color: var(--theme-danger);
+}
