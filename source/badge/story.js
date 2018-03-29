@@ -12,4 +12,10 @@ storiesOf('Badge', module)
       <Badge color="danger">Danger</Badge>
       <Badge color="success">Success</Badge>
     </React.Fragment>
+  ))
+  .add('sizes', () => (
+    <React.Fragment>
+      <Badge size="s">Small</Badge>
+      <Badge size="m">Medium</Badge>
+    </React.Fragment>
   ));

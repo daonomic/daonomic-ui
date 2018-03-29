@@ -8,6 +8,14 @@
   background-color: var(--theme-primary);
 }
 
+.root_size_s {
+  font-size: 12px;
+}
+
+.root_size_m {
+  font-size: 16px;
+}
+
 .root_color_primary {
   color: var(--theme-primary-opposite);
   background-color: var(--theme-primary);
