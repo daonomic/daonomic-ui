@@ -1,5 +1,19 @@
 # Changelog
 
+## 4.3.0
+
+### Fixes
+
+* Removed unused `--theme-darkgray`
+
+### Improvements
+
+* Added several colors:
+  * `--theme-danger-opposite`
+  * `--theme-warning` and `--theme-warning-opposite`
+  * `--theme-success` and `--theme-success-opposite`
+* `Badge`: added `warning` and `success` colors
+
 ## 4.2.0
 
 ### Improvements
