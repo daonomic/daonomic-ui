@@ -15,7 +15,7 @@ const Badge = ({ className, children, color, ...restProps }) => (
 Badge.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
-  color: PropTypes.oneOf(['primary', 'danger']),
+  color: PropTypes.oneOf(['primary', 'warning', 'danger', 'success']),
 };
 
 Badge.defaultProps = {
