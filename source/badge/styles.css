@@ -27,3 +27,8 @@
   color: var(--theme-success-opposite);
   background-color: var(--theme-success);
 }
+
+.root_uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}

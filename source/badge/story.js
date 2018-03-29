@@ -4,6 +4,7 @@ import Badge from './';
 
 storiesOf('Badge', module)
   .add('default', () => <Badge>Badge</Badge>)
+  .add('uppercase', () => <Badge isUppercase>Badge</Badge>)
   .add('colors', () => (
     <React.Fragment>
       <Badge color="primary">Primary</Badge>
