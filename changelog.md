@@ -1,5 +1,15 @@
 # Changelog
 
+## 4.4.0
+
+### Fixes
+
+* Fixed `Badge` proptypes
+
+### Improvements
+
+* `Badge`: added props `isUppercase` and `size`
+
 ## 4.3.0
 
 ### Fixes
