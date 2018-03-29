@@ -9,9 +9,21 @@
 }
 
 .root_color_primary {
+  color: var(--theme-primary-opposite);
   background-color: var(--theme-primary);
 }
 
+.root_color_warning {
+  color: var(--theme-warning-opposite);
+  background-color: var(--theme-warning);
+}
+
 .root_color_danger {
+  color: var(--theme-danger-opposite);
   background-color: var(--theme-danger);
+}
+
+.root_color_success {
+  color: var(--theme-success-opposite);
+  background-color: var(--theme-success);
 }
