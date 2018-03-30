@@ -19,14 +19,14 @@ export default class Select extends Component {
 
   id = nanoid(15);
 
-  renderPlaceholder = ({ placeholder, label }) => {
-    if (!placeholder && !label) {
+  renderPlaceholder = ({ placeholder }) => {
+    if (!placeholder) {
       return null;
     }
 
     return (
       <option value="" hidden disabled>
-        {placeholder || label}
+        {placeholder}
       </option>
     );
   };
@@ -54,7 +54,7 @@ export default class Select extends Component {
       <div className={className}>
         {this.renderLabel({ label })}
         <BaseSelect invalid={normalizedErrors.length > 0} {...restProps}>
-          {this.renderPlaceholder({ placeholder, label })}
+          {this.renderPlaceholder({ placeholder })}
           {children}
         </BaseSelect>
         <FieldError>{normalizedErrors.join(', ')}</FieldError>
