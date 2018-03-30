@@ -1,5 +1,17 @@
 # Changelog
 
+## 4.5.0
+
+### Fixes
+
+* `Input`: fixed `onFocus` and `onBlur` handlers
+
+### Improvements
+
+* Added `BaseInput` component with textarea support
+* Added `FieldLabel` component
+* Added textarea support to `Input`
+
 ## 4.4.0
 
 ### Fixes
