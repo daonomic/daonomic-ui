@@ -2,13 +2,13 @@
   --select-padding-right: calc(var(--theme-control-padding-horizontal) * 3);
 }
 
-.select-wrapper {
+.root {
   position: relative;
   display: block;
   color: var(--theme-control-text);
 }
 
-.select-wrapper::after {
+.root::after {
   content: '';
   position: absolute;
   top: 0;
@@ -44,20 +44,20 @@
   transition: box-shadow 0.2s;
 }
 
-.root_invalid .select {
+.select_invalid {
   border-color: var(--theme-control-invalid-border);
   box-shadow: 0 0 0 3px var(--theme-control-invalid-shadow);
 }
 
-.root_disabled .select {
+.select_disabled {
   background: var(--theme-control-disabled-background);
   border-color: var(--theme-control-disabled-border);
   cursor: not-allowed;
 }
 
 /* Focus */
-.root:not(.root_invalid):not(.root_disabled) .select:focus,
-.root:not(.root_invalid):not(.root_disabled) .select:hover {
+.select:not(.select_invalid):not(.select_disabled):focus,
+.select:not(.select_invalid):not(.select_disabled):hover {
   border-color: var(--theme-control-focus-border);
   box-shadow: 0 0 0 3px var(--theme-control-focus-shadow);
   transition: none;
@@ -91,11 +91,11 @@
     padding: 0.5rem 1.5rem 0.5rem 1rem;
   }
 
-  .select-wrapper::after {
+  .root::after {
     z-index: 5;
   }
 
-  .select-wrapper::before {
+  .root::before {
     position: absolute;
     top: 0;
     right: 1rem;

@@ -1,66 +1,64 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import cn from 'classnames';
+import nanoid from 'nanoid';
+import BaseSelect from '../base-select';
+import FieldLabel from '../field-label';
 import FieldError from '../field-error';
-import styles from './styles.css';
 
 export default class Select extends Component {
-  renderLabel = (label) => {
-    if (!label) {
+  static propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string,
+    label: PropTypes.string,
+    placeholder: PropTypes.string,
+    errors: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.arrayOf(PropTypes.string),
+    ]),
+  };
+
+  id = nanoid(15);
+
+  renderPlaceholder = ({ placeholder, label }) => {
+    if (!placeholder && !label) {
       return null;
     }
 
     return (
       <option value="" hidden disabled>
-        {label}
+        {placeholder || label}
       </option>
     );
+  };
+
+  renderLabel = ({ label }) => {
+    if (!label) {
+      return null;
+    }
+
+    return <FieldLabel>{label}</FieldLabel>;
   };
 
   render = () => {
     const {
       className,
       children,
-      value,
       label,
+      placeholder,
       errors,
-      disabled,
       ...restProps
     } = this.props;
     const normalizedErrors = [].concat(errors).filter(Boolean);
 
     return (
-      <div
-        className={cn(className, styles.root, {
-          [styles.root_invalid]: normalizedErrors.length > 0,
-          [styles.root_disabled]: disabled,
-        })}
-      >
-        <div className={styles['select-wrapper']}>
-          <select
-            disabled={disabled}
-            className={styles.select}
-            value={value || ''}
-            {...restProps}
-          >
-            {this.renderLabel(label)}
-            {children}
-          </select>
-        </div>
+      <div className={className}>
+        {this.renderLabel({ label })}
+        <BaseSelect invalid={normalizedErrors.length > 0} {...restProps}>
+          {this.renderPlaceholder({ placeholder, label })}
+          {children}
+        </BaseSelect>
         <FieldError>{normalizedErrors.join(', ')}</FieldError>
       </div>
     );
   };
 }
-
-Select.propTypes = {
-  className: PropTypes.string,
-  children: PropTypes.node,
-  value: PropTypes.string,
-  label: PropTypes.string,
-  errors: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.arrayOf(PropTypes.string),
-  ]),
-  disabled: PropTypes.bool,
-};
