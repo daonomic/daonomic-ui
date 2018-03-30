@@ -1,5 +1,16 @@
 # Changelog
 
+## 5.0.0
+
+### Breaking changes
+
+* `Select`: prop `label` became `placeholder`
+
+### Improvements
+
+* Added `BaseSelect` component
+* `Select`: added _real_ label and placeholder support
+
 ## 4.5.0
 
 ### Fixes
