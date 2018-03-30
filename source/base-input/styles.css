@@ -1,12 +1,4 @@
-.label {
-  box-sizing: border-box;
-  display: inline-block;
-  padding-bottom: 0.5em;
-  color: var(--theme-muted);
-  transition: all 0.2s;
-}
-
-.input {
+.root {
   box-sizing: border-box;
   appearance: none;
   display: block;
@@ -25,23 +17,27 @@
   transition: border 0.2s;
 }
 
-.input:-webkit-autofill {
+.root:-webkit-autofill {
   /* this prevents autofilled input background-color change in Chrome */
   transition: background-color 5000s ease-in-out 0s;
 }
 
-.input:focus {
+.root:focus {
   border-color: var(--theme-control-focus-border);
   box-shadow: 0 0 0 3px var(--theme-control-focus-shadow);
 }
 
-.root_invalid .input {
+.root_invalid {
   border-color: var(--theme-control-invalid-border);
   box-shadow: 0 0 0 3px var(--theme-control-invalid-shadow);
 }
 
-.root_disabled .input {
+.root_disabled {
   cursor: not-allowed;
   border-color: var(--theme-control-disabled-border);
   background-color: var(--theme-control-disabled-background);
+}
+
+.root_textarea {
+  resize: vertical;
 }
