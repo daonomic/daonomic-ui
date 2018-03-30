@@ -1,5 +1,11 @@
 # Changelog
 
+## 5.0.1
+
+### Fixes
+
+* Fixed `Select` placeholder rendering
+
 ## 5.0.0
 
 ### Breaking changes
