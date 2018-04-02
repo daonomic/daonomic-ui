@@ -27,6 +27,10 @@
   box-shadow: 0 0 0 3px var(--theme-control-focus-shadow);
 }
 
+.root:invalid {
+  box-shadow: none; /* disable unnecessary :invalid box-shadow in Firefox */
+}
+
 .root_invalid {
   border-color: var(--theme-control-invalid-border);
   box-shadow: 0 0 0 3px var(--theme-control-invalid-shadow);
