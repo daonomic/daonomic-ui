@@ -1,5 +1,13 @@
 # Changelog
 
+## 5.0.2
+
+### Fixes
+
+* Set default textarea rows count
+* Removed unnecessary box-shadow on `:invalid` inputs in Firefox
+* Fixed `Input` and `BaseInput` proptypes
+
 ## 5.0.1
 
 ### Fixes
