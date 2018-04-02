@@ -18,7 +18,7 @@ export default class BaseInput extends Component {
   render() {
     const { element, className, disabled, invalid, ...restProps } = this.props;
 
-    return React.createElement(element, {
+    const attrs = {
       ...restProps,
       disabled,
       className: cn(className, styles.root, {
@@ -26,6 +26,12 @@ export default class BaseInput extends Component {
         [styles.root_invalid]: invalid,
         [styles.root_textarea]: element === 'textarea',
       }),
-    });
+    };
+
+    if (element === 'textarea') {
+      attrs.rows = attrs.rows || 3;
+    }
+
+    return React.createElement(element, attrs);
   }
 }
