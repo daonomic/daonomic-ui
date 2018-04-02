@@ -1,5 +1,11 @@
 # Changelog
 
+## 5.0.3
+
+### Fixes
+
+* Fixed `BaseInput` focus box-shadow
+
 ## 5.0.2
 
 ### Fixes
