@@ -5,7 +5,7 @@ import styles from './styles.css';
 
 export default class BaseInput extends Component {
   static propTypes = {
-    element: PropTypes.string,
+    element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
     disabled: PropTypes.bool,
     invalid: PropTypes.bool,

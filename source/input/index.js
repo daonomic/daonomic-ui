@@ -10,7 +10,7 @@ export default class Input extends PureComponent {
   static Uncontrolled = Uncontrolled;
 
   static propTypes = {
-    element: PropTypes.string,
+    element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     label: PropTypes.string.isRequired,
     value: PropTypes.string,
     onChange: PropTypes.func.isRequired,
