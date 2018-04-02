@@ -22,13 +22,13 @@
   transition: background-color 5000s ease-in-out 0s;
 }
 
+.root:invalid {
+  box-shadow: none; /* disable unnecessary :invalid box-shadow in Firefox */
+}
+
 .root:focus {
   border-color: var(--theme-control-focus-border);
   box-shadow: 0 0 0 3px var(--theme-control-focus-shadow);
-}
-
-.root:invalid {
-  box-shadow: none; /* disable unnecessary :invalid box-shadow in Firefox */
 }
 
 .root_invalid {
