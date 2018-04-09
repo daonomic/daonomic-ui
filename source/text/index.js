@@ -8,6 +8,7 @@ export default class Text extends React.Component {
     element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
     isMuted: PropTypes.bool,
+    isCaps: PropTypes.bool,
     align: PropTypes.oneOf(['left', 'center', 'right']),
   };
 
@@ -17,11 +18,19 @@ export default class Text extends React.Component {
   };
 
   render = () => {
-    const { element, className, align, isMuted, ...restProps } = this.props;
+    const {
+      element,
+      className,
+      align,
+      isMuted,
+      isCaps,
+      ...restProps
+    } = this.props;
 
     return React.createElement(element, {
       className: cn(className, styles.root, styles[`root_align_${align}`], {
         [styles.root_muted]: isMuted,
+        [styles.root_caps]: isCaps,
       }),
       ...restProps,
     });

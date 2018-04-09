@@ -23,27 +23,28 @@ storiesOf('Text', module)
       adipisci blanditiis quo!
     </Text>
   ))
-  .add('align left', () => (
-    <Text element="div" align="left">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sed
-      deleniti in rerum sequi earum corporis voluptates iste perspiciatis, dicta
-      debitis minima cupiditate asperiores voluptate? Tempore dignissimos
-      adipisci blanditiis quo!
-    </Text>
+  .add('alignment', () => (
+    <React.Fragment>
+      <Text element="div" align="left">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sed
+        deleniti in rerum sequi earum corporis voluptates iste perspiciatis,
+        dicta debitis minima cupiditate asperiores voluptate? Tempore
+        dignissimos adipisci blanditiis quo!
+      </Text>
+
+      <Text element="div" align="center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sed
+        deleniti in rerum sequi earum corporis voluptates iste perspiciatis,
+        dicta debitis minima cupiditate asperiores voluptate? Tempore
+        dignissimos adipisci blanditiis quo!
+      </Text>
+
+      <Text element="div" align="right">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sed
+        deleniti in rerum sequi earum corporis voluptates iste perspiciatis,
+        dicta debitis minima cupiditate asperiores voluptate? Tempore
+        dignissimos adipisci blanditiis quo!
+      </Text>
+    </React.Fragment>
   ))
-  .add('align center', () => (
-    <Text element="div" align="center">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sed
-      deleniti in rerum sequi earum corporis voluptates iste perspiciatis, dicta
-      debitis minima cupiditate asperiores voluptate? Tempore dignissimos
-      adipisci blanditiis quo!
-    </Text>
-  ))
-  .add('align right', () => (
-    <Text element="div" align="right">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sed
-      deleniti in rerum sequi earum corporis voluptates iste perspiciatis, dicta
-      debitis minima cupiditate asperiores voluptate? Tempore dignissimos
-      adipisci blanditiis quo!
-    </Text>
-  ));
+  .add('caps', () => <Text isCaps>IIFE</Text>);

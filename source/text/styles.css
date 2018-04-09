@@ -2,6 +2,11 @@
   color: var(--theme-muted);
 }
 
+.root_caps {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
 .root_align_left {
   text-align: left;
 }
