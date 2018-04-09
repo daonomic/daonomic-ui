@@ -1,16 +1,20 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 import Text from './';
 
 storiesOf('Text', module)
-  .add('default', () => (
-    <Text>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet provident
-      iste cum vel necessitatibus. Inventore expedita corporis odit dicta illum
-      maiores eligendi veritatis, fugiat modi. Animi repudiandae perferendis
-      impedit saepe!
-    </Text>
-  ))
+  .add(
+    'default',
+    withInfo()(() => (
+      <Text>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet provident
+        iste cum vel necessitatibus. Inventore expedita corporis odit dicta
+        illum maiores eligendi veritatis, fugiat modi. Animi repudiandae
+        perferendis impedit saepe!
+      </Text>
+    )),
+  )
   .add('muted', () => (
     <Text isMuted>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sed

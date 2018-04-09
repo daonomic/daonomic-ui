@@ -1,4 +1,3 @@
 :root {
-  --theme-panel-bg: #fff;
-  --theme-panel-shadow: rgba(36, 45, 52, 0.1);
+  --theme-panel-shadow: 0 1px 2px 0 rgba(36, 45, 52, 0.1);
 }

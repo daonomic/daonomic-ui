@@ -4,28 +4,18 @@ import cn from 'classnames';
 import styles from './styles.css';
 import PanelSeparator from './separator';
 
-export default function Panel({ className, children, paddingSize }) {
-  return (
-    <section
-      className={cn(className, styles.root, {
-        [styles[`root_padding_${paddingSize}`]]: paddingSize,
-      })}
-    >
-      {children}
-    </section>
-  );
+export default function Panel({ className, children }) {
+  return <section className={cn(className, styles.root)}>{children}</section>;
 }
 
 Panel.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
-  paddingSize: PropTypes.oneOf(['normal', 'large']),
 };
 
 Panel.defaultProps = {
   className: '',
   children: null,
-  paddingSize: 'normal',
 };
 
 Panel.Separator = PanelSeparator;
