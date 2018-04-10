@@ -1,4 +1,19 @@
 :root {
-  --theme-button-bg: var(--color-primary);
-  --theme-button-text: var(--color-primary-opposite);
+  --button-primary-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12),
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.08);
+  --button-primary-border: none;
+  --button-primary-background: var(--color-primary);
+  --button-primary-hover-background: #5c95ff;
+  --button-primary-active-background: #337aff;
+  --button-primary-disabled-background: #93999f;
+  --button-primary-text-color: var(--color-primary-opposite);
+  --button-primary-disabled-text-color: var(--color-primary-opposite);
+
+  --button-secondary-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  --button-secondary-border: 1px solid #cfd5da;
+  --button-secondary-background: #fff;
+  --button-secondary-hover-background: #f7f7f8;
+  --button-secondary-active-background: #f2f5f7;
+  --button-secondary-text-color: #242d34;
+  --button-secondary-disabled-text-color: #969b9e;
 }

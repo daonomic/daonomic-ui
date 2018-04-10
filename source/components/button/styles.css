@@ -1,36 +1,17 @@
 .root {
   appearance: none;
-  display: table;
-  padding: 0.375rem 0.75rem;
+  display: inline-block;
+  padding: 0.5em 1em;
   white-space: nowrap;
   font: inherit;
-  font-size: 16px;
-  line-height: 1.5;
   text-decoration: none;
-  color: var(--theme-button-text);
   background: none;
   border: none;
   outline: none;
-  background-color: var(--theme-button-bg);
-  border-radius: 0.25em;
+  border-radius: 5px;
   cursor: pointer;
   transition: box-shadow 0.2s;
   user-select: none;
-}
-
-.root:not(.root_disabled):hover {
-  background-color: color(var(--theme-button-bg) blackness(15%));
-}
-
-.root:not(.root_disabled):active {
-  background-color: color(var(--theme-button-bg) blackness(25%));
-}
-
-.root:not(.root_disabled):active,
-.root:not(.root_disabled):focus {
-  transition: none;
-  box-shadow: 0 0 0 0.075rem #fff,
-    0 0 0 0.2rem color(var(--theme-button-bg) blackness(15%));
 }
 
 .root_disabled {
@@ -38,7 +19,59 @@
   cursor: default;
 }
 
-.root_size_small {
-  padding: 0.3em 0.7em;
-  font-size: 14px;
+.root_size_s {
+  font-size: var(--typo-size-xs);
+  line-height: var(--typo-line-height-xs);
+}
+
+.root_size_m {
+  font-size: var(--typo-size-s);
+  line-height: var(--typo-line-height-s);
+}
+
+.root_size_l {
+  font-size: var(--typo-size-m);
+  line-height: var(--typo-line-height-m);
+}
+
+.root_disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.root:not(.root_disabled):focus {
+  box-shadow: var(--button-primary-shadow),
+    0 0 0 3px color(var(--color-primary) alpha(30%));
+}
+
+.root_design_primary {
+  color: var(--button-primary-text-color);
+  background: var(--button-primary-background);
+  border: var(--button-primary-border);
+  box-shadow: var(--button-primary-shadow);
+}
+
+.root_design_primary:not(.root_disabled):hover,
+.root_design_primary:not(.root_disabled):focus {
+  background: var(--button-primary-hover-background);
+}
+
+.root_design_primary:not(.root_disabled):active {
+  background: var(--button-primary-active-background);
+}
+
+.root_design_secondary {
+  background: var(--button-secondary-background);
+  color: var(--button-secondary-text-color);
+  border: var(--button-secondary-border);
+  box-shadow: var(--button-secondary-shadow);
+}
+
+.root_design_secondary:not(.root_disabled):hover,
+.root_design_secondary:not(.root_disabled):focus {
+  background: var(--button-secondary-hover-background);
+}
+
+.root_design_secondary:not(.root_disabled):active {
+  background: var(--button-secondary-active-background);
 }

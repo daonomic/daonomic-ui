@@ -38,7 +38,7 @@
 }
 
 .input:checked ~ .indicator {
-  background-color: var(--theme-button-bg);
+  background-color: var(--color-primary);
 }
 
 .input:active:not(:disabled) ~ .indicator {

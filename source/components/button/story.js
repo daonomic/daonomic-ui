@@ -1,17 +1,37 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
-import Button from './';
+import Button, { sizes, designs } from './';
 import { CustomComponent } from './demo';
 
 storiesOf('Button', module)
-  .add('default', () => <Button onClick={action('click')}>Button</Button>)
-  .add('disabled', () => <Button disabled>Button</Button>)
-  .add('small size', () => (
-    <Button size="small" onClick={action('click')}>
-      Button
-    </Button>
-  ))
+  .add(
+    'sizes, designs and disabled state',
+    withInfo()(() => (
+      <React.Fragment>
+        {sizes.map((size) => (
+          <div key={size} style={{ paddingBottom: '1em' }}>
+            {designs.map((design) => (
+              <div key={size} style={{ paddingBottom: '.5em' }}>
+                <Button design={design} size={size} onClick={action('click')}>
+                  {design} {size}
+                </Button>{' '}
+                <Button
+                  disabled
+                  design={design}
+                  size={size}
+                  onClick={action('click')}
+                >
+                  {design} {size} disabled
+                </Button>
+              </div>
+            ))}
+          </div>
+        ))}
+      </React.Fragment>
+    )),
+  )
   .add('button as link', () => (
     <Button
       element="a"
@@ -20,11 +40,6 @@ storiesOf('Button', module)
       rel="noopener noreferrer"
       onClick={action('click')}
     >
-      Button
-    </Button>
-  ))
-  .add('button as span with proper tabindex', () => (
-    <Button element="span" onClick={action('click')}>
       Button
     </Button>
   ))
