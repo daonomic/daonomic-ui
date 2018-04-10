@@ -1,5 +1,56 @@
 # Changelog
 
+## 6.0.0
+
+### Breaking changes
+
+* Moved all components to `./source/components` directory
+* `Panel`: removed `paddingSize` prop
+* Renamed CSS variables:
+  * `--theme-text` → `--color-text`
+  * `--theme-primary` → `--color-primary`
+  * `--theme-primary-opposite` → `--color-primary-opposite`
+  * `--theme-danger` → `--color-danger`
+  * `--theme-danger-opposite` → `--color-danger-opposite`
+  * `--theme-warning` → `--color-warning`
+  * `--theme-warning-opposite` → `--color-warning-opposite`
+  * `--theme-success` → `--color-success`
+  * `--theme-success-opposite` → `--color-success-opposite`
+  * `--theme-muted` → `--color-text-muted`
+  * `--theme-page-bg` → `--color-page-bg`
+  * `--theme-borders` → `--color-borders`
+* Removed CSS variables:
+  * `--theme-button-text`
+  * `--theme-panel-bg`
+
+### Improvements
+
+* Added global styles (`source/global.css`)
+* Added support for named imports (e.g. `import { Button } from '@daonomic/ui'`)
+* Updated `Panel` design
+* `Text`: added `isCaps` prop
+* Updated `Badge` design
+* Updated `Button` design and added secondary buttons design
+* Added CSS variables:
+  * `--color-black`
+  * `--color-black-secondary`
+  * `--color-text-primary`
+  * `--color-text-success`
+  * `--color-text-warning`
+  * `--color-text-danger`
+  * `--color-labels`
+  * `--color-placeholders`
+  * `--typo-font-family-main`
+  * `--typo-size-m`
+  * `--typo-line-height-m`
+  * `--typo-size-s`
+  * `--typo-line-height-s`
+  * `--typo-size-xs`
+  * `--typo-line-height-xs`
+  * `--typo-size-xxs`
+  * `--typo-line-height-xs`
+  * A few button variables in `source/theme/butotn.css`
+
 ## 5.0.3
 
 ### Fixes
