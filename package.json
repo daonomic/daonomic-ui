@@ -2,7 +2,7 @@
   "name": "@daonomic/ui",
   "version": "5.0.3",
   "description": "Base UI components for Daonomic services",
-  "main": "",
+  "main": "./source/index.js",
   "files": [
     "source"
   ],
@@ -80,6 +80,7 @@
     "webpack-append": "0.1.2"
   },
   "dependencies": {
+    "case": "1.5.4",
     "nanoid": "1.0.2"
   }
 }
