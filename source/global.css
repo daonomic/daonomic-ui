@@ -1,0 +1,18 @@
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+  font-family: var(--typo-font-family-main);
+  font-size: var(--typo-size-m);
+  line-height: var(--typo-line-height-m);
+  background-color: var(--color-page-bg);
+  color: var(--color-text);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}

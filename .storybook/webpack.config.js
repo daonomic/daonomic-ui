@@ -19,6 +19,10 @@ module.exports = {
           'postcss-loader',
           {
             loader: 'webpack-append',
+            query: `@import "${sourceDir}/global.css";`,
+          },
+          {
+            loader: 'webpack-append',
             query: `@import "${sourceDir}/theme/index.css";`,
           },
         ],

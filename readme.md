@@ -6,6 +6,8 @@ Base UI components for Daonomic services.
 
 ## Usage
 
+### Install dependencies
+
 Install `@daonomic/ui` package:
 
 ```bash
@@ -18,17 +20,17 @@ Install the following postcss plugins and include them to your build pipeline:
 npm i postcss-import postcss-nesting postcss-custom-media postcss-custom-properties postcss-calc postcss-color-function postcss-flexbugs-fixes autoprefixer -DE
 ```
 
-### Theming
+### Setup build
 
 `daonomic-ui` uses CSS custom properties for theming, so currently `daonomic-ui` requires `postcss-custom-properties` plugin and additional build setup due to insufficient browsers support.
 
-Add `theme.css` to your project:
+Create project-specific theme file and include base theme:
 
 ```css
-@import 'daonomic-ui/source/theme/index.css'; /* imports default theme */
+@import 'daonomic-ui/source/theme/index.css';
 
 :root {
-  --color-primary: #000; /* you can redefine custom properties from default theme */
+  --color-primary: #000; /* you can redefine custom properties from base theme */
   --color-modal-overlay: rgba(
     0,
     0,
@@ -44,17 +46,48 @@ Install `webpack-append` plugin:
 npm i webpack-append -DE
 ```
 
-Configure webpack to include `theme.css` at the beginning of every imported CSS file:
+Configure webpack to include theme file at the beginning of every imported CSS file:
 
-```javascript
-{
-  test: /\.css$/,
-  use: [
-    /* all your CSS loaders, */
-    {
-      loader: 'webpack-append',
-      query: `@import "/path/to/theme.css";`,
-    },
-  ],
-},
+```diff
+  {
+    test: /\.css$/,
+    use: [
+      /* all your CSS loaders, */
++    {
++       loader: 'webpack-append',
++       query: `@import "/path/to/theme.css";`,
++     },
+    ],
+  },
+```
+
+### Include global styles
+
+`@daonomic/ui` comes with a predefined global styles for typography etc. Add `@daonomic/ui/source/global.css` to your webpack entries:
+
+```diff
+  const webpackConfig = {
+    entry: [
+      `./source/index.js`,
++     `@daonomic/ui/source/global.css`,
+    ],
+  };
+```
+
+Or include it in your own global styles file:
+
+```diff
+  ./source/global.css
+
++ @import "@daonomic/ui/source/global.css";
+
+  body { /* ... */ }
+```
+
+### Include fonts
+
+By default, `@daonomic/ui` uses `Open Sans` as the main font family, so make sure to include it. For example, from Google Fonts:
+
+```html
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=cyrillic" rel="stylesheet">
 ```
