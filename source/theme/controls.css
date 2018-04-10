@@ -1,13 +1,13 @@
 :root {
   --theme-control-padding-vertical: 0.375rem;
   --theme-control-padding-horizontal: 0.75em;
-  --theme-control-border: var(--theme-borders);
+  --theme-control-border: var(--color-borders);
   --theme-control-background: #fff;
-  --theme-control-text: var(--theme-text);
-  --theme-control-focus-border: var(--theme-primary);
-  --theme-control-focus-shadow: color(var(--theme-primary) alpha(25%));
-  --theme-control-invalid-border: var(--theme-danger);
-  --theme-control-invalid-shadow: color(var(--theme-danger) alpha(25%));
-  --theme-control-disabled-border: var(--theme-borders);
-  --theme-control-disabled-background: color(var(--theme-borders) alpha(10%));
+  --theme-control-text: var(--color-text);
+  --theme-control-focus-border: var(--color-primary);
+  --theme-control-focus-shadow: color(var(--color-primary) alpha(25%));
+  --theme-control-invalid-border: var(--color-danger);
+  --theme-control-invalid-shadow: color(var(--color-danger) alpha(25%));
+  --theme-control-disabled-border: var(--color-borders);
+  --theme-control-disabled-background: color(var(--color-borders) alpha(10%));
 }

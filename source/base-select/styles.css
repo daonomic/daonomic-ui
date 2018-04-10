@@ -33,7 +33,7 @@
   padding-right: var(--select-padding-right);
   font-size: 16px;
   line-height: 1.5;
-  color: var(--theme-text);
+  color: var(--color-text);
   background-color: var(--theme-control-background);
   border: 0;
   border-radius: 0.25em;

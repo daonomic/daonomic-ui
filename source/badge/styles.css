@@ -4,8 +4,8 @@
   font-size: 16px;
   line-height: 1.35;
   border-radius: 0.25em;
-  color: var(--theme-primary-opposite);
-  background-color: var(--theme-primary);
+  color: var(--color-primary-opposite);
+  background-color: var(--color-primary);
 }
 
 .root_size_s {
@@ -17,23 +17,23 @@
 }
 
 .root_color_primary {
-  color: var(--theme-primary-opposite);
-  background-color: var(--theme-primary);
+  color: var(--color-primary-opposite);
+  background-color: var(--color-primary);
 }
 
 .root_color_warning {
-  color: var(--theme-warning-opposite);
-  background-color: var(--theme-warning);
+  color: var(--color-warning-opposite);
+  background-color: var(--color-warning);
 }
 
 .root_color_danger {
-  color: var(--theme-danger-opposite);
-  background-color: var(--theme-danger);
+  color: var(--color-danger-opposite);
+  background-color: var(--color-danger);
 }
 
 .root_color_success {
-  color: var(--theme-success-opposite);
-  background-color: var(--theme-success);
+  color: var(--color-success-opposite);
+  background-color: var(--color-success);
 }
 
 .root_uppercase {

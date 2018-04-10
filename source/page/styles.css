@@ -6,7 +6,7 @@
   bottom: 0;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  background-color: var(--theme-page-bg);
+  background-color: var(--color-page-bg);
 }
 
 .inner {

@@ -28,8 +28,8 @@ Add `theme.css` to your project:
 @import 'daonomic-ui/source/theme/index.css'; /* imports default theme */
 
 :root {
-  --theme-primary: #000; /* you can redefine custom properties from default theme */
-  --theme-modal-overlay-color: rgba(
+  --color-primary: #000; /* you can redefine custom properties from default theme */
+  --color-modal-overlay: rgba(
     0,
     0,
     0,

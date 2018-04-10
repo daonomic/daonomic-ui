@@ -1,4 +1,4 @@
 :root {
-  --theme-button-bg: var(--theme-primary);
-  --theme-button-text: var(--theme-primary-opposite);
+  --theme-button-bg: var(--color-primary);
+  --theme-button-text: var(--color-primary-opposite);
 }
