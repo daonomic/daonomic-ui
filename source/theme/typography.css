@@ -3,4 +3,13 @@
 
   --typo-size-m: 16px;
   --typo-line-height-m: 1.375;
+
+  --typo-size-s: 14px;
+  --typo-line-height-s: calc(20 / 14);
+
+  --typo-size-xs: 12px;
+  --typo-line-height-xs: calc(16 / 12);
+
+  --typo-size-xxs: 10px;
+  --typo-line-height-xs: 1.4;
 }

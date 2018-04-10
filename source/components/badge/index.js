@@ -27,11 +27,14 @@ const Badge = ({
   </span>
 );
 
+export const colors = ['primary', 'warning', 'danger', 'success'];
+export const sizes = ['s', 'm'];
+
 Badge.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
-  size: PropTypes.oneOf(['s', 'm']),
-  color: PropTypes.oneOf(['primary', 'warning', 'danger', 'success']),
+  size: PropTypes.oneOf(sizes),
+  color: PropTypes.oneOf(colors),
   isUppercase: PropTypes.bool,
 };
 

@@ -1,22 +1,23 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import Badge from './';
+import Badge, { colors, sizes } from './';
 
 storiesOf('Badge', module)
-  .add('default', withInfo()(() => <Badge>Badge</Badge>))
-  .add('uppercase', () => <Badge isUppercase>Badge</Badge>)
-  .add('colors', () => (
-    <React.Fragment>
-      <Badge color="primary">Primary</Badge>
-      <Badge color="warning">Warning</Badge>
-      <Badge color="danger">Danger</Badge>
-      <Badge color="success">Success</Badge>
-    </React.Fragment>
-  ))
-  .add('sizes', () => (
-    <React.Fragment>
-      <Badge size="s">Small</Badge>
-      <Badge size="m">Medium</Badge>
-    </React.Fragment>
-  ));
+  .add(
+    'sizes and colors',
+    withInfo()(() => (
+      <React.Fragment>
+        {sizes.map((size) => (
+          <div key={size} style={{ paddingBottom: '1em' }}>
+            {colors.map((color) => (
+              <Badge key={color} size={size} color={color}>
+                {size} {color}
+              </Badge>
+            ))}
+          </div>
+        ))}
+      </React.Fragment>
+    )),
+  )
+  .add('uppercase', () => <Badge isUppercase>Badge</Badge>);
