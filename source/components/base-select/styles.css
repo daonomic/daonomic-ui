@@ -74,7 +74,7 @@
 /* <option> elements inherit styles from <select>, so reset them. */
 .select option {
   color: var(--color-text);
-  background: var(--theme-control-background);
+  background: var(--control-background);
 }
 
 /* Media query to target Firefox only */
@@ -113,6 +113,6 @@
   .select:focus,
   .select:active {
     color: var(--color-text);
-    background: var(--theme-control-background);
+    background: var(--control-background);
   }
 }

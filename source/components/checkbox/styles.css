@@ -24,7 +24,7 @@
 .indicator {
   width: 1em;
   height: 1em;
-  background-color: var(--theme-control-background);
+  background-color: var(--control-background);
   border: 1px solid var(--theme-control-border);
   background-size: 50% 50%;
   background-position: center center;

@@ -3,17 +3,17 @@
   appearance: none;
   display: block;
   width: 100%;
-  padding: var(--theme-control-padding-vertical)
-    var(--theme-control-padding-horizontal);
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
   line-height: 1;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: var(--typo-size-m);
+  line-height: var(--typo-line-height-m);
   color: var(--color-text);
   outline: 0;
   border: 0;
-  border-radius: 0.25em;
-  border: 1px solid var(--theme-control-border);
-  background-color: var(--theme-control-background);
+  border: none;
+  border-bottom: 1px solid #e7eaee;
+  background-color: var(--control-background);
   transition: border 0.2s;
 }
 
@@ -28,18 +28,16 @@
 
 .root:focus {
   border-color: var(--theme-control-focus-border);
-  box-shadow: 0 0 0 3px var(--theme-control-focus-shadow);
 }
 
 .root_invalid {
-  border-color: var(--theme-control-invalid-border);
-  box-shadow: 0 0 0 3px var(--theme-control-invalid-shadow);
+  border-color: var(--color-danger);
 }
 
 .root_disabled {
+  opacity: 0.65;
   cursor: not-allowed;
-  border-color: var(--theme-control-disabled-border);
-  background-color: var(--theme-control-disabled-background);
+  color: #8492a5;
 }
 
 .root_textarea {

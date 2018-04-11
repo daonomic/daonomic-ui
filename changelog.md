@@ -6,12 +6,18 @@
 
 * Renamed CSS variables:
   * `--theme-panel-shadow` → `--panel-shadow`
+  * `--theme-control-background` → `--control-background`
 * Removed CSS variables:
   * `--theme-control-text`
+  * `--theme-control-focus-shadow`
+  * `--theme-control-invalid-shadow`
+  * `--theme-control-invalid-border`
+  * `--theme-control-padding-horizontal`
+  * `--theme-control-padding-vertical`
 
 ### Improvements
 
-* Updated `Select` design
+* Updated `Select`, `FieldError` and `BaseInput` design
 * Updated `FieldError` design
 * `Text`: added prop `size`
 * Added CSS variables:
