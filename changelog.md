@@ -12,6 +12,7 @@
 ### Improvements
 
 * Updated `Select` design
+* Updated `FieldError` design
 * `Text`: added prop `size`
 * Added CSS variables:
   * `--control-height-s`
