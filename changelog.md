@@ -1,6 +1,6 @@
 # Changelog
 
-## Next
+## 7.0.0
 
 ### Breaking changes
 
