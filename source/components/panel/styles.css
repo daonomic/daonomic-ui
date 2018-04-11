@@ -1,15 +1,8 @@
-:root {
-  --panel-padding-vertical: 15px;
-  --panel-padding-horizontal: 20px;
-  --panel-padding-vertical-desktop: 30px;
-  --panel-padding-horizontal-desktop: 40px;
-}
-
 .root {
   padding: var(--panel-padding-vertical) var(--panel-padding-horizontal);
   border-radius: 6px;
   background-color: #fff;
-  box-shadow: var(--theme-panel-shadow);
+  box-shadow: var(--panel-shadow);
 
   @media (--desktop) {
     padding: var(--panel-padding-vertical-desktop)

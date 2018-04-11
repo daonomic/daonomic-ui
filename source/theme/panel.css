@@ -1,3 +1,7 @@
 :root {
-  --theme-panel-shadow: 0 1px 2px 0 rgba(36, 45, 52, 0.1);
+  --panel-padding-vertical: 15px;
+  --panel-padding-horizontal: 20px;
+  --panel-padding-vertical-desktop: 30px;
+  --panel-padding-horizontal-desktop: 40px;
+  --panel-shadow: 0 1px 2px 0 rgba(36, 45, 52, 0.1);
 }

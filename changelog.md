@@ -4,6 +4,8 @@
 
 ### Breaking changes
 
+* Renamed CSS variables:
+  * `--theme-panel-shadow` → `--panel-shadow`
 * Removed CSS variables:
   * `--theme-control-text`
 
