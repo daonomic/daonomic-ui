@@ -34,7 +34,7 @@
 
 .input:focus ~ .indicator {
   border-color: var(--theme-control-focus-border);
-  box-shadow: 0 0 0 0.2em var(--theme-control-focus-shadow);
+  box-shadow: var(--control-focus-shadow);
 }
 
 .input:checked ~ .indicator {

@@ -1,9 +1,15 @@
 :root {
+  --control-height-s: 28px;
+  --control-height-m: 32px;
+  --control-height-l: 36px;
+
+  --control-focus-shadow: 0 0 0 3px color(var(--color-primary) alpha(25%));
+  --control-invalid-shadow: 0 0 0 3px color(var(--color-danger) alpha(25%));
+
   --theme-control-padding-vertical: 0.375rem;
   --theme-control-padding-horizontal: 0.75em;
   --theme-control-border: var(--color-borders);
   --theme-control-background: #fff;
-  --theme-control-text: var(--color-text);
   --theme-control-focus-border: var(--color-primary);
   --theme-control-focus-shadow: color(var(--color-primary) alpha(25%));
   --theme-control-invalid-border: var(--color-danger);

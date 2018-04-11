@@ -1,11 +1,13 @@
 :root {
-  --select-padding-right: calc(var(--theme-control-padding-horizontal) * 3);
+  --select-border-radius: 5px;
+  --select-padding-left: 1em;
+  --select-padding-right: 2em;
 }
 
 .root {
   position: relative;
   display: block;
-  color: var(--theme-control-text);
+  color: var(--color-text);
 }
 
 .root::after {
@@ -14,52 +16,53 @@
   top: 0;
   right: 0;
   bottom: 0;
-  width: calc(var(--theme-control-padding-horizontal) * 3);
+  width: var(--select-padding-right);
   pointer-events: none;
   opacity: 0.5;
   background-image: url('./resources/arrow.svg');
   background-repeat: no-repeat;
   background-position: center center;
-  border-top-right-radius: 0.25em;
-  border-bottom-right-radius: 0.25em;
+  border-top-right-radius: var(--select-border-radius);
+  border-bottom-right-radius: var(--select-border-radius);
 }
 
 .select {
   display: block;
   width: 100%;
+  height: var(--control-height-l);
   margin: 0;
-  padding: var(--theme-control-padding-vertical)
-    var(--theme-control-padding-horizontal);
+  padding-left: var(--select-padding-left);
   padding-right: var(--select-padding-right);
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: var(--typo-size-m);
+  line-height: var(--typo-line-height-m);
   color: var(--color-text);
-  background-color: var(--theme-control-background);
+  background-color: #fff;
   border: 0;
-  border-radius: 0.25em;
+  border-radius: var(--select-border-radius);
   cursor: pointer;
   outline: 0;
-  border: 1px solid var(--theme-control-border);
+  border: 1px solid var(--color-borders);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
   appearance: none;
   transition: box-shadow 0.2s;
 }
 
 .select_invalid {
-  border-color: var(--theme-control-invalid-border);
-  box-shadow: 0 0 0 3px var(--theme-control-invalid-shadow);
+  border-color: var(--color-danger);
+  box-shadow: var(--control-invalid-shadow);
 }
 
 .select_disabled {
-  background: var(--theme-control-disabled-background);
-  border-color: var(--theme-control-disabled-border);
+  opacity: 0.65;
+  color: var(--color-text-muted);
   cursor: not-allowed;
+  box-shadow: none;
 }
 
 /* Focus */
 .select:not(.select_invalid):not(.select_disabled):focus,
 .select:not(.select_invalid):not(.select_disabled):hover {
-  border-color: var(--theme-control-focus-border);
-  box-shadow: 0 0 0 3px var(--theme-control-focus-shadow);
+  box-shadow: var(--control-focus-shadow);
   transition: none;
 }
 
@@ -70,7 +73,7 @@
 
 /* <option> elements inherit styles from <select>, so reset them. */
 .select option {
-  color: var(--theme-control-text);
+  color: var(--color-text);
   background: var(--theme-control-background);
 }
 
@@ -109,7 +112,7 @@
   .select:hover,
   .select:focus,
   .select:active {
-    color: var(--theme-control-text);
+    color: var(--color-text);
     background: var(--theme-control-background);
   }
 }

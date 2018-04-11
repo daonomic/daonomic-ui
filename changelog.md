@@ -1,5 +1,26 @@
 # Changelog
 
+## Next
+
+### Breaking changes
+
+* Removed CSS variables:
+  * `--theme-control-text`
+
+### Improvements
+
+* Updated `Select` design
+* Added CSS variables:
+  * `--control-height-s`
+  * `--control-height-m`
+  * `--control-height-l`
+  * `--control-focus-shadow`
+  * `--control-invalid-shadow`
+
+### Fixes
+
+* Fixed `Button` sizes
+
 ## 6.0.0
 
 ### Breaking changes
