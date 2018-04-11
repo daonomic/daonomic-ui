@@ -10,12 +10,19 @@
 ### Improvements
 
 * Updated `Select` design
+* `Text`: added prop `size`
 * Added CSS variables:
   * `--control-height-s`
   * `--control-height-m`
   * `--control-height-l`
   * `--control-focus-shadow`
   * `--control-invalid-shadow`
+  * `--typo-size-l`
+  * `--typo-line-height-l`
+  * `--typo-size-xl`
+  * `--typo-line-height-xl`
+  * `--typo-size-xxl`
+  * `--typo-line-height-xxl`
 
 ### Fixes
 

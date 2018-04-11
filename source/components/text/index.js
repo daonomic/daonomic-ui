@@ -3,35 +3,47 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import styles from './styles.css';
 
+export const alignments = ['left', 'center', 'right'];
+export const sizes = ['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl'];
+
 export default class Text extends React.Component {
   static propTypes = {
     element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
     isMuted: PropTypes.bool,
     isCaps: PropTypes.bool,
-    align: PropTypes.oneOf(['left', 'center', 'right']),
+    size: PropTypes.oneOf(sizes),
+    align: PropTypes.oneOf(alignments),
   };
 
   static defaultProps = {
     element: 'span',
     align: 'left',
+    size: 'm',
   };
 
   render = () => {
     const {
       element,
       className,
-      align,
       isMuted,
       isCaps,
+      align,
+      size,
       ...restProps
     } = this.props;
 
     return React.createElement(element, {
-      className: cn(className, styles.root, styles[`root_align_${align}`], {
-        [styles.root_muted]: isMuted,
-        [styles.root_caps]: isCaps,
-      }),
+      className: cn(
+        className,
+        styles.root,
+        styles[`root_align_${align}`],
+        styles[`root_size_${size}`],
+        {
+          [styles.root_muted]: isMuted,
+          [styles.root_caps]: isCaps,
+        },
+      ),
       ...restProps,
     });
   };

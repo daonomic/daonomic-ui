@@ -18,3 +18,38 @@
 .root_align_right {
   text-align: right;
 }
+
+.root_size_xxs {
+  font-size: var(--typo-size-xxs);
+  line-height: var(--typo-line-height-xxs);
+}
+
+.root_size_xs {
+  font-size: var(--typo-size-xs);
+  line-height: var(--typo-line-height-xs);
+}
+
+.root_size_s {
+  font-size: var(--typo-size-s);
+  line-height: var(--typo-line-height-s);
+}
+
+.root_size_m {
+  font-size: var(--typo-size-m);
+  line-height: var(--typo-line-height-m);
+}
+
+.root_size_l {
+  font-size: var(--typo-size-l);
+  line-height: var(--typo-line-height-l);
+}
+
+.root_size_xl {
+  font-size: var(--typo-size-xl);
+  line-height: var(--typo-line-height-xl);
+}
+
+.root_size_xxl {
+  font-size: var(--typo-size-xxl);
+  line-height: var(--typo-line-height-xxl);
+}

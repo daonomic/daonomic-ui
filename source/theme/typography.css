@@ -1,15 +1,24 @@
 :root {
   --typo-font-family-main: Open Sans, Arial, Helvetica, sans-serif;
 
-  --typo-size-m: 16px;
-  --typo-line-height-m: 1.375;
-
-  --typo-size-s: 14px;
-  --typo-line-height-s: calc(20 / 14);
+  --typo-size-xxs: 10px;
+  --typo-line-height-xxs: 1.4;
 
   --typo-size-xs: 12px;
   --typo-line-height-xs: calc(16 / 12);
 
-  --typo-size-xxs: 10px;
-  --typo-line-height-xs: 1.4;
+  --typo-size-s: 14px;
+  --typo-line-height-s: calc(20 / 14);
+
+  --typo-size-m: 16px;
+  --typo-line-height-m: 1.375;
+
+  --typo-size-l: 18px;
+  --typo-line-height-l: calc(24 / 18);
+
+  --typo-size-xl: 20px;
+  --typo-line-height-xl: 1.2;
+
+  --typo-size-xxl: 24px;
+  --typo-line-height-xxl: calc(32 / 24);
 }
