@@ -4,8 +4,12 @@ import cn from 'classnames';
 import styles from './styles.css';
 import PanelSeparator from './separator';
 
-export default function Panel({ className, children }) {
-  return <section className={cn(className, styles.root)}>{children}</section>;
+export default function Panel({ className, children, ...restProps }) {
+  return (
+    <section {...restProps} className={cn(className, styles.root)}>
+      {children}
+    </section>
+  );
 }
 
 Panel.propTypes = {

@@ -1,5 +1,11 @@
 # Changelog
 
+## Next
+
+### Improvements
+
+* `Panel`: pass additional props to it's root element
+
 ## 7.0.1
 
 * Fix `--color-borders`
