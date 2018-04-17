@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.1.1
+
+* Added `pointer-events: none;` to `Input` label
+
 ## 7.1.0
 
 ### Improvements
