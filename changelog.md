@@ -4,7 +4,7 @@
 
 ### Improvements
 
-* `Panel`: added passing additional props to it's root element
+* `Panel` and `Page`: added passing additional props to root element
 * Removed unused `--color-placeholders` variable
 * Removed internal `BaseInput` component
 * Made `Input`'s label floating

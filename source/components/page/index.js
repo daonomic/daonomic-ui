@@ -5,9 +5,9 @@ import PageHeader from './page-header';
 import PageFooter from './page-footer';
 import PageContent from './page-content';
 
-export default function Page({ children }) {
+export default function Page({ children, ...restProps }) {
   return (
-    <div className={styles.root}>
+    <div {...restProps} className={styles.root}>
       <div className={styles.inner}>{children}</div>
     </div>
   );
