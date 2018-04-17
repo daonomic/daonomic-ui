@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.1.3
+
+* Fixed `FieldLabel` margins
+
 ## 7.1.2
 
 * Made label floating if input has placeholder
