@@ -16,6 +16,7 @@ export default class Input extends PureComponent {
     disabled: PropTypes.bool,
     invalid: PropTypes.bool,
     label: PropTypes.string.isRequired,
+    placeholder: PropTypes.string,
     value: PropTypes.string,
     errors: PropTypes.oneOfType([
       PropTypes.string,
@@ -56,20 +57,17 @@ export default class Input extends PureComponent {
     }
   };
 
-  render() {
+  renderInput = () => {
     const { id } = this;
     const {
       element,
-      className,
       disabled,
       invalid,
-      label,
       value,
       errors,
       ...restProps
     } = this.props;
     const normalizedErrors = [].concat(errors).filter(Boolean);
-    const isLabelFloating = (value || '').length > 0 || this.state.isFocused;
 
     if (element === 'input') {
       restProps.type = restProps.type || 'text';
@@ -79,7 +77,7 @@ export default class Input extends PureComponent {
       restProps.rows = restProps.rows || 3;
     }
 
-    const input = React.createElement(element, {
+    return React.createElement(element, {
       ...restProps,
       className: cn(styles.input, {
         [styles.input_disabled]: disabled,
@@ -93,10 +91,18 @@ export default class Input extends PureComponent {
       onFocus: this.handleFocus,
       onBlur: this.handleBlur,
     });
+  };
+
+  render() {
+    const { id } = this;
+    const { className, label, placeholder, value, errors } = this.props;
+    const normalizedErrors = [].concat(errors).filter(Boolean);
+    const isLabelFloating =
+      (placeholder || value || '').length > 0 || this.state.isFocused;
 
     return (
       <div className={cn(className, styles.root)}>
-        {input}
+        {this.renderInput()}
 
         <FieldLabel
           htmlFor={id}

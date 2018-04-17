@@ -19,6 +19,17 @@ storiesOf('Input', module)
       </Row>
     )),
   )
+  .add('with placeholder', () =>
+    ['input', 'textarea'].map((element) => (
+      <Row key={element}>
+        <Input.Uncontrolled
+          element={element}
+          label="E-mail"
+          placeholder="example@example.com"
+        />
+      </Row>
+    )),
+  )
   .add('with single error', () =>
     ['input', 'textarea'].map((element) => (
       <Row key={element}>

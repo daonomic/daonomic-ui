@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.1.2
+
+* Made label floating if input has placeholder
+
 ## 7.1.1
 
 * Added `pointer-events: none;` to `Input` label

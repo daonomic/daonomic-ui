@@ -47,6 +47,10 @@
   transition: border 0.2s;
 }
 
+.input::placeholder {
+  color: var(--color-labels);
+}
+
 .input:-webkit-autofill {
   /* this prevents autofilled input background-color change in Chrome */
   transition: background-color 5000s ease-in-out 0s;
