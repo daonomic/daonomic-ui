@@ -14,7 +14,6 @@ export default class Input extends PureComponent {
     element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
     disabled: PropTypes.bool,
-    invalid: PropTypes.bool,
     label: PropTypes.string.isRequired,
     placeholder: PropTypes.string,
     value: PropTypes.string,
@@ -59,14 +58,7 @@ export default class Input extends PureComponent {
 
   renderInput = () => {
     const { id } = this;
-    const {
-      element,
-      disabled,
-      invalid,
-      value,
-      errors,
-      ...restProps
-    } = this.props;
+    const { element, disabled, value, errors, ...restProps } = this.props;
     const normalizedErrors = [].concat(errors).filter(Boolean);
 
     if (element === 'input') {
@@ -81,10 +73,9 @@ export default class Input extends PureComponent {
       ...restProps,
       className: cn(styles.input, {
         [styles.input_disabled]: disabled,
-        [styles.input_invalid]: invalid,
+        [styles.input_invalid]: normalizedErrors.length > 0,
         [styles.input_textarea]: element === 'textarea',
       }),
-      invalid: normalizedErrors.length > 0,
       value: value || '',
       disabled,
       id: id,

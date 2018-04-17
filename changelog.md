@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.1.4
+
+* Removed `invalid` prop from `Input`
+
 ## 7.1.3
 
 * Fixed `FieldLabel` margins
