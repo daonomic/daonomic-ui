@@ -1,55 +1,111 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import nanoid from 'nanoid';
-import BaseInput from '../base-input';
+import cn from 'classnames';
 import FieldLabel from '../field-label';
 import FieldError from '../field-error';
 import Uncontrolled from './uncontrolled';
+import styles from './styles.css';
 
 export default class Input extends PureComponent {
   static Uncontrolled = Uncontrolled;
 
   static propTypes = {
     element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+    className: PropTypes.string,
+    disabled: PropTypes.bool,
+    invalid: PropTypes.bool,
     label: PropTypes.string.isRequired,
     value: PropTypes.string,
-    onChange: PropTypes.func.isRequired,
-    className: PropTypes.string,
     errors: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.arrayOf(PropTypes.string),
     ]),
+    onChange: PropTypes.func.isRequired,
+    onFocus: PropTypes.func,
+    onBlur: PropTypes.func,
+  };
+
+  static defaultProps = {
+    element: 'input',
   };
 
   id = nanoid(15);
 
+  state = {
+    isFocused: false,
+  };
+
+  handleFocus = () => {
+    this.setState({
+      isFocused: true,
+    });
+
+    if (typeof this.props.onFocus === 'function') {
+      this.props.onFocus();
+    }
+  };
+
+  handleBlur = () => {
+    this.setState({
+      isFocused: false,
+    });
+
+    if (typeof this.props.onBlur === 'function') {
+      this.props.onBlur();
+    }
+  };
+
   render() {
     const { id } = this;
     const {
-      label,
       element,
-      value,
       className,
+      disabled,
+      invalid,
+      label,
+      value,
       errors,
       ...restProps
     } = this.props;
     const normalizedErrors = [].concat(errors).filter(Boolean);
+    const isLabelFloating = (value || '').length > 0 || this.state.isFocused;
 
     if (element === 'input') {
       restProps.type = restProps.type || 'text';
     }
 
-    return (
-      <div className={className}>
-        <FieldLabel htmlFor={id}>{label}</FieldLabel>
+    if (element === 'textarea') {
+      restProps.rows = restProps.rows || 3;
+    }
 
-        <BaseInput
-          {...restProps}
-          element={element}
-          invalid={normalizedErrors.length > 0}
-          value={value || ''}
-          id={id}
-        />
+    const input = React.createElement(element, {
+      ...restProps,
+      className: cn(styles.input, {
+        [styles.input_disabled]: disabled,
+        [styles.input_invalid]: invalid,
+        [styles.input_textarea]: element === 'textarea',
+      }),
+      invalid: normalizedErrors.length > 0,
+      value: value || '',
+      disabled,
+      id: id,
+      onFocus: this.handleFocus,
+      onBlur: this.handleBlur,
+    });
+
+    return (
+      <div className={cn(className, styles.root)}>
+        {input}
+
+        <FieldLabel
+          htmlFor={id}
+          className={cn(styles.label, {
+            [styles.label_floating]: isLabelFloating,
+          })}
+        >
+          {label}
+        </FieldLabel>
 
         <FieldError>{normalizedErrors.join(', ')}</FieldError>
       </div>

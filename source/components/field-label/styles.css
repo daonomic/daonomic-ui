@@ -1,7 +1,6 @@
 .root {
   box-sizing: border-box;
   display: inline-block;
-  padding-bottom: 0.5em;
-  color: var(--color-text-muted);
+  color: var(--color-labels);
   transition: all 0.2s;
 }

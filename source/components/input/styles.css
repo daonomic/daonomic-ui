@@ -1,0 +1,76 @@
+:root {
+  --input-floating-label-height: 21px;
+}
+
+.root {
+  position: relative;
+  padding-top: var(--input-floating-label-height);
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0;
+  transform: translateY(
+    calc(
+      -50% + var(--input-floating-label-height) + (var(--control-height-l) / 2)
+    )
+  );
+  transition: transform 0.2s ease;
+}
+
+.label_floating {
+  transform: translateY(0) scale(0.75);
+}
+
+.label,
+.input {
+  font-size: var(--typo-size-m);
+  line-height: var(--typo-line-height-m);
+}
+
+.input {
+  box-sizing: border-box;
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: var(--control-height-l);
+  font-family: inherit;
+  color: var(--color-text);
+  outline: 0;
+  border: 0;
+  border: none;
+  border-bottom: 1px solid #e7eaee;
+  background-color: var(--control-background);
+  transition: border 0.2s;
+}
+
+.input:-webkit-autofill {
+  /* this prevents autofilled input background-color change in Chrome */
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.input:invalid {
+  box-shadow: none; /* disable unnecessary :invalid box-shadow in Firefox */
+}
+
+.input:focus {
+  border-color: var(--theme-control-focus-border);
+}
+
+.input_invalid {
+  border-color: var(--color-danger);
+}
+
+.input_disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  color: #8492a5;
+}
+
+.input_textarea {
+  padding-top: 7px;
+  height: calc(var(--control-height-l) * 2);
+  resize: vertical;
+}

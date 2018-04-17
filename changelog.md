@@ -1,10 +1,13 @@
 # Changelog
 
-## Next
+## 7.1.0
 
 ### Improvements
 
-* `Panel`: pass additional props to it's root element
+* `Panel`: added passing additional props to it's root element
+* Removed unused `--color-placeholders` variable
+* Removed internal `BaseInput` component
+* Made `Input`'s label floating
 
 ## 7.0.1
 
