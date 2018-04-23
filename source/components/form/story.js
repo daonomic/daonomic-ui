@@ -10,6 +10,18 @@ import Button from '../button';
 storiesOf('Form', module).add('default', () => (
   <form onSubmit={(event) => event.preventDefault()}>
     <FormRow>
+      <div style={{ display: 'flex' }}>
+        <Select label="Select country">
+          <option value="1">Russia</option>
+          <option value="2">USA</option>
+        </Select>
+
+        <div style={{ width: '1em' }} />
+
+        <Input.Uncontrolled label="Name" />
+      </div>
+    </FormRow>
+    <FormRow>
       <Select label="Select country">
         <option value="1">Russia</option>
         <option value="2">USA</option>

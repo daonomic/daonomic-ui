@@ -1,5 +1,11 @@
 # Changelog
 
+## Next
+
+### Fixes
+
+* Fix `FieldLabel` design
+
 ## 7.1.4
 
 * Removed `invalid` prop from `Input`
