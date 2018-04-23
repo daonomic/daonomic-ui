@@ -1,8 +1,6 @@
 # Changelog
 
-## Next
-
-### Fixes
+## 7.1.5
 
 * Fix `FieldLabel` design
 
