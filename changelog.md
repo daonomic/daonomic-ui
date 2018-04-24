@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.1.6
+
+* Fix `Select` placeholder
+
 ## 7.1.5
 
 * Fix `FieldLabel` design

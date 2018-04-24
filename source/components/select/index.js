@@ -25,7 +25,7 @@ export default class Select extends Component {
     }
 
     return (
-      <option value="" hidden disabled>
+      <option value="" disabled>
         {placeholder}
       </option>
     );
