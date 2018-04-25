@@ -61,7 +61,7 @@
 }
 
 .input:focus {
-  border-color: var(--theme-control-focus-border);
+  border-color: var(--color-primary);
 }
 
 .input_invalid {

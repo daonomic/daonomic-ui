@@ -5,11 +5,16 @@
 ### Breaking changes
 
 * Removed component `FieldError` (use `FieldHint` instead)
+* Removed following CSS variables:
+  * `--theme-control-disabled-border`
+  * `--theme-control-disabled-background`
+  * `--theme-control-focus-border`
 
 ### Improvements
 
 * Added `FieldHint` component
 * Added `description` prop to `Select`, `Input` and `Checkbox`
+* Updated `Checkbox` design
 
 ## 7.1.6
 

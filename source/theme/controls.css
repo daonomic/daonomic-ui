@@ -8,7 +8,4 @@
   --control-background: #fff;
 
   --theme-control-border: var(--color-borders);
-  --theme-control-focus-border: var(--color-primary);
-  --theme-control-disabled-border: var(--color-borders);
-  --theme-control-disabled-background: color(var(--color-borders) alpha(10%));
 }

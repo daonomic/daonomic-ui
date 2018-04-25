@@ -1,3 +1,7 @@
+:root {
+  --checkbox-border-color: #9a9fa3;
+}
+
 .root {
   position: relative;
   padding-left: 1.75em;
@@ -22,36 +26,33 @@
 }
 
 .indicator {
+  display: block;
   width: 1em;
   height: 1em;
   background-color: var(--control-background);
-  border: 1px solid var(--theme-control-border);
-  background-size: 50% 50%;
+  border: 2px solid var(--checkbox-border-color);
+  background-size: 0.75em 0.5625em;
   background-position: center center;
   background-repeat: no-repeat;
   border-radius: 0.25em;
 }
 
 .input:focus ~ .indicator {
-  border-color: var(--theme-control-focus-border);
-  box-shadow: var(--control-focus-shadow);
+  border-color: var(--color-primary);
 }
 
 .input:checked ~ .indicator {
+  border-color: var(--color-primary);
   background-color: var(--color-primary);
 }
 
-.input:active:not(:disabled) ~ .indicator {
-  background-color: #84c6ff;
-}
-
 .input:checked ~ .indicator {
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTYuNCwxTDUuNywxLjdMMi45LDQuNUwyLjEsMy43TDEuNCwzTDAsNC40bDAuNywwLjdsMS41LDEuNWwwLjcsMC43bDAuNy0wLjdsMy41LTMuNWwwLjctMC43TDYuNCwxTDYuNCwxeiINCgkvPg0KPC9zdmc+DQo=);
+  background-image: url('./resources/check.svg');
 }
 
 .input:disabled ~ .indicator {
-  border-color: var(--theme-control-disabled-border);
-  background-color: var(--theme-control-disabled-background);
+  border-color: color(var(--checkbox-border-color) alpha(30%));
+  background-color: color(var(--checkbox-border-color) alpha(10%));
 }
 
 .text {
