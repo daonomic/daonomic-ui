@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import nanoid from 'nanoid';
 import cn from 'classnames';
 import FieldLabel from '../field-label';
-import FieldError from '../field-error';
+import FieldHint from '../field-hint';
 import Uncontrolled from './uncontrolled';
 import styles from './styles.css';
 
@@ -104,7 +104,7 @@ export default class Input extends PureComponent {
           {label}
         </FieldLabel>
 
-        <FieldError>{normalizedErrors.join(', ')}</FieldError>
+        <FieldHint type="error">{normalizedErrors.join(', ')}</FieldHint>
       </div>
     );
   }

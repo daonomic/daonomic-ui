@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import nanoid from 'nanoid';
 import BaseSelect from '../base-select';
 import FieldLabel from '../field-label';
-import FieldError from '../field-error';
+import FieldHint from '../field-hint';
 
 export default class Select extends Component {
   static propTypes = {
@@ -57,7 +57,7 @@ export default class Select extends Component {
           {this.renderPlaceholder({ placeholder })}
           {children}
         </BaseSelect>
-        <FieldError>{normalizedErrors.join(', ')}</FieldError>
+        <FieldHint type="error">{normalizedErrors.join(', ')}</FieldHint>
       </div>
     );
   };

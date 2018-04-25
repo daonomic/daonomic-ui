@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import FormRow from '../form-row';
-import FieldError from '../field-error';
+import FieldHint from '../field-hint';
 import Select from '../select';
 import Input from '../input';
 import Checkbox from '../checkbox';
@@ -49,7 +49,7 @@ storiesOf('Form', module).add('default', () => (
 
     <FormRow>
       <Button type="submit">Submit</Button>
-      <FieldError>Submit failed, please try again</FieldError>
+      <FieldHint type="error">Submit failed, please try again</FieldHint>
     </FormRow>
   </form>
 ));

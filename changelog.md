@@ -1,5 +1,15 @@
 # Changelog
 
+## 8.0.0
+
+### Breaking changes
+
+* Removed component `FieldError` (use `FieldHint` instead)
+
+### Improvements
+
+* Added `FieldHint` component
+
 ## 7.1.6
 
 * Fix `Select` placeholder

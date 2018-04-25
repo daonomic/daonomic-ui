@@ -3,5 +3,12 @@
   padding-top: 0.4em;
   font-size: var(--typo-size-xs);
   line-height: var(--typo-line-height-xs);
+}
+
+.root_type_default {
+  color: var(--color-text-muted);
+}
+
+.root_type_error {
   color: var(--color-text-danger);
 }

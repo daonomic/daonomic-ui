@@ -13,5 +13,5 @@ storiesOf('Checkbox', module)
     <Checkbox disabled label="I agree with the terms and conditions" />
   ))
   .add('error', () => (
-    <Checkbox error="required" label="I agree with the terms and conditions" />
+    <Checkbox errors="required" label="I agree with the terms and conditions" />
   ));

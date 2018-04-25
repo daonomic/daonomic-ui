@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import FieldError from '../field-error';
+import FieldHint from '../field-hint';
 import styles from './styles.css';
 
 export default class Checkbox extends PureComponent {
@@ -30,7 +30,7 @@ export default class Checkbox extends PureComponent {
             }}
           />
         </label>
-        <FieldError>{normalizedErrors.join(', ')}</FieldError>
+        <FieldHint type="error">{normalizedErrors.join(', ')}</FieldHint>
       </div>
     );
   };
