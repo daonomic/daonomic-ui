@@ -1,5 +1,16 @@
 # Changelog
 
+## 9.0.0
+
+### Breaking changes
+
+* Removed `isMuted` prop on `Text` (use `design` prop instead)
+
+### Improvements
+
+* Added `desgin` prop to `Text`
+* Added global links styles
+
 ## 8.0.2
 
 * Changed `description` prop type from `string` to `node` in `Select`, `Input` and `Checkbox`

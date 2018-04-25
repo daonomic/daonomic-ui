@@ -1,7 +1,3 @@
-.root_muted {
-  color: var(--color-text-muted);
-}
-
 .root_caps {
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -52,4 +48,23 @@
 .root_size_xxl {
   font-size: var(--typo-size-xxl);
   line-height: var(--typo-line-height-xxl);
+}
+
+.root_design_muted {
+  color: var(--color-text-muted);
+}
+
+/* When editing .root_design_link styles don't forget to update global links styles in global.css */
+.root_design_link {
+  text-decoration: none;
+  color: var(--color-text-link);
+  cursor: pointer;
+}
+
+.root_design_link:hover {
+  text-decoration: underline;
+}
+
+.root_design_link:focus {
+  outline: 2px solid color(var(--color-primary) alpha(30%));
 }

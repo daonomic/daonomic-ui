@@ -5,13 +5,14 @@ import styles from './styles.css';
 
 export const alignments = ['left', 'center', 'right'];
 export const sizes = ['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl'];
+export const designs = ['muted', 'link'];
 
 export default class Text extends React.Component {
   static propTypes = {
     element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
-    isMuted: PropTypes.bool,
     isCaps: PropTypes.bool,
+    design: PropTypes.oneOf(designs),
     size: PropTypes.oneOf(sizes),
     align: PropTypes.oneOf(alignments),
   };
@@ -26,10 +27,10 @@ export default class Text extends React.Component {
     const {
       element,
       className,
-      isMuted,
       isCaps,
       align,
       size,
+      design,
       ...restProps
     } = this.props;
 
@@ -40,7 +41,7 @@ export default class Text extends React.Component {
         styles[`root_align_${align}`],
         styles[`root_size_${size}`],
         {
-          [styles.root_muted]: isMuted,
+          [styles[`root_design_${design}`]]: design,
           [styles.root_caps]: isCaps,
         },
       ),

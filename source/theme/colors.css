@@ -16,6 +16,7 @@
 
   --color-text: var(--color-black);
   --color-text-muted: var(--color-black-secondary);
+  --color-text-link: #4382ff;
   --color-text-primary: #3173ed;
   --color-text-success: #55aa00;
   --color-text-warning: #ec9e00;
