@@ -11,6 +11,7 @@ export default class Select extends Component {
     className: PropTypes.string,
     label: PropTypes.string,
     placeholder: PropTypes.string,
+    description: PropTypes.string,
     errors: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.arrayOf(PropTypes.string),
@@ -45,6 +46,7 @@ export default class Select extends Component {
       children,
       label,
       placeholder,
+      description,
       errors,
       ...restProps
     } = this.props;
@@ -57,6 +59,7 @@ export default class Select extends Component {
           {this.renderPlaceholder({ placeholder })}
           {children}
         </BaseSelect>
+        <FieldHint>{description}</FieldHint>
         <FieldHint type="error">{normalizedErrors.join(', ')}</FieldHint>
       </div>
     );

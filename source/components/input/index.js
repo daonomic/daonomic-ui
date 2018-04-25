@@ -16,6 +16,7 @@ export default class Input extends PureComponent {
     disabled: PropTypes.bool,
     label: PropTypes.string.isRequired,
     placeholder: PropTypes.string,
+    description: PropTypes.string,
     value: PropTypes.string,
     errors: PropTypes.oneOfType([
       PropTypes.string,
@@ -58,7 +59,14 @@ export default class Input extends PureComponent {
 
   renderInput = () => {
     const { id } = this;
-    const { element, disabled, value, errors, ...restProps } = this.props;
+    const {
+      element,
+      disabled,
+      value,
+      errors,
+      description, // eslint-disable-line no-unused-vars
+      ...restProps
+    } = this.props;
     const normalizedErrors = [].concat(errors).filter(Boolean);
 
     if (element === 'input') {
@@ -104,6 +112,7 @@ export default class Input extends PureComponent {
           {label}
         </FieldLabel>
 
+        <FieldHint>{this.props.description}</FieldHint>
         <FieldHint type="error">{normalizedErrors.join(', ')}</FieldHint>
       </div>
     );

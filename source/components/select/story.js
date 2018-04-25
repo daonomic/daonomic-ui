@@ -11,7 +11,7 @@ storiesOf('Select', module)
     </Select>
   ))
   .add('with label', () => (
-    <Select label="Cryptocurrency">
+    <Select label="Select cryptocurrency">
       <option value="btc">Bitcoin</option>
       <option value="eth">Ethereum</option>
       <option value="ltc">Litecoin</option>
@@ -24,10 +24,25 @@ storiesOf('Select', module)
       <option value="ltc">Litecoin</option>
     </Select>
   ))
+  .add('with description', () => (
+    <Select description="Select cryptocurrency">
+      <option value="btc">Bitcoin</option>
+      <option value="eth">Ethereum</option>
+      <option value="ltc">Litecoin</option>
+    </Select>
+  ))
   .add('with errors', () => (
+    <Select errors={['This field is required']}>
+      <option value="btc">Bitcoin</option>
+      <option value="eth">Ethereum</option>
+      <option value="ltc">Litecoin</option>
+    </Select>
+  ))
+  .add('with label, placeholder, description and errors', () => (
     <Select
-      label="Cryptocurrency"
+      label="Select cryptocurrency"
       placeholder="Select cryptocurrency"
+      description="Select cryptocurrency"
       errors={['This field is required']}
     >
       <option value="btc">Bitcoin</option>

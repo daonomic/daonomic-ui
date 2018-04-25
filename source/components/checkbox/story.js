@@ -12,6 +12,19 @@ storiesOf('Checkbox', module)
   .add('disabled', () => (
     <Checkbox disabled label="I agree with the terms and conditions" />
   ))
-  .add('error', () => (
+  .add('with description', () => (
+    <Checkbox
+      label="I agree with the terms and conditions"
+      description="It's required by the law"
+    />
+  ))
+  .add('with errors', () => (
     <Checkbox errors="required" label="I agree with the terms and conditions" />
+  ))
+  .add('with description and errors', () => (
+    <Checkbox
+      errors="required"
+      label="I agree with the terms and conditions"
+      description="It's required by the law"
+    />
   ));

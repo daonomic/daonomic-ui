@@ -9,6 +9,7 @@
 ### Improvements
 
 * Added `FieldHint` component
+* Added `description` prop to `Select`, `Input` and `Checkbox`
 
 ## 7.1.6
 
