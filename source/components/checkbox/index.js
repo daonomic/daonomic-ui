@@ -8,7 +8,7 @@ export default class Checkbox extends PureComponent {
   static propTypes = {
     className: PropTypes.string,
     label: PropTypes.string,
-    description: PropTypes.string,
+    description: PropTypes.node,
     errors: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.arrayOf(PropTypes.string),

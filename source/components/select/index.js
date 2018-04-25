@@ -11,7 +11,7 @@ export default class Select extends Component {
     className: PropTypes.string,
     label: PropTypes.string,
     placeholder: PropTypes.string,
-    description: PropTypes.string,
+    description: PropTypes.node,
     errors: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.arrayOf(PropTypes.string),

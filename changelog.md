@@ -1,5 +1,9 @@
 # Changelog
 
+## 8.0.2
+
+* Changed `description` prop type from `string` to `node` in `Select`, `Input` and `Checkbox`
+
 ## 8.0.1
 
 * Fixed `Checkbox` design
