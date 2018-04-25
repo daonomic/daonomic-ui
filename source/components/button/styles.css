@@ -18,6 +18,14 @@
   user-select: none;
 }
 
+.root:hover {
+  text-decoration: none;
+}
+
+.root:focus {
+  outline: 0;
+}
+
 .root_disabled {
   opacity: 0.65;
   cursor: default;

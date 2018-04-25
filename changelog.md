@@ -1,5 +1,9 @@
 # Changelog
 
+## 9.0.1
+
+* Fixed `Button` with `a` element styles
+
 ## 9.0.0
 
 ### Breaking changes
