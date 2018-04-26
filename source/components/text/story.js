@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import Text, { alignments, sizes, designs } from './';
+import Text, { alignments, sizes, designs, weights } from './';
 
 const textSample =
   'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem minus cupiditate nostrum vero aliquid tenetur, ipsam nulla nisi pariatur dolorem excepturi, similique quibusdam possimus culpa architecto suscipit eum aspernatur ipsum!';
@@ -52,5 +52,14 @@ storiesOf('Text', module)
       <a href="https://google.com" target="_blank" rel="noopener noreferrer">
         Just a regular html link that uses global styles
       </a>
+    </React.Fragment>
+  ))
+  .add('weights', () => (
+    <React.Fragment>
+      {weights.map((weight) => (
+        <Text key={weight} element="div" weight={weight}>
+          weight {weight}
+        </Text>
+      ))}
     </React.Fragment>
   ));

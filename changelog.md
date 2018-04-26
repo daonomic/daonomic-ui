@@ -1,5 +1,11 @@
 # Changelog
 
+## 9.1.0
+
+### Imrpovements
+
+* Added `weight` prop to `Text`
+
 ## 9.0.1
 
 * Fixed `Button` with `a` element styles

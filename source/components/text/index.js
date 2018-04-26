@@ -6,6 +6,7 @@ import styles from './styles.css';
 export const alignments = ['left', 'center', 'right'];
 export const sizes = ['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl'];
 export const designs = ['muted', 'link'];
+export const weights = ['normal', 'semibold'];
 
 export default class Text extends React.Component {
   static propTypes = {
@@ -15,12 +16,14 @@ export default class Text extends React.Component {
     design: PropTypes.oneOf(designs),
     size: PropTypes.oneOf(sizes),
     align: PropTypes.oneOf(alignments),
+    weight: PropTypes.oneOf(weights),
   };
 
   static defaultProps = {
     element: 'span',
     align: 'left',
     size: 'm',
+    weight: 'normal',
   };
 
   render = () => {
@@ -31,6 +34,7 @@ export default class Text extends React.Component {
       align,
       size,
       design,
+      weight,
       ...restProps
     } = this.props;
 
@@ -40,6 +44,7 @@ export default class Text extends React.Component {
         styles.root,
         styles[`root_align_${align}`],
         styles[`root_size_${size}`],
+        styles[`root_weight_${weight}`],
         {
           [styles[`root_design_${design}`]]: design,
           [styles.root_caps]: isCaps,

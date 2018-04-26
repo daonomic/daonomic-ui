@@ -68,3 +68,11 @@
 .root_design_link:focus {
   outline: 2px solid color(var(--color-primary) alpha(30%));
 }
+
+.root_weight_normal {
+  font-weight: 400;
+}
+
+.root_weight_semibold {
+  font-weight: 600;
+}
