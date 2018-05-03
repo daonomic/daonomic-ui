@@ -76,6 +76,7 @@
 
 .input_textarea {
   padding-top: 7px;
-  height: calc(var(--control-height-l) * 2);
+  padding-bottom: 7px;
+  height: auto;
   resize: vertical;
 }
