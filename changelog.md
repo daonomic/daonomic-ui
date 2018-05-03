@@ -1,5 +1,20 @@
 # Changelog
 
+## 9.2.0
+
+### Improvements
+
+* Added `Form`, `Form.Field` and `Form.Group` components
+
+### Fixes
+
+* Fixed `FieldLabel` design
+* Fixed `Input` with `element="textarea"` design
+
+### Deprecations
+
+* Deprecated `FormRow` component
+
 ## 9.1.0
 
 ### Imrpovements
