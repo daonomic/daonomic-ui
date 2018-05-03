@@ -6,4 +6,7 @@
   line-height: var(--typo-line-height-xs);
   color: var(--color-labels);
   transition: all 0.2s;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
