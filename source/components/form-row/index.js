@@ -4,6 +4,8 @@ import cn from 'classnames';
 import styles from './styles.css';
 
 const FormRow = ({ className, children }) => {
+  console.warn('FormRow is deprecated, use Form.Field instead'); // eslint-disable-line
+
   return <div className={cn(className, styles.root)}>{children}</div>;
 };
 
