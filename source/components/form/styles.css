@@ -1,0 +1,15 @@
+:not(.group) > .field:not(:last-child),
+.group:not(:last-child) {
+  padding-bottom: 25px;
+}
+
+.group {
+  display: flex;
+  align-items: flex-start;
+  margin: -0.5em;
+}
+
+.group .field {
+  flex: 1 1 100%;
+  margin: 0.5em;
+}
