@@ -1,5 +1,11 @@
 # Changelog
 
+## 9.3.0
+
+### Improvements
+
+* Added `Hr` component
+
 ## 9.2.0
 
 ### Improvements
