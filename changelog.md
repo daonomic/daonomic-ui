@@ -1,5 +1,9 @@
 # Changelog
 
+## 9.4.1
+
+* Fix build
+
 ## 9.4.0
 
 ### Improvements

@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "start-storybook -p 9000",
-    "build": "babel source --out-dir lib",
+    "build": "cp -R source lib && babel lib -d lib",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "format": "prettier --write \"./source/**/*.{js,css,json,md}\"",
