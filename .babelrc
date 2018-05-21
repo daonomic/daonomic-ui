@@ -1,0 +1,22 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": "8.9",
+          "browsers": ["last 2 versions", "iOS >= 8", "> 1%"]
+        }
+      }
+    ],
+    "react"
+  ],
+  "plugins": [
+    "syntax-export-extensions",
+    "transform-export-extensions",
+    "syntax-object-rest-spread",
+    "transform-object-rest-spread",
+    "syntax-class-properties",
+    "transform-class-properties"
+  ]
+}

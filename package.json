@@ -2,9 +2,9 @@
   "name": "@daonomic/ui",
   "version": "9.3.0",
   "description": "Base UI components for Daonomic services",
-  "main": "./source/index.js",
+  "main": "./lib/index.js",
   "files": [
-    "source"
+    "lib"
   ],
   "engines": {
     "node": "^8.9.0",
@@ -12,6 +12,7 @@
   },
   "scripts": {
     "start": "start-storybook -p 9000",
+    "build": "babel source --out-dir lib",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "format": "prettier --write \"./source/**/*.{js,css,json,md}\"",
@@ -21,7 +22,7 @@
     "ensure-git-credentials": "git config --local user.name \"Dev\" && git config --local user.email \"dev@0v1se.com\"",
     "postinstall": "npm run ensure-git-credentials",
     "precommit": "npm run ensure-git-credentials && lint-staged && npm t",
-    "prepublishOnly": "npm t",
+    "prepublishOnly": "npm t && npm run build",
     "postpublish": "npm run deploy-storybook"
   },
   "lint-staged": {
@@ -53,7 +54,16 @@
     "@storybook/react": "3.4.2",
     "@storybook/storybook-deployer": "2.3.0",
     "autoprefixer": "8.3.0",
+    "babel-cli": "6.26.0",
     "babel-eslint": "8.2.3",
+    "babel-plugin-syntax-class-properties": "6.13.0",
+    "babel-plugin-syntax-export-extensions": "6.13.0",
+    "babel-plugin-syntax-object-rest-spread": "6.13.0",
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "babel-plugin-transform-export-extensions": "6.22.0",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-react": "6.24.1",
     "classnames": "2.2.5",
     "css-loader": "0.28.11",
     "eslint": "4.19.1",
@@ -80,7 +90,6 @@
     "webpack-append": "0.1.2"
   },
   "dependencies": {
-    "case": "1.5.4",
     "nanoid": "1.0.2"
   }
 }

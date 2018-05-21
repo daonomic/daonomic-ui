@@ -5,6 +5,7 @@
 # Build
 build/
 storybook-static/
+lib/
 
 # Development stuff
 platforms/

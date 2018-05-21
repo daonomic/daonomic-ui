@@ -1,5 +1,12 @@
 # Changelog
 
+## 9.4.0
+
+### Improvements
+
+* Transpile source code so it can be used without requiring additional build setup
+* Use export extensions instead of webpack’s `require.context` to reexport all components at `index.js`
+
 ## 9.3.0
 
 ### Improvements
