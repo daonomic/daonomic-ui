@@ -97,7 +97,8 @@ export default class Input extends PureComponent {
     const { className, label, placeholder, value, errors } = this.props;
     const normalizedErrors = [].concat(errors).filter(Boolean);
     const isLabelFloating =
-      (placeholder || value || '').length > 0 || this.state.isFocused;
+      (placeholder || (value || '').toString()).length > 0 ||
+      this.state.isFocused;
 
     return (
       <div className={cn(className, styles.root)}>

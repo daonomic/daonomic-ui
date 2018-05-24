@@ -84,4 +84,9 @@ storiesOf('Input', module)
         />
       </Row>
     )),
-  );
+  )
+  .add('type=number', () => (
+    <Row>
+      <Input type="number" label="Amount" value="50" />
+    </Row>
+  ));
