@@ -1,5 +1,10 @@
 # Changelog
 
+## 9.4.2
+
+* Fixed number input floating label
+* Prevented source files from being published
+
 ## 9.4.1
 
 * Fix build
