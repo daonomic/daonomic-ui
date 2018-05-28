@@ -22,7 +22,7 @@ export default class Checkbox extends PureComponent {
       label,
       description,
       errors,
-      labelProps,
+      labelProps = {},
       ...restProps
     } = this.props;
     const normalizedErrors = [].concat(errors).filter(Boolean);
