@@ -1,5 +1,9 @@
 # Changelog
 
+## 9.5.1
+
+* Fixed missing `labelProps` value in `Checkbox`
+
 ## 9.5.0
 
 ### Improvements
