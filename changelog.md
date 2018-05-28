@@ -1,5 +1,11 @@
 # Changelog
 
+## 9.5.0
+
+### Improvements
+
+* `Checkbox`: added `labelProps` prop
+
 ## 9.4.2
 
 * Fixed number input floating label
