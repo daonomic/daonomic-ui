@@ -1,6 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
+import 'focus-visible';
 import styles from './styles.css';
 
 export const alignments = ['left', 'center', 'right'];

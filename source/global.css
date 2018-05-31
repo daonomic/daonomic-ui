@@ -28,6 +28,7 @@ a:hover {
   text-decoration: underline;
 }
 
-a:focus {
+body:not(:global(.js-focus-visible)) a:focus,
+a:global(.focus-visible) {
   outline: 2px solid color(var(--color-primary) alpha(30%));
 }

@@ -1,3 +1,5 @@
+import 'focus-visible';
+
 export { default as Badge } from './components/badge';
 export { default as BaseSelect } from './components/base-select';
 export { default as Button } from './components/button';
