@@ -20,7 +20,6 @@
     "test:unit": "jest --verbose --passWithNoTests",
     "test:lint": "eslint source",
     "ensure-git-credentials": "git config --local user.name \"Dev\" && git config --local user.email \"dev@0v1se.com\"",
-    "postinstall": "npm run ensure-git-credentials",
     "precommit": "npm run ensure-git-credentials && lint-staged && npm t",
     "prepublishOnly": "npm t && npm run build",
     "postpublish": "npm run deploy-storybook"
