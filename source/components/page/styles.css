@@ -1,18 +1,8 @@
 .root {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  background-color: var(--color-page-bg);
-}
-
-.inner {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--color-page-bg);
 }
 
 .header,

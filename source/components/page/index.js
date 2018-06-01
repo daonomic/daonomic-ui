@@ -8,7 +8,7 @@ import PageContent from './page-content';
 export default function Page({ children, ...restProps }) {
   return (
     <div {...restProps} className={styles.root}>
-      <div className={styles.inner}>{children}</div>
+      {children}
     </div>
   );
 }
