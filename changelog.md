@@ -1,5 +1,9 @@
 # Changelog
 
+## 9.6.2
+
+- Fixed `Page` component and global styles
+
 ## 9.6.1
 
 - Removed unnecessary postinstall script
