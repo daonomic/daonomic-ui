@@ -1,5 +1,9 @@
 # Changelog
 
+## 9.6.1
+
+- Removed unnecessary postinstall script
+
 ## 9.6.0
 
 ### Improvements
