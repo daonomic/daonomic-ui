@@ -1,5 +1,9 @@
 # Changelog
 
+## 10.0.0
+
+- Changed default `Button` design from `primary` to `secondary`
+
 ## 9.6.2
 
 - Fixed `Page` component and global styles
