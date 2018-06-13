@@ -45,7 +45,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   size: 'm',
-  design: 'primary',
+  design: 'secondary',
   className: '',
   element: 'button',
 };
