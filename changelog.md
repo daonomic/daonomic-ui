@@ -1,5 +1,11 @@
 # Changelog
 
+## 10.1.0
+
+### Improvements
+
+- Added `MailtoLink` component
+
 ## 10.0.0
 
 - Changed default `Button` design from `primary` to `secondary`
