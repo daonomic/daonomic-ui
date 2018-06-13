@@ -1,5 +1,9 @@
 # Changelog
 
+## 10.1.1
+
+- Fixed missing `MailtoLink` export from index file
+
 ## 10.1.0
 
 ### Improvements
