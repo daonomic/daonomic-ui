@@ -32,7 +32,7 @@ export default function Button(props) {
   return React.createElement(element, attrs);
 }
 
-export const sizes = ['s', 'm', 'l'];
+export const sizes = ['s', 'm'];
 export const designs = ['primary', 'secondary'];
 
 Button.propTypes = {

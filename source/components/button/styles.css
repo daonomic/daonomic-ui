@@ -41,11 +41,6 @@
   font-size: var(--typo-size-s);
 }
 
-.root_size_l {
-  height: var(--control-height-l);
-  font-size: var(--typo-size-m);
-}
-
 .root_disabled {
   opacity: 0.5;
   cursor: default;
