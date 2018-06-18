@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 import nanoid from 'nanoid';
 import BaseSelect from '../base-select';
 import FieldLabel from '../field-label';
 import FieldHint from '../field-hint';
+import styles from './styles.css';
 
 export default class Select extends Component {
   static propTypes = {
@@ -53,7 +55,7 @@ export default class Select extends Component {
     const normalizedErrors = [].concat(errors).filter(Boolean);
 
     return (
-      <div className={className}>
+      <div className={cn(className, styles.root)}>
         {this.renderLabel({ label })}
         <BaseSelect invalid={normalizedErrors.length > 0} {...restProps}>
           {this.renderPlaceholder({ placeholder })}

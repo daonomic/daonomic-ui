@@ -1,10 +1,7 @@
-:root {
-  --input-floating-label-height: 21px;
-}
-
 .root {
   position: relative;
-  padding-top: var(--input-floating-label-height);
+  padding-top: var(--control-label-height);
+  margin-top: calc(var(--control-label-height) * -1);
 }
 
 .label {
@@ -13,9 +10,7 @@
   left: 0;
   transform-origin: 0 0;
   transform: translateY(
-    calc(
-      -50% + var(--input-floating-label-height) + (var(--control-height-l) / 2)
-    )
+    calc(-50% + var(--control-label-height) + (var(--control-height-m) / 2))
   );
   transition: transform 0.2s ease;
   pointer-events: none;
@@ -36,7 +31,7 @@
   appearance: none;
   display: block;
   width: 100%;
-  height: var(--control-height-l);
+  height: var(--control-height-m);
   font-family: inherit;
   color: var(--color-text);
   outline: 0;

@@ -29,45 +29,25 @@ storiesOf('Form', module)
       <Form onSubmit={(event) => event.preventDefault()}>
         <Form.Group>
           <Form.Field>
-            <Input.Uncontrolled type="email" label="Email" />
-          </Form.Field>
-          <Form.Field>
-            <Input.Uncontrolled type="password" label="Password" />
-          </Form.Field>
-          <Form.Field>
-            <Input.Uncontrolled
-              type="password"
-              label="Confirm password"
-              errors={['Passwords should match']}
-            />
-          </Form.Field>
-        </Form.Group>
-
-        <Form.Field>
-          <Button type="submit">Submit</Button>
-          <FieldHint type="error">Submit failed, please try again</FieldHint>
-        </Form.Field>
-      </Form>
-
-      <div style={{ height: '3em' }} />
-
-      <Form onSubmit={(event) => event.preventDefault()}>
-        <Form.Group>
-          <Form.Field>
             <Select label="Select country">
               <option value="1">Russia</option>
               <option value="2">USA</option>
             </Select>
           </Form.Field>
+
           <Form.Field>
-            <Input.Uncontrolled label="Name" />
+            <Input.Uncontrolled
+              type="email"
+              label="Email"
+              errors={['Should not be empty']}
+            />
+          </Form.Field>
+
+          <Form.Field>
+            <Button type="submit">Submit</Button>
+            <FieldHint type="error">Submit failed, please try again</FieldHint>
           </Form.Field>
         </Form.Group>
-
-        <Form.Field>
-          <Button type="submit">Submit</Button>
-          <FieldHint type="error">Submit failed, please try again</FieldHint>
-        </Form.Field>
       </Form>
     </React.Fragment>
   ))

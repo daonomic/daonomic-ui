@@ -1,7 +1,7 @@
 .root {
   box-sizing: border-box;
   display: table;
-  margin-bottom: 0.5em;
+  height: var(--control-label-height);
   font-size: var(--typo-size-xs);
   line-height: var(--typo-line-height-xs);
   color: var(--color-labels);

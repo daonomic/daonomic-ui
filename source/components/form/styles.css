@@ -12,4 +12,5 @@
 .group .field {
   flex: 1 1 100%;
   margin: 0.5em;
+  padding-top: var(--control-label-height);
 }
