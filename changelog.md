@@ -1,5 +1,18 @@
 # Changelog
 
+## 11.0.0
+
+### Breaking changes
+
+- Removed `l` size on `Button`
+- Removed `--control-height-l` CSS variable
+- `Input` and `Select` should be used only inside `Form.Field`
+
+### Improvements
+
+- `Form.Group` can contain `Button`
+- Added `--control-label-height` CSS variable
+
 ## 10.1.1
 
 - Fixed missing `MailtoLink` export from index file
