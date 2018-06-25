@@ -7,7 +7,6 @@ export { default as Checkbox } from './components/checkbox';
 export { default as FieldHint } from './components/field-hint';
 export { default as FieldLabel } from './components/field-label';
 export { default as Form } from './components/form';
-export { default as FormRow } from './components/form-row';
 export { default as Hr } from './components/hr';
 export { default as Input } from './components/input';
 export { default as Logo } from './components/logo';
