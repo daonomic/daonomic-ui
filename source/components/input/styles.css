@@ -1,7 +1,6 @@
 .root {
   position: relative;
   padding-top: var(--control-label-height);
-  margin-top: calc(var(--control-label-height) * -1);
 }
 
 .label {

@@ -7,11 +7,19 @@ export default class FormField extends React.Component {
   static propTypes = {
     className: PropTypes.string,
     children: PropTypes.node,
+    withGhostLabel: PropTypes.bool,
   };
 
   render() {
-    const { className, ...restProps } = this.props;
+    const { className, withGhostLabel, ...restProps } = this.props;
 
-    return <div className={cn(className, styles.field)} {...restProps} />;
+    return (
+      <div
+        className={cn(className, styles.field, {
+          [styles['field_with-ghost-label']]: withGhostLabel,
+        })}
+        {...restProps}
+      />
+    );
   }
 }

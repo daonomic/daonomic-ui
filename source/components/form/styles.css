@@ -12,5 +12,8 @@
 .group .field {
   flex: 1 1 100%;
   margin: 0.5em;
+}
+
+.group .field_with-ghost-label {
   padding-top: var(--control-label-height);
 }
