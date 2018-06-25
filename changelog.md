@@ -1,5 +1,20 @@
 # Changelog
 
+## 12.0.0
+
+### Breaking changes
+
+- Inline `Form.Field`s now require `withGhostLabel` prop if it’s children doesn’t have a label
+- Removed deprecated `FormRow` component
+
+### Improvements
+
+- Removed negative margins on `Input` and `Select`
+
+### Fixes
+
+- Fixed `Form` layout
+
 ## 11.0.0
 
 ### Breaking changes
