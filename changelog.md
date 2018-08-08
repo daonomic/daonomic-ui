@@ -1,5 +1,12 @@
 # Changelog
 
+## 12.1.0
+
+### Improvements
+
+- Changed `--tablet` breakpoint `480px` → `600px`
+- Made `Form.Group` linear on mobiles
+
 ## 12.0.0
 
 ### Breaking changes
