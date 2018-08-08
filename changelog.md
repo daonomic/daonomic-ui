@@ -1,5 +1,9 @@
 # Changelog
 
+## 12.1.1
+
+- Fixed `Form` layout
+
 ## 12.1.0
 
 ### Improvements
