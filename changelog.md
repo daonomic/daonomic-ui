@@ -1,5 +1,9 @@
 # Changelog
 
+## 12.1.2
+
+- Fixed Checkbox alignment in form groups
+
 ## 12.1.1
 
 - Fixed `Form` layout
