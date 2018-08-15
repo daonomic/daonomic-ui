@@ -1,22 +1,37 @@
 :root {
+  --checkbox-size: 16px;
+  --checkbox-safe-area: 4px;
+  --checkbox-top-spacing: calc(
+    (
+        var(--control-height-m) - var(--checkbox-size) -
+          var(--checkbox-safe-area) * 2
+      ) / 2
+  );
   --checkbox-border-color: #9a9fa3;
 }
 
 .root {
-  position: relative;
-  padding-left: 1.5em;
   line-height: 1.5em;
 }
 
+.label,
+.hints {
+  padding-left: 24px;
+}
+
 .label {
+  position: relative;
   display: block;
+  min-height: var(--control-height-m);
+  padding-top: var(--checkbox-top-spacing);
+  padding-bottom: var(--checkbox-top-spacing);
   cursor: pointer;
 }
 
 .input,
 .indicator {
   position: absolute;
-  top: 0.25em;
+  top: calc(var(--checkbox-top-spacing) + 0.25em);
   left: 0;
 }
 
@@ -27,8 +42,8 @@
 
 .indicator {
   display: block;
-  width: 1em;
-  height: 1em;
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
   background-color: var(--control-background);
   border: 2px solid var(--checkbox-border-color);
   background-size: 0.75em 0.5625em;

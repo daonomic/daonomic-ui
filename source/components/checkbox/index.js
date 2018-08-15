@@ -42,8 +42,10 @@ export default class Checkbox extends PureComponent {
             }}
           />
         </label>
-        <FieldHint>{description}</FieldHint>
-        <FieldHint type="error">{normalizedErrors.join(', ')}</FieldHint>
+        <div className={styles.hints}>
+          <FieldHint>{description}</FieldHint>
+          <FieldHint type="error">{normalizedErrors.join(', ')}</FieldHint>
+        </div>
       </div>
     );
   };

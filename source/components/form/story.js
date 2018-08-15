@@ -59,6 +59,13 @@ storiesOf('Form', module)
           </Form.Field>
 
           <Form.Field withGhostLabel>
+            <Checkbox
+              label="Agree with terms and conditions"
+              errors={['This field is required']}
+            />
+          </Form.Field>
+
+          <Form.Field withGhostLabel>
             <Button type="submit">Submit</Button>
             <FieldHint type="error">Submit failed, please try again</FieldHint>
           </Form.Field>
