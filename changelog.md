@@ -1,5 +1,10 @@
 # Changelog
 
+## 12.1.4
+
+- Fixed `Button` as link styles
+- Show only one `Panel.Separator` if there are multiple separators after each other
+
 ## 12.1.3
 
 - Fixed BaseSelect appearance in Firefox when used inline
