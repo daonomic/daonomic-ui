@@ -27,6 +27,7 @@
 }
 
 .select {
+  box-sizing: border-box;
   display: block;
   width: 100%;
   height: var(--control-height-m);
@@ -83,36 +84,6 @@
   .select {
     text-indent: 0.01px;
     text-overflow: '';
-    padding-right: 1rem;
-  }
-}
-
-/* IE9 hack to hide the arrow */
-@media screen and (min-width: 0\0) {
-  .select {
-    z-index: 1;
-    padding: 0.5rem 1.5rem 0.5rem 1rem;
-  }
-
-  .root::after {
-    z-index: 5;
-  }
-
-  .root::before {
-    position: absolute;
-    top: 0;
-    right: 1rem;
-    bottom: 0;
-    z-index: 2;
-    content: '';
-    display: block;
-    width: 1.5rem;
-  }
-
-  .select:hover,
-  .select:focus,
-  .select:active {
-    color: var(--color-text);
-    background: var(--control-background);
+    padding-right: var(--select-padding-right);
   }
 }
