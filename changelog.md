@@ -1,5 +1,9 @@
 # Changelog
 
+## 12.1.3
+
+- Fixed BaseSelect appearance in Firefox when used inline
+
 ## 12.1.2
 
 - Fixed Checkbox alignment in form groups
