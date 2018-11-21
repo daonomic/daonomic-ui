@@ -26,3 +26,7 @@
       calc(var(--panel-padding-horizontal-desktop) * -1);
   }
 }
+
+.separator + .separator {
+  display: none;
+}

@@ -9,6 +9,8 @@ storiesOf('Panel', module)
       <Panel>
         Panel content
         <Panel.Separator />
+        <Panel.Separator />
+        <Panel.Separator />
         Panel content
       </Panel>
     </Overlay>
