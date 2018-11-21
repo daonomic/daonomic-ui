@@ -8,7 +8,6 @@
   white-space: nowrap;
   font: inherit;
   line-height: 1;
-  text-decoration: none;
   background: none;
   border: none;
   outline: none;
@@ -18,7 +17,10 @@
   user-select: none;
 }
 
-.root:hover {
+.root,
+.root:hover,
+.root:active,
+.root:focus {
   text-decoration: none;
 }
 
@@ -51,10 +53,16 @@
 }
 
 .root_design_primary {
-  color: var(--button-primary-text-color);
   background: var(--button-primary-background);
   border: var(--button-primary-border);
   box-shadow: var(--button-primary-shadow);
+}
+
+.root_design_primary,
+.root_design_primary:hover,
+.root_design_primary:active,
+.root_design_primary:focus {
+  color: var(--button-primary-text-color);
 }
 
 .root_design_primary:not(.root_disabled):hover,
@@ -68,9 +76,15 @@
 
 .root_design_secondary {
   background: var(--button-secondary-background);
-  color: var(--button-secondary-text-color);
   border: var(--button-secondary-border);
   box-shadow: var(--button-secondary-shadow);
+}
+
+.root_design_secondary,
+.root_design_secondary:hover,
+.root_design_secondary:active,
+.root_design_secondary:focus {
+  color: var(--button-secondary-text-color);
 }
 
 .root_design_secondary:not(.root_disabled):hover,
