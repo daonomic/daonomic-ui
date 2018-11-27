@@ -1,5 +1,10 @@
 # Changelog
 
+## 12.2.2
+
+- Tweaked `Modal` styles
+- Added `Modal.setAppElement()`
+
 ## 12.2.1
 
 - Added `Modal` export to root
