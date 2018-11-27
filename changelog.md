@@ -1,5 +1,9 @@
 # Changelog
 
+## 12.2.1
+
+- Added `Modal` export to root
+
 ## 12.2.0
 
 ### Improvements
