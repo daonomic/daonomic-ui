@@ -39,3 +39,5 @@ Modal.propTypes = {
   onClose: PropTypes.func.isRequired,
   className: PropTypes.string,
 };
+
+Modal.setAppElement = ReactModal.setAppElement;
