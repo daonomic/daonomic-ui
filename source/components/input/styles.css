@@ -1,6 +1,8 @@
 .root {
   position: relative;
   padding-top: var(--control-label-height);
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .label {
