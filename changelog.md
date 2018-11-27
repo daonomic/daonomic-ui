@@ -1,5 +1,9 @@
 # Changelog
 
+## 12.2.3
+
+- Fixed input label overflow
+
 ## 12.2.2
 
 - Tweaked `Modal` styles
