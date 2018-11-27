@@ -1,5 +1,11 @@
 # Changelog
 
+## 12.2.0
+
+### Improvements
+
+- Added `Modal` component
+
 ## 12.1.4
 
 - Fixed `Button` as link styles
