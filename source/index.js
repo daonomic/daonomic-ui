@@ -16,3 +16,4 @@ export { default as Panel } from './components/panel';
 export { default as Select } from './components/select';
 export { default as Text } from './components/text';
 export { default as MailtoLink } from './components/mailto-link';
+export { default as Modal } from './components/modal';
