@@ -1,5 +1,9 @@
 # Changelog
 
+## 12.2.4
+
+- Fixed secondary `Button` border color
+
 ## 12.2.3
 
 - Fixed input label overflow
