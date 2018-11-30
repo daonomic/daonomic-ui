@@ -10,7 +10,7 @@
   --button-primary-disabled-text-color: var(--color-primary-opposite);
 
   --button-secondary-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
-  --button-secondary-border: 1px solid #cfd5da;
+  --button-secondary-border: 1px solid var(--color-borders);
   --button-secondary-background: #fff;
   --button-secondary-hover-background: #f7f7f8;
   --button-secondary-active-background: #f2f5f7;
