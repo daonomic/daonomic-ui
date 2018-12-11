@@ -1,5 +1,11 @@
 # Changelog
 
+## 12.3.0
+
+### Improvements
+
+- Added `IconArrowPopout` component
+
 ## 12.2.4
 
 - Fixed secondary `Button` border color
