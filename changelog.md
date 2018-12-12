@@ -1,5 +1,12 @@
 # Changelog
 
+## 12.4.0
+
+### Improvements
+
+- Close `Modal` on escape press or overlay click
+- Added `Tooltip` component based on [react-tooltip-lite](https://github.com/bsidelinger912/react-tooltip-lite)
+
 ## 12.3.0
 
 ### Improvements
