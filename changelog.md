@@ -1,5 +1,9 @@
 # Changelog
 
+## 12.4.1
+
+- Export `Tooltip` from root
+
 ## 12.4.0
 
 ### Improvements
