@@ -1,5 +1,9 @@
 # Changelog
 
+## 12.5.1
+
+- Set `Tooltip` content line height
+
 ## 12.5.0
 
 ### Improvements
