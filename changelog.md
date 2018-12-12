@@ -1,5 +1,16 @@
 # Changelog
 
+## 12.5.0
+
+### Improvements
+
+- Added `Portal` component
+- Simplified `Tooltip` API
+
+### Fixes
+
+- Fixed blinking `Tooltip` with multiple children
+
 ## 12.4.1
 
 - Export `Tooltip` from root
