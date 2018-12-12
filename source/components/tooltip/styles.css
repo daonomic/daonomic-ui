@@ -2,24 +2,37 @@
   display: inline-block;
 }
 
-:global(.react-tooltip-lite) {
-  background: #333;
-  color: white;
+.tooltip {
+  position: absolute;
+  z-index: 1000;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px;
   font-size: 12px;
+  border-radius: 5px;
+  color: white;
+  background: #333;
 }
 
-:global(.react-tooltip-lite-up-arrow) {
+.arrow {
+  position: absolute;
+  z-index: 1001;
+  width: 0;
+  height: 0;
+}
+
+.arrow_up {
   border-top: 10px solid #333;
 }
 
-:global(.react-tooltip-lite-down-arrow) {
+.arrow_down {
   border-bottom: 10px solid #333;
 }
 
-:global(.react-tooltip-lite-right-arrow) {
+.arrow_right {
   border-right: 10px solid #333;
 }
 
-:global(.react-tooltip-lite-left-arrow) {
+.arrow_left {
   border-left: 10px solid #333;
 }
