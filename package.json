@@ -1,6 +1,6 @@
 {
   "name": "@daonomic/ui",
-  "version": "12.5.0",
+  "version": "12.5.1",
   "description": "Base UI components for Daonomic services",
   "main": "./lib/index.js",
   "files": [
