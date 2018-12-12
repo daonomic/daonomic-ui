@@ -18,6 +18,7 @@ export default function Modal({
       {...restProps}
       className={cn(className, styles.window)}
       overlayClassName={styles.overlay}
+      onRequestClose={onClose}
     >
       <header className={styles.header}>
         <Text element="h2" size="xl">
