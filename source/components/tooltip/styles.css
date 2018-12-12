@@ -1,0 +1,25 @@
+.root {
+  display: inline-block;
+}
+
+:global(.react-tooltip-lite) {
+  background: #333;
+  color: white;
+  font-size: 12px;
+}
+
+:global(.react-tooltip-lite-up-arrow) {
+  border-top: 10px solid #333;
+}
+
+:global(.react-tooltip-lite-down-arrow) {
+  border-bottom: 10px solid #333;
+}
+
+:global(.react-tooltip-lite-right-arrow) {
+  border-right: 10px solid #333;
+}
+
+:global(.react-tooltip-lite-left-arrow) {
+  border-left: 10px solid #333;
+}
