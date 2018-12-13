@@ -11,6 +11,10 @@ body {
   color: var(--color-text);
 }
 
+body {
+  overflow-y: scroll;
+}
+
 *,
 *::before,
 *::after {
