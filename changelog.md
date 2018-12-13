@@ -1,5 +1,11 @@
 # Changelog
 
+## 12.6.0
+
+### Improvements
+
+- Always show scrollbar on body to prevent horizontal shift on content overflow
+
 ## 12.5.1
 
 - Set `Tooltip` content line height
