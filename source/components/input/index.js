@@ -14,7 +14,7 @@ export default class Input extends PureComponent {
     element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
     disabled: PropTypes.bool,
-    label: PropTypes.string.isRequired,
+    label: PropTypes.node.isRequired,
     placeholder: PropTypes.string,
     description: PropTypes.node,
     value: PropTypes.string,

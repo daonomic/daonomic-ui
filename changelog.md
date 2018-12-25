@@ -1,5 +1,11 @@
 # Changelog
 
+## 12.7.0
+
+### Improvements
+
+- Allow to pass `PropTypes.node` to `Input`’s label
+
 ## 12.6.0
 
 ### Improvements

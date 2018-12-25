@@ -89,4 +89,13 @@ storiesOf('Input', module)
     <Row>
       <Input type="number" label="Amount" value="50" />
     </Row>
+  ))
+  .add('custom label', () => (
+    <Row>
+      <Input
+        type="number"
+        label={<span style={{ color: 'green' }}>Amount</span>}
+        value="50"
+      />
+    </Row>
   ));
