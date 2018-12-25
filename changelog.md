@@ -1,5 +1,11 @@
 # Changelog
 
+## 12.8.0
+
+### Improvements
+
+- Allow to pass `PropTypes.node` to `Select`’s label and placeholder
+
 ## 12.7.0
 
 ### Improvements

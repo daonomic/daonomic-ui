@@ -56,4 +56,17 @@ storiesOf('Select', module)
       <option value="eth">Ethereum</option>
       <option value="ltc">Litecoin</option>
     </Select>
+  ))
+  .add('custom placeholder and label', () => (
+    <Select
+      disabled
+      label={<span style={{ color: 'green' }}>Cryptocurrency</span>}
+      placeholder={
+        <span style={{ color: 'green' }}>Select cryptocurrency</span>
+      }
+    >
+      <option value="btc">Bitcoin</option>
+      <option value="eth">Ethereum</option>
+      <option value="ltc">Litecoin</option>
+    </Select>
   ));

@@ -9,8 +9,8 @@ export default class Select extends Component {
   static propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    label: PropTypes.string,
-    placeholder: PropTypes.string,
+    label: PropTypes.node,
+    placeholder: PropTypes.node,
     description: PropTypes.node,
     errors: PropTypes.oneOfType([
       PropTypes.string,
