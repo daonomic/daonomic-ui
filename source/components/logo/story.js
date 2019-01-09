@@ -9,4 +9,5 @@ storiesOf('Logo', module)
       <Logo design="white" />
     </div>
   ))
-  .add('gradient', () => <Logo design="gradient" />);
+  .add('gradient', () => <Logo design="gradient" />)
+  .add('compact', () => <Logo design="compact" />);
