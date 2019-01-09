@@ -33,6 +33,11 @@
   cursor: default;
 }
 
+.root_fullwidth {
+  display: block;
+  width: 100%;
+}
+
 .root_size_s {
   height: var(--control-height-s);
   font-size: var(--typo-size-xs);
