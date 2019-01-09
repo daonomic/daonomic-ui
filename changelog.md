@@ -1,5 +1,11 @@
 # Changelog
 
+## 12.11.0
+
+### Improvements
+
+- Allowed `Page` className extension
+
 ## 12.10.0
 
 ### Improvements
