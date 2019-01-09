@@ -1,5 +1,11 @@
 # Changelog
 
+## 12.10.0
+
+### Improvements
+
+- Added compact logo variant
+
 ## 12.9.0
 
 ### Improvements
