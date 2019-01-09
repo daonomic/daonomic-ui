@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 import styles from './styles.css';
 
-export default function PageContent({ children, ...restProps }) {
+export default function PageContent({ children, className, ...restProps }) {
   return (
-    <main className={styles.content} {...restProps}>
+    <main {...restProps} className={cn(className, styles.content)}>
       {children}
     </main>
   );
@@ -12,6 +13,7 @@ export default function PageContent({ children, ...restProps }) {
 
 PageContent.propTypes = {
   children: PropTypes.node,
+  className: PropTypes.string,
 };
 
 PageContent.defaultProps = {

@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 import styles from './styles.css';
 
-export default function PageFooter({ children, ...restProps }) {
+export default function PageFooter({ children, className, ...restProps }) {
   return (
-    <footer className={styles.footer} {...restProps}>
+    <footer {...restProps} className={cn(className, styles.footer)}>
       {children}
     </footer>
   );
@@ -12,6 +13,7 @@ export default function PageFooter({ children, ...restProps }) {
 
 PageFooter.propTypes = {
   children: PropTypes.node,
+  className: PropTypes.string,
 };
 
 PageFooter.defaultProps = {

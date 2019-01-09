@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 import styles from './styles.css';
 
-export default function PageHeader({ children, ...restProps }) {
+export default function PageHeader({ children, className, ...restProps }) {
   return (
-    <header className={styles.header} {...restProps}>
+    <header {...restProps} className={cn(className, styles.header)}>
       {children}
     </header>
   );
@@ -12,6 +13,7 @@ export default function PageHeader({ children, ...restProps }) {
 
 PageHeader.propTypes = {
   children: PropTypes.node,
+  className: PropTypes.string,
 };
 
 PageHeader.defaultProps = {
