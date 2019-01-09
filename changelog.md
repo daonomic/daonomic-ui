@@ -1,5 +1,11 @@
 # Changelog
 
+## 12.9.0
+
+### Improvements
+
+- Added `fullWidth` prop to `Button`
+
 ## 12.8.0
 
 ### Improvements
