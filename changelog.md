@@ -1,5 +1,11 @@
 # Changelog
 
+## 12.12.0
+
+### Improvements
+
+- Added compactWhite logo variant
+
 ## 12.11.0
 
 ### Improvements
