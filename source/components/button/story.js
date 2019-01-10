@@ -32,16 +32,30 @@ storiesOf('Button', module)
       </React.Fragment>
     )),
   )
+  .add('full width button', () => <Button fullWidth>Full width button</Button>)
   .add('button as link', () => (
-    <Button
-      element="a"
-      href="https://google.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={action('click')}
-    >
-      Button
-    </Button>
+    <React.Fragment>
+      <Button
+        element="a"
+        href="https://google.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={action('click')}
+      >
+        Button
+      </Button>
+
+      <Button
+        fullWidth
+        element="a"
+        href="https://google.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={action('click')}
+      >
+        Button
+      </Button>
+    </React.Fragment>
   ))
   .add('button with custom element', () => (
     <Button
