@@ -1,5 +1,9 @@
 # Changelog
 
+## 12.12.1
+
+- Fixed fullwidth `Button` with custom element
+
 ## 12.12.0
 
 ### Improvements
