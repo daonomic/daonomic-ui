@@ -4,10 +4,17 @@ import standardLogo from './resources/standard.svg';
 import whiteLogo from './resources/white.svg';
 import gradientLogo from './resources/gradient.svg';
 import compactLogo from './resources/compact.svg';
+import compactWhiteLogo from './resources/compact-white.svg';
 
 export default class Logo extends React.Component {
   static propTypes = {
-    design: PropTypes.oneOf(['standard', 'gradient', 'white', 'compact']),
+    design: PropTypes.oneOf([
+      'standard',
+      'gradient',
+      'white',
+      'compact',
+      'compactWhite',
+    ]),
   };
 
   static defaultProps = {
@@ -30,6 +37,11 @@ export default class Logo extends React.Component {
 
       case 'compact': {
         logoImage = compactLogo;
+        break;
+      }
+
+      case 'compactWhite': {
+        logoImage = compactWhiteLogo;
         break;
       }
 
