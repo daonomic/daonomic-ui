@@ -34,6 +34,7 @@
   margin: 0;
   padding-left: var(--select-padding-left);
   padding-right: var(--select-padding-right);
+  font: inherit;
   font-size: var(--typo-size-m);
   line-height: var(--typo-line-height-m);
   color: var(--color-text);
