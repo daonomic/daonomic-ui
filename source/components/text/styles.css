@@ -74,6 +74,6 @@ body:not(:global(.js-focus-visible)) .root_design_link:focus,
   font-weight: 400;
 }
 
-.root_weight_semibold {
+.root_weight_bold {
   font-weight: 600;
 }

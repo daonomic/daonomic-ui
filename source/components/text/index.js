@@ -7,7 +7,7 @@ import styles from './styles.css';
 export const alignments = ['left', 'center', 'right'];
 export const sizes = ['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl'];
 export const designs = ['muted', 'link'];
-export const weights = ['normal', 'semibold'];
+export const weights = ['normal', 'bold'];
 
 export default class Text extends React.Component {
   static propTypes = {
