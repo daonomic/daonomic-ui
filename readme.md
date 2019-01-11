@@ -86,8 +86,11 @@ Or include it in your own global styles file:
 
 ### Include fonts
 
-By default, `@daonomic/ui` uses `Open Sans` as the main font family, so make sure to include it. For example, from Google Fonts:
+By default, `@daonomic/ui` uses `IBM Plex Sans` as the main font family, so make sure to include it. For example, from Google Fonts:
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=cyrillic" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;subset=cyrillic"
+  rel="stylesheet"
+/>
 ```
