@@ -1,5 +1,16 @@
 # Changelog
 
+## 13.0.0
+
+### Breaking changes
+
+- Switched from `Open Sans` to `IBM Plex Sans` font family
+- Replaced `semibold` with `bold` weight in `Text`
+
+### Fixes
+
+- Fixed `Select` font
+
 ## 12.12.1
 
 - Fixed fullwidth `Button` with custom element
