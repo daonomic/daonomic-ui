@@ -14,7 +14,7 @@
       {
         "devDependencies": [
           "postcss.config.js",
-          "**/webpack/**/*.js",
+          "styleguide.config.js",
           "**/story.js",
           "**/*.spec.js"
         ]

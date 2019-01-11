@@ -1,3 +1,5 @@
+@import './theme/index.css';
+
 html,
 body {
   box-sizing: border-box;
