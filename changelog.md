@@ -1,5 +1,9 @@
 # Changelog
 
+## 14.0.1
+
+- Switched `Tooltip` animation names to local scope
+
 ## 14.0.0
 
 ### Breaking changes

@@ -50,18 +50,20 @@
 /* Shift in/out top */
 
 :global
-  :matches(.rc-tooltip-shift-enter-active, .rc-tooltip-shift-appear-active):matches(.rc-tooltip-placement-top, .rc-tooltip-placemenet-topLeft, .rc-tooltip-placemenet-topRight) {
+  :matches(.rc-tooltip-shift-enter-active, .rc-tooltip-shift-appear-active):matches(.rc-tooltip-placement-top, .rc-tooltip-placemenet-topLeft, .rc-tooltip-placemenet-topRight)
+  :local {
   animation-name: shiftInTop;
   animation-play-state: running;
 }
 
 :global
-  .rc-tooltip-shift-leave-active:matches(.rc-tooltip-placement-top, .rc-tooltip-placemenet-topLeft, .rc-tooltip-placemenet-topRight) {
+  .rc-tooltip-shift-leave-active:matches(.rc-tooltip-placement-top, .rc-tooltip-placemenet-topLeft, .rc-tooltip-placemenet-topRight)
+  :local {
   animation-name: shiftOutTop;
   animation-play-state: running;
 }
 
-@keyframes :global(shiftInTop) {
+@keyframes shiftInTop {
   0% {
     opacity: 0;
     transform: translateY(-8px);
@@ -73,7 +75,7 @@
   }
 }
 
-@keyframes :global(shiftOutTop) {
+@keyframes shiftOutTop {
   0% {
     opacity: 1;
     transform: translateY(0);
@@ -88,18 +90,20 @@
 /* Shift in/out bottom */
 
 :global
-  :matches(.rc-tooltip-shift-enter-active, .rc-tooltip-shift-appear-active):matches(.rc-tooltip-placement-bottom, .rc-tooltip-placemenet-bottomLeft, .rc-tooltip-placemenet-bottomRight) {
+  :matches(.rc-tooltip-shift-enter-active, .rc-tooltip-shift-appear-active):matches(.rc-tooltip-placement-bottom, .rc-tooltip-placemenet-bottomLeft, .rc-tooltip-placemenet-bottomRight)
+  :local {
   animation-name: shiftInBottom;
   animation-play-state: running;
 }
 
 :global
-  .rc-tooltip-shift-leave-active:matches(.rc-tooltip-placement-bottom, .rc-tooltip-placemenet-bottomLeft, .rc-tooltip-placemenet-bottomRight) {
+  .rc-tooltip-shift-leave-active:matches(.rc-tooltip-placement-bottom, .rc-tooltip-placemenet-bottomLeft, .rc-tooltip-placemenet-bottomRight)
+  :local {
   animation-name: shiftOutBottom;
   animation-play-state: running;
 }
 
-@keyframes :global(shiftInBottom) {
+@keyframes shiftInBottom {
   0% {
     opacity: 0;
     transform: translateY(8px);
@@ -111,7 +115,7 @@
   }
 }
 
-@keyframes :global(shiftOutBottom) {
+@keyframes shiftOutBottom {
   0% {
     opacity: 1;
     transform: translateY(0);
@@ -126,18 +130,20 @@
 /* Shift in/out left */
 
 :global
-  :matches(.rc-tooltip-shift-enter-active, .rc-tooltip-shift-appear-active):matches(.rc-tooltip-placement-left, .rc-tooltip-placemenet-leftTop, .rc-tooltip-placemenet-leftBottom) {
+  :matches(.rc-tooltip-shift-enter-active, .rc-tooltip-shift-appear-active):matches(.rc-tooltip-placement-left, .rc-tooltip-placemenet-leftTop, .rc-tooltip-placemenet-leftBottom)
+  :local {
   animation-name: shiftInLeft;
   animation-play-state: running;
 }
 
 :global
-  .rc-tooltip-shift-leave-active:matches(.rc-tooltip-placement-left, .rc-tooltip-placemenet-leftTop, .rc-tooltip-placemenet-leftBottom) {
+  .rc-tooltip-shift-leave-active:matches(.rc-tooltip-placement-left, .rc-tooltip-placemenet-leftTop, .rc-tooltip-placemenet-leftBottom)
+  :local {
   animation-name: shiftOutLeft;
   animation-play-state: running;
 }
 
-@keyframes :global(shiftInLeft) {
+@keyframes shiftInLeft {
   0% {
     opacity: 0;
     transform: translateX(-8px);
@@ -149,7 +155,7 @@
   }
 }
 
-@keyframes :global(shiftOutLeft) {
+@keyframes shiftOutLeft {
   0% {
     opacity: 1;
     transform: translateY(0);
@@ -164,18 +170,20 @@
 /* Shift in/out right */
 
 :global
-  :matches(.rc-tooltip-shift-enter-active, .rc-tooltip-shift-appear-active):matches(.rc-tooltip-placement-right, .rc-tooltip-placemenet-rightTop, .rc-tooltip-placemenet-rightBottom) {
+  :matches(.rc-tooltip-shift-enter-active, .rc-tooltip-shift-appear-active):matches(.rc-tooltip-placement-right, .rc-tooltip-placemenet-rightTop, .rc-tooltip-placemenet-rightBottom)
+  :local {
   animation-name: shiftInRight;
   animation-play-state: running;
 }
 
 :global
-  .rc-tooltip-shift-leave-active:matches(.rc-tooltip-placement-right, .rc-tooltip-placemenet-rightTop, .rc-tooltip-placemenet-rightBottom) {
+  .rc-tooltip-shift-leave-active:matches(.rc-tooltip-placement-right, .rc-tooltip-placemenet-rightTop, .rc-tooltip-placemenet-rightBottom)
+  :local {
   animation-name: shiftOutRight;
   animation-play-state: running;
 }
 
-@keyframes :global(shiftInRight) {
+@keyframes shiftInRight {
   0% {
     opacity: 0;
     transform: translateX(8px);
@@ -187,7 +195,7 @@
   }
 }
 
-@keyframes :global(shiftOutRight) {
+@keyframes shiftOutRight {
   0% {
     opacity: 1;
     transform: translateY(0);
