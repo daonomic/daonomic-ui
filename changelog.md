@@ -1,5 +1,16 @@
 # Changelog
 
+## 14.0.0
+
+### Breaking changes
+
+- Require `postcss-selector-matches` plugin
+- Used `rc-tooltip` as a base for `Tooltip`
+
+### Improvements
+
+- Updated `Tooltip` design
+
 ## 13.0.0
 
 ### Breaking changes

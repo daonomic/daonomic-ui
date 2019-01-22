@@ -1,39 +1,200 @@
-.root {
-  display: inline-block;
-}
-
-.tooltip {
+:global .rc-tooltip {
   position: absolute;
-  z-index: 1000;
-  display: inline-block;
-  box-sizing: border-box;
-  padding: 10px;
-  font-size: 12px;
-  line-height: 16px;
-  border-radius: 5px;
-  color: white;
-  background: #333;
+  z-index: 1070;
+  visibility: visible;
+  display: block;
+  padding: 8px;
+  font-size: 11px;
+  line-height: 14px;
+  opacity: 0.95;
 }
 
-.arrow {
-  position: absolute;
-  z-index: 1001;
-  width: 0;
-  height: 0;
+:global .rc-tooltip-hidden {
+  display: none;
 }
 
-.arrow_up {
-  border-top: 10px solid #333;
+:global .rc-tooltip-inner {
+  padding: 5px 8px;
+  text-align: left;
+  text-decoration: none;
+  color: #fff;
+  background-color: #555555;
+  border-radius: 3px;
 }
 
-.arrow_down {
-  border-bottom: 10px solid #333;
+:global .rc-tooltip-arrow {
+  display: none;
 }
 
-.arrow_right {
-  border-right: 10px solid #333;
+:global .rc-tooltip-shift-enter,
+:global .rc-tooltip-shift-leave {
+  display: block;
 }
 
-.arrow_left {
-  border-left: 10px solid #333;
+:global .rc-tooltip-shift-enter,
+:global .rc-tooltip-shift-appear {
+  opacity: 0;
+  animation-duration: 0.2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-play-state: paused;
+}
+
+:global .rc-tooltip-shift-leave {
+  animation-duration: 0.2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-play-state: paused;
+}
+
+/* Shift in/out top */
+
+:global
+  :matches(.rc-tooltip-shift-enter-active, .rc-tooltip-shift-appear-active):matches(.rc-tooltip-placement-top, .rc-tooltip-placemenet-topLeft, .rc-tooltip-placemenet-topRight) {
+  animation-name: shiftInTop;
+  animation-play-state: running;
+}
+
+:global
+  .rc-tooltip-shift-leave-active:matches(.rc-tooltip-placement-top, .rc-tooltip-placemenet-topLeft, .rc-tooltip-placemenet-topRight) {
+  animation-name: shiftOutTop;
+  animation-play-state: running;
+}
+
+@keyframes :global(shiftInTop) {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes :global(shiftOutTop) {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+/* Shift in/out bottom */
+
+:global
+  :matches(.rc-tooltip-shift-enter-active, .rc-tooltip-shift-appear-active):matches(.rc-tooltip-placement-bottom, .rc-tooltip-placemenet-bottomLeft, .rc-tooltip-placemenet-bottomRight) {
+  animation-name: shiftInBottom;
+  animation-play-state: running;
+}
+
+:global
+  .rc-tooltip-shift-leave-active:matches(.rc-tooltip-placement-bottom, .rc-tooltip-placemenet-bottomLeft, .rc-tooltip-placemenet-bottomRight) {
+  animation-name: shiftOutBottom;
+  animation-play-state: running;
+}
+
+@keyframes :global(shiftInBottom) {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes :global(shiftOutBottom) {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+/* Shift in/out left */
+
+:global
+  :matches(.rc-tooltip-shift-enter-active, .rc-tooltip-shift-appear-active):matches(.rc-tooltip-placement-left, .rc-tooltip-placemenet-leftTop, .rc-tooltip-placemenet-leftBottom) {
+  animation-name: shiftInLeft;
+  animation-play-state: running;
+}
+
+:global
+  .rc-tooltip-shift-leave-active:matches(.rc-tooltip-placement-left, .rc-tooltip-placemenet-leftTop, .rc-tooltip-placemenet-leftBottom) {
+  animation-name: shiftOutLeft;
+  animation-play-state: running;
+}
+
+@keyframes :global(shiftInLeft) {
+  0% {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes :global(shiftOutLeft) {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+}
+
+/* Shift in/out right */
+
+:global
+  :matches(.rc-tooltip-shift-enter-active, .rc-tooltip-shift-appear-active):matches(.rc-tooltip-placement-right, .rc-tooltip-placemenet-rightTop, .rc-tooltip-placemenet-rightBottom) {
+  animation-name: shiftInRight;
+  animation-play-state: running;
+}
+
+:global
+  .rc-tooltip-shift-leave-active:matches(.rc-tooltip-placement-right, .rc-tooltip-placemenet-rightTop, .rc-tooltip-placemenet-rightBottom) {
+  animation-name: shiftOutRight;
+  animation-play-state: running;
+}
+
+@keyframes :global(shiftInRight) {
+  0% {
+    opacity: 0;
+    transform: translateX(8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes :global(shiftOutRight) {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(8px);
+  }
 }

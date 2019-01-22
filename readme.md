@@ -17,7 +17,7 @@ npm i @daonomic/ui -SE
 Install the following postcss plugins and include them to your build pipeline:
 
 ```bash
-npm i postcss-import postcss-nesting postcss-custom-media postcss-custom-properties postcss-calc postcss-color-function postcss-flexbugs-fixes autoprefixer -DE
+npm i postcss-import postcss-nesting postcss-custom-media postcss-custom-properties postcss-calc postcss-color-function postcss-flexbugs-fixes postcss-selector-matches autoprefixer -DE
 ```
 
 ### Setup build

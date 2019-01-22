@@ -43,8 +43,8 @@
   "peerDependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
   },
   "devDependencies": {
     "@daonomic/eslint-config": "1.0.0",
@@ -80,10 +80,11 @@
     "postcss-import": "11.1.0",
     "postcss-loader": "2.1.5",
     "postcss-nesting": "6.0.0",
+    "postcss-selector-matches": "4.0.0",
     "prettier": "1.15.3",
     "prop-types": "15.6.2",
-    "react": "16.2.0",
-    "react-dom": "16.2.0",
+    "react": "16.7.0",
+    "react-dom": "16.7.0",
     "style-loader": "0.23.1",
     "url-loader": "1.1.2",
     "webpack-append": "0.1.2"
@@ -91,6 +92,7 @@
   "dependencies": {
     "focus-visible": "4.1.5",
     "nanoid": "2.0.0",
+    "rc-tooltip": "3.7.3",
     "react-modal": "^3.7.1"
   }
 }
