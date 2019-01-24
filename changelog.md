@@ -1,5 +1,10 @@
 # Changelog
 
+## 14.1.00
+
+- Added `Pagination` component
+- Added `Table` component
+
 ## 14.0.1
 
 - Switched `Tooltip` animation names to local scope
