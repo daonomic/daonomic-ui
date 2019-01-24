@@ -93,6 +93,7 @@
     "focus-visible": "4.1.5",
     "nanoid": "2.0.0",
     "rc-tooltip": "3.7.3",
-    "react-modal": "^3.7.1"
+    "react-modal": "^3.7.1",
+    "ultimate-pagination": "1.0.0"
   }
 }

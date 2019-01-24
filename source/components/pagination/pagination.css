@@ -1,0 +1,55 @@
+.list {
+  display: flex;
+  list-style: none;
+}
+
+.button {
+  position: relative;
+  appearance: none;
+  margin-left: -1px;
+  padding: 0.75em;
+  border: 1px solid var(--color-borders);
+  color: var(--color-primary);
+  font-family: inherit;
+  font-size: 0.75em;
+  background: none;
+  background-color: var(--color-primary-opposite);
+  cursor: pointer;
+
+  @media (--tablet) {
+    padding: 0.75em 1em;
+  }
+}
+
+.button:focus,
+.button:hover,
+.button:active {
+  z-index: 1;
+}
+
+.button:focus {
+  outline: 2px solid var(--color-primary);
+}
+
+.button:hover,
+.button:active {
+  background-color: var(--color-borders);
+  transition: none;
+}
+
+.button:disabled,
+.button:disabled:hover {
+  cursor: default;
+}
+
+.button:disabled:not(.button_active) {
+  opacity: 0.75;
+  color: var(--color-text-muted);
+  background-color: var(--color-primary-opposite);
+}
+
+.button_active,
+.button_active:hover {
+  color: var(--color-primary-opposite);
+  background-color: var(--color-primary);
+}
