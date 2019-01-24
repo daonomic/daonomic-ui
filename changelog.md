@@ -1,6 +1,12 @@
 # Changelog
 
-## 14.1.00
+## 14.1.1
+
+- Exported Table and Pagination from index file
+
+## 14.1.0
+
+### Improvements
 
 - Added `Pagination` component
 - Added `Table` component

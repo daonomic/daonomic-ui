@@ -19,3 +19,5 @@ export { default as MailtoLink } from './components/mailto-link';
 export { default as Modal } from './components/modal';
 export { default as Tooltip } from './components/tooltip';
 export { default as Portal } from './components/portal';
+export { default as Table } from './components/table';
+export { default as Pagination } from './components/pagination';
