@@ -1,5 +1,15 @@
 # Changelog
 
+## 14.2.0
+
+### Improvements
+
+- Added `Spinner` component
+
+### Fixes
+
+- Fixed `Pagination` and `Table` components
+
 ## 14.1.1
 
 - Exported Table and Pagination from index file
