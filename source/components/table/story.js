@@ -46,7 +46,7 @@ storiesOf('Table', module)
     </Table>
   ))
   .add('empty', () => (
-    <Table caption="Users" isEmpty placeholder="No users found">
+    <Table isEmpty caption="Users" placeholder="No users found">
       <thead>
         <tr>
           <th>Email</th>

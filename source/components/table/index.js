@@ -5,7 +5,7 @@ import cn from 'classnames';
 import Text from '../text';
 import styles from './table.css';
 
-export default class Table extends React.Component<Props> {
+export default class Table extends React.Component {
   static propTypes = {
     children: PropTypes.Node,
     caption: PropTypes.Node,

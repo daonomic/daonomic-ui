@@ -4,7 +4,7 @@ import cn from 'classnames';
 import pagination, { ITEM_TYPES } from 'ultimate-pagination';
 import styles from './pagination.css';
 
-export default class Pagination extends React.Component<Props> {
+export default class Pagination extends React.Component {
   static propTypes = {
     totalPages: PropTypes.number.isRequired,
     currentPage: PropTypes.number.isRequired,
