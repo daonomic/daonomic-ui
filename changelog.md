@@ -1,5 +1,21 @@
 # Changelog
 
+## 15.0.0
+
+### Breaking changes
+
+- Changed `Button` css variables: `--button-{theme}-{state}-{property}` → `--button-{property}-{state}-{theme}`
+
+### Improvements
+
+- Updated `Button` design
+- Updated `--color-primary`
+
+### Technical
+
+- Upgrade Babel to v7
+- Upgrade Storybook to v4
+
 ## 14.2.0
 
 ### Improvements
