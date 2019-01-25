@@ -13,12 +13,39 @@ storiesOf('Button', module)
         {sizes.map((size) => (
           <div key={size} style={{ paddingBottom: '1em' }}>
             {designs.map((design) => (
-              <div key={size} style={{ paddingBottom: '.5em' }}>
+              <div
+                key={size}
+                style={{
+                  padding: '2em',
+                  background: design.includes('inverse')
+                    ? '#000'
+                    : 'transparent',
+                }}
+              >
                 <Button design={design} size={size} onClick={action('click')}>
                   {design} {size}
                 </Button>{' '}
                 <Button
                   disabled
+                  design={design}
+                  size={size}
+                  onClick={action('click')}
+                >
+                  {design} {size} disabled
+                </Button>
+                <div style={{ marginTop: '1em' }} />
+                <Button
+                  fullWidth
+                  design={design}
+                  size={size}
+                  onClick={action('click')}
+                >
+                  {design} {size} disabled
+                </Button>
+                <div style={{ marginTop: '1em' }} />
+                <Button
+                  disabled
+                  fullWidth
                   design={design}
                   size={size}
                   onClick={action('click')}
@@ -32,7 +59,6 @@ storiesOf('Button', module)
       </React.Fragment>
     )),
   )
-  .add('full width button', () => <Button fullWidth>Full width button</Button>)
   .add('button as link', () => (
     <React.Fragment>
       <Button

@@ -34,7 +34,7 @@ export default function Button(props) {
 }
 
 export const sizes = ['s', 'm'];
-export const designs = ['primary', 'secondary'];
+export const designs = ['primary', 'secondary', 'secondary-inverse'];
 
 Button.propTypes = {
   size: PropTypes.oneOf(sizes),

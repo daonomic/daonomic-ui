@@ -1,19 +1,67 @@
 :root {
-  --button-primary-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12),
-    inset 0 -1px 0 0 rgba(0, 0, 0, 0.08);
-  --button-primary-border: none;
-  --button-primary-background: var(--color-primary);
-  --button-primary-hover-background: #5c95ff;
-  --button-primary-active-background: #337aff;
-  --button-primary-disabled-background: #93999f;
-  --button-primary-text-color: var(--color-primary-opposite);
-  --button-primary-disabled-text-color: var(--color-primary-opposite);
+  --button-border-radius: 4px;
 
-  --button-secondary-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
-  --button-secondary-border: 1px solid var(--color-borders);
-  --button-secondary-background: #fff;
-  --button-secondary-hover-background: #f7f7f8;
-  --button-secondary-active-background: #f2f5f7;
-  --button-secondary-text-color: #242d34;
-  --button-secondary-disabled-text-color: #969b9e;
+  /* Opacity */
+  --button-opacity-primary: 1;
+  --button-opacity-hover-primary: 1;
+  --button-opacity-active-primary: 1;
+  --button-opacity-disabled-primary: 0.3;
+
+  --button-opacity-secondary: 1;
+  --button-opacity-hover-secondary: 1;
+  --button-opacity-active-secondary: 1;
+  --button-opacity-disabled-secondary: 1;
+
+  --button-opacity-secondary-inverse: 1;
+  --button-opacity-hover-secondary-inverse: 1;
+  --button-opacity-active-secondary-inverse: 1;
+  --button-opacity-disabled-secondary-inverse: 1;
+
+  /* Border */
+  --button-border-primary: none;
+  --button-border-hover-primary: none;
+  --button-border-active-primary: none;
+  --button-border-disabled-primary: none;
+
+  --button-border-secondary: 2px solid color(#2849ff alpha(20%));
+  --button-border-hover-secondary: 2px solid color(#2849ff alpha(40%));
+  --button-border-active-secondary: 2px solid color(#2849ff alpha(30%));
+  --button-border-disabled-secondary: 2px solid color(#2849ff alpha(20%));
+
+  --button-border-secondary-inverse: 2px solid color(#eee alpha(20%));
+  --button-border-hover-secondary-inverse: 2px solid color(#eee alpha(40%));
+  --button-border-active-secondary-inverse: 2px solid color(#eee alpha(30%));
+  --button-border-disabled-secondary-inverse: 2px solid color(#eee alpha(20%));
+
+  /* Background */
+  --button-background-primary: var(--color-primary);
+  --button-background-hover-primary: #2849ff;
+  --button-background-active-primary: rgba(83, 109, 254, 0.8);
+  --button-background-disabled-primary: var(--color-primary);
+
+  --button-background-secondary: transparent;
+  --button-background-hover-secondary: transparent;
+  --button-background-active-secondary: transparent;
+  --button-background-disabled-secondary: transparent;
+
+  --button-background-secondary-inverse: transparent;
+  --button-background-hover-secondary-inverse: transparent;
+  --button-background-active-secondary-inverse: transparent;
+  --button-background-disabled-secondary-inverse: transparent;
+
+  /* Text color */
+  --button-text-color-primary: var(--color-primary-opposite);
+  --button-text-color-hover-primary: var(--color-primary-opposite);
+  --button-text-color-active-primary: var(--color-primary-opposite);
+  --button-text-color-disabled-primary: var(--color-primary-opposite);
+
+  --button-text-color-secondary: var(--color-primary);
+  --button-text-color-hover-secondary: var(--color-primary);
+  --button-text-color-active-secondary: var(--color-primary);
+  --button-text-color-disabled-secondary: rgba(83, 109, 254, 0.3);
+
+  --button-text-color-secondary-inverse: #fff;
+  --button-text-color-hover-secondary-inverse: #fff;
+  --button-text-color-active-secondary-inverse: #fff;
+  --button-text-color-disabled-secondary-inverse: rgba(255, 255, 255, 0.3);
 }

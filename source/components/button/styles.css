@@ -12,16 +12,14 @@
   background: none;
   border: none;
   outline: none;
-  border-radius: 5px;
+  border-radius: var(--button-border-radius);
   cursor: pointer;
   transition: box-shadow 0.2s;
   user-select: none;
 }
 
 .root,
-.root:hover,
-.root:active,
-.root:focus {
+.root:matches(:hover, :active, :focus) {
   text-decoration: none;
 }
 
@@ -30,8 +28,7 @@
 }
 
 .root_disabled {
-  opacity: 0.65;
-  cursor: default;
+  cursor: not-allowed;
 }
 
 .root_fullwidth {
@@ -49,55 +46,92 @@
   font-size: var(--typo-size-s);
 }
 
-.root_disabled {
-  opacity: 0.5;
-  cursor: default;
-}
-
 .root:not(.root_disabled):focus {
-  box-shadow: var(--button-primary-shadow), var(--control-focus-shadow);
+  box-shadow: var(--control-focus-shadow);
 }
 
 .root_design_primary {
-  background: var(--button-primary-background);
-  border: var(--button-primary-border);
-  box-shadow: var(--button-primary-shadow);
+  color: var(--button-text-color-primary);
+  background: var(--button-background-primary);
+  border: var(--button-border-primary);
+  opacity: var(--button-opacity-primary);
 }
 
-.root_design_primary,
-.root_design_primary:hover,
-.root_design_primary:active,
-.root_design_primary:focus {
-  color: var(--button-primary-text-color);
-}
-
-.root_design_primary:not(.root_disabled):hover,
-.root_design_primary:not(.root_disabled):focus {
-  background: var(--button-primary-hover-background);
+.root_design_primary:not(.root_disabled):matches(:hover, :focus) {
+  color: var(--button-text-color-hover-primary);
+  background: var(--button-background-hover-primary);
+  border: var(--button-border-hover-primary);
+  opacity: var(--button-opacity-hover-primary);
 }
 
 .root_design_primary:not(.root_disabled):active {
-  background: var(--button-primary-active-background);
+  color: var(--button-text-color-active-primary);
+  background: var(--button-background-active-primary);
+  border: var(--button-border-active-primary);
+  opacity: var(--button-opacity-active-primary);
+}
+
+.root_design_primary.root_disabled {
+  color: var(--button-text-color-disabled-primary);
+  background: var(--button-background-disabled-primary);
+  border: var(--button-border-disabled-primary);
+  opacity: var(--button-opacity-disabled-primary);
 }
 
 .root_design_secondary {
-  background: var(--button-secondary-background);
-  border: var(--button-secondary-border);
-  box-shadow: var(--button-secondary-shadow);
+  color: var(--button-text-color-secondary);
+  background: var(--button-background-secondary);
+  border: var(--button-border-secondary);
+  opacity: var(--button-opacity-secondary);
 }
 
-.root_design_secondary,
-.root_design_secondary:hover,
-.root_design_secondary:active,
-.root_design_secondary:focus {
-  color: var(--button-secondary-text-color);
-}
-
-.root_design_secondary:not(.root_disabled):hover,
-.root_design_secondary:not(.root_disabled):focus {
-  background: var(--button-secondary-hover-background);
+.root_design_secondary:not(.root_disabled):matches(:hover, :focus) {
+  color: var(--button-text-color-hover-secondary);
+  background: var(--button-background-hover-secondary);
+  border: var(--button-border-hover-secondary);
+  opacity: var(--button-opacity-hover-secondary);
+  box-shadow: none;
 }
 
 .root_design_secondary:not(.root_disabled):active {
-  background: var(--button-secondary-active-background);
+  color: var(--button-text-color-active-secondary);
+  background: var(--button-background-active-secondary);
+  border: var(--button-border-active-secondary);
+  opacity: var(--button-opacity-active-secondary);
+}
+
+.root_design_secondary.root_disabled {
+  color: var(--button-text-color-disabled-secondary);
+  background: var(--button-background-disabled-secondary);
+  border: var(--button-border-disabled-secondary);
+  opacity: var(--button-opacity-disabled-secondary);
+}
+
+.root_design_secondary-inverse {
+  color: var(--button-text-color-secondary-inverse);
+  background: var(--button-background-secondary-inverse);
+  border: var(--button-border-secondary-inverse);
+  opacity: var(--button-opacity-secondary-inverse);
+}
+
+.root_design_secondary-inverse:not(.root_disabled):matches(:hover, :focus) {
+  color: var(--button-text-color-hover-secondary-inverse);
+  background: var(--button-background-hover-secondary-inverse);
+  border: var(--button-border-hover-secondary-inverse);
+  opacity: var(--button-opacity-hover-secondary-inverse);
+  box-shadow: none;
+}
+
+.root_design_secondary-inverse:not(.root_disabled):active {
+  color: var(--button-text-color-active-secondary-inverse);
+  background: var(--button-background-active-secondary-inverse);
+  border: var(--button-border-active-secondary-inverse);
+  opacity: var(--button-opacity-active-secondary-inverse);
+}
+
+.root_design_secondary-inverse.root_disabled {
+  color: var(--button-text-color-disabled-secondary-inverse);
+  background: var(--button-background-disabled-secondary-inverse);
+  border: var(--button-border-disabled-secondary-inverse);
+  opacity: var(--button-opacity-disabled-secondary-inverse);
 }
