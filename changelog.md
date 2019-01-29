@@ -1,5 +1,11 @@
 # Changelog
 
+## 15.1.0
+
+### Improvements
+
+- Updated `Pagination` design
+
 ## 15.0.0
 
 ### Breaking changes
