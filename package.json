@@ -99,6 +99,7 @@
     "nanoid": "2.0.1",
     "rc-tooltip": "3.7.3",
     "react-modal": "^3.7.1",
+    "react-tabs": "3.0.0",
     "ultimate-pagination": "1.0.0"
   }
 }

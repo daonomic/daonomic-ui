@@ -1,0 +1,91 @@
+:root {
+  --tabs-height: 55px;
+  --tabs-padding: 4px;
+  --tabs-padding-vertical: 20px;
+}
+
+.list-wrapper {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  height: var(--tabs-height);
+}
+
+.list-wrapper::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  height: 1px;
+  background-color: #eee;
+}
+
+.list {
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  height: calc(var(--tabs-height) * 2);
+  padding: var(--tabs-padding);
+  list-style: none;
+}
+
+.tab {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(var(--tabs-height) - (var(--tabs-padding) * 2));
+  margin-right: 20px;
+  padding-left: 2px;
+  padding-right: 2pxrem;
+  font-size: 15px;
+  line-height: 1;
+  white-space: nowrap;
+  opacity: 0.6;
+  color: #333;
+  transition-property: opacity, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+  outline: 0;
+}
+
+.tab::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+.tab:matches(.tab_selected, :hover, :focus) {
+  opacity: 1;
+  color: #000;
+}
+
+.tab:focus {
+  box-shadow: var(--control-focus-shadow);
+}
+
+.tab_selected,
+.tab_selected:matches(:hover, :focus) {
+  color: var(--color-text);
+  cursor: default;
+}
+
+.tab_selected::after {
+  background: var(--color-primary);
+}
+
+.panel {
+  display: none;
+  padding-top: 20px;
+}
+
+.panel_selected {
+  display: block;
+}
