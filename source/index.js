@@ -22,3 +22,4 @@ export { default as Portal } from './components/portal';
 export { default as Table } from './components/table';
 export { default as Pagination } from './components/pagination';
 export { default as Spinner } from './components/spinner';
+export { default as Tabs } from './components/tabs';
