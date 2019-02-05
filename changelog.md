@@ -1,5 +1,9 @@
 # Changelog
 
+## 15.2.1
+
+- Added `Tabs` export from root
+
 ## 15.2.0
 
 ### Improvements
