@@ -1,5 +1,11 @@
 # Changelog
 
+## 15.2.0
+
+### Improvements
+
+- Added `Tabs` component
+
 ## 15.1.0
 
 ### Improvements
