@@ -1,5 +1,11 @@
 # Changelog
 
+## 16.1.0
+
+### Improvements
+
+- Inherit font size from parent by default in `Text` component
+
 ## 16.0.0
 
 ### Breaking changes
