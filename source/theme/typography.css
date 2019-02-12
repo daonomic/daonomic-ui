@@ -1,11 +1,11 @@
 :root {
   --typo-font-family-main: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
 
-  --typo-size-xxs: 10px;
+  --typo-size-xxs: 11px;
   --typo-line-height-xxs: 1.4;
 
-  --typo-size-xs: 12px;
-  --typo-line-height-xs: calc(16 / 12);
+  --typo-size-xs: 13px;
+  --typo-line-height-xs: calc(19 / 13);
 
   --typo-size-s: 14px;
   --typo-line-height-s: calc(20 / 14);
