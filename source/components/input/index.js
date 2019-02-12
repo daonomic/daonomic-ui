@@ -102,16 +102,18 @@ export default class Input extends PureComponent {
 
     return (
       <div className={cn(className, styles.root)}>
-        {this.renderInput()}
-
-        <FieldLabel
-          htmlFor={id}
-          className={cn(styles.label, {
-            [styles.label_floating]: isLabelFloating,
-          })}
-        >
-          {label}
-        </FieldLabel>
+        <div className={styles['input-wrapper']}>
+          {this.renderInput()}
+          <FieldLabel
+            htmlFor={id}
+            className={cn(styles.label, {
+              [styles.label_floating]: isLabelFloating,
+            })}
+          >
+            {label}
+          </FieldLabel>
+          <div className={styles.underline} />
+        </div>
 
         <FieldHint>{this.props.description}</FieldHint>
         <FieldHint type="error">{normalizedErrors.join(', ')}</FieldHint>

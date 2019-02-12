@@ -1,8 +1,20 @@
 .root {
-  position: relative;
-  padding-top: var(--control-label-height);
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.input-wrapper {
+  position: relative;
+  padding-top: var(--control-label-height);
+}
+
+.underline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: #e7eaee;
 }
 
 .label {
@@ -38,9 +50,8 @@
   outline: 0;
   border: 0;
   border: none;
-  border-bottom: 1px solid #e7eaee;
   background-color: var(--control-background);
-  transition: border 0.2s;
+  transition: border-color 0.2s;
 }
 
 .input::placeholder {
@@ -56,12 +67,16 @@
   box-shadow: none; /* disable unnecessary :invalid box-shadow in Firefox */
 }
 
-.input:focus {
-  border-color: var(--color-primary);
+.input:matches(:focus, .input_invalid) ~ .underline {
+  height: 2px;
 }
 
-.input_invalid {
-  border-color: var(--color-danger);
+.input:focus ~ .underline {
+  background: var(--color-primary);
+}
+
+.input_invalid ~ .underline {
+  background: var(--color-danger);
 }
 
 .input_disabled {
