@@ -6,9 +6,12 @@ import Text from '../text';
 import styles from './table.css';
 
 export default class Table extends React.Component {
+  static classNames = {
+    alignRight: styles.right,
+  };
+
   static propTypes = {
     children: PropTypes.Node,
-    caption: PropTypes.Node,
     className: PropTypes.string,
     isEmpty: PropTypes.bool,
     placeholder: PropTypes.Node,
@@ -23,43 +26,23 @@ export default class Table extends React.Component {
   };
 
   renderTable = () => (
-    <table className={styles.table}>
-      {this.renderCaption({ element: 'caption' })}
-      {this.props.children}
-    </table>
+    <table className={styles.table}>{this.props.children}</table>
   );
 
   renderPlaceholder = () => (
-    <React.Fragment>
-      {this.renderCaption({ element: 'p' })}
-      <Text
-        design="muted"
-        element="p"
-        align="center"
-        className={styles.placeholder}
-      >
-        {this.props.placeholder}
-      </Text>
-    </React.Fragment>
-  );
-
-  renderCaption = ({ element }) => (
     <Text
-      isCaps
       design="muted"
-      align="left"
-      size="xs"
-      element={element}
-      className={styles.caption}
+      element="p"
+      align="center"
+      className={styles.placeholder}
     >
-      {this.props.caption}
+      {this.props.placeholder}
     </Text>
   );
 
   render() {
     const {
       className,
-      caption, // eslint-disable-line no-unused-vars
       isEmpty, // eslint-disable-line no-unused-vars
       placeholder, // eslint-disable-line no-unused-vars
       ...restProps

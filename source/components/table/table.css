@@ -1,7 +1,9 @@
 .root {
   display: block;
+  padding: 1px;
   width: 100%;
-  overflow-x: scroll;
+  overflow-x: auto;
+  box-sizing: border-box;
 }
 
 .placeholder {
@@ -11,29 +13,42 @@
 }
 
 .table {
+  box-sizing: border-box;
   width: 100%;
   text-align: left;
   border-collapse: collapse;
-}
-
-.caption {
-  caption-side: top;
-  padding: 0.75em;
-  padding-left: 0;
-  margin: 0;
+  font-size: 13px;
+  line-height: 19px;
 }
 
 .table th,
 .table td {
-  padding: 0.75em;
-  border-top: 1px solid var(--color-borders);
+  padding: 16px;
+  padding-bottom: 14px;
 }
 
 .table th {
   vertical-align: bottom;
-  border-bottom: 1px solid var(--color-borders);
+  font-weight: 400;
+  font-size: 13px;
+  color: #aaa;
 }
 
 .table td {
   vertical-align: baseline;
+  box-sizing: border-box;
+  border-top: 1px solid var(--color-borders);
+}
+
+.table tr:last-child td {
+  border-bottom: 1px solid var(--color-borders);
+}
+
+.table tbody tr {
+  border-left: 1px solid var(--color-borders);
+  border-right: 1px solid var(--color-borders);
+}
+
+.right {
+  text-align: right;
 }
