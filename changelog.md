@@ -1,5 +1,11 @@
 # Changelog
 
+## 16.2.0
+
+### Improvements
+
+- Update `Badge` design
+
 ## 16.1.0
 
 ### Improvements
