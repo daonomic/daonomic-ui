@@ -1,5 +1,18 @@
 # Changelog
 
+## 16.0.0
+
+### Breaking changes
+
+- Removed `caption` prop on `Table`
+- Removed `design` prop on `Text`
+
+### Improvements
+
+- Updated `Table` design
+- Updated `Input` design
+- Added `color` prop to `Text`
+
 ## 15.2.1
 
 - Added `Tabs` export from root
