@@ -23,7 +23,6 @@ export default class Text extends React.Component {
   static defaultProps = {
     element: 'span',
     align: 'left',
-    size: 'm',
     color: 'normal',
     weight: 'normal',
   };
@@ -45,11 +44,11 @@ export default class Text extends React.Component {
         className,
         styles.root,
         styles[`root_align_${align}`],
-        styles[`root_size_${size}`],
         styles[`root_weight_${weight}`],
         styles[`root_color_${color}`],
         {
           [styles.root_caps]: isCaps,
+          [styles[`root_size_${size}`]]: size,
         },
       ),
       ...restProps,
