@@ -3,6 +3,8 @@
   letter-spacing: 0.1em;
 }
 
+/* Align */
+
 .root_align_left {
   text-align: left;
 }
@@ -14,6 +16,8 @@
 .root_align_right {
   text-align: right;
 }
+
+/* Size */
 
 .root_size_xxs {
   font-size: var(--typo-size-xxs);
@@ -50,30 +54,34 @@
   line-height: var(--typo-line-height-xxl);
 }
 
-.root_design_muted {
+/* Color */
+
+.root_color_normal {
+  color: var(--color-text);
+}
+
+.root_color_muted {
   color: var(--color-text-muted);
 }
 
-/* When editing .root_design_link styles don't forget to update global links styles in global.css */
-.root_design_link {
-  text-decoration: none;
-  color: var(--color-text-link);
-  cursor: pointer;
+.root_color_success {
+  color: var(--color-text-success);
 }
 
-.root_design_link:hover {
-  text-decoration: underline;
+.root_color_danger {
+  color: var(--color-text-danger);
 }
 
-body:not(:global(.js-focus-visible)) .root_design_link:focus,
-.root_design_link:global(.focus-visible) {
-  outline: 2px solid color(var(--color-primary) alpha(30%));
+.root_color_warning {
+  color: var(--color-text-warning);
 }
+
+/* Weight */
 
 .root_weight_normal {
   font-weight: 400;
 }
 
 .root_weight_bold {
-  font-weight: 600;
+  font-weight: 700;
 }

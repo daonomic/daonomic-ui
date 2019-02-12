@@ -1,5 +1,5 @@
 :root {
-  --color-black: #242d34;
+  --color-black: #333;
   --color-black-secondary: #50575c;
 
   --color-primary: #536dfe;
@@ -15,7 +15,7 @@
   --color-danger-opposite: #fff;
 
   --color-text: var(--color-black);
-  --color-text-muted: var(--color-black-secondary);
+  --color-text-muted: #aaa;
   --color-text-link: #4382ff;
   --color-text-primary: #3173ed;
   --color-text-success: #55aa00;

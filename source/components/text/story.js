@@ -1,14 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import Text, { alignments, sizes, designs, weights } from './';
+import Text, { alignments, sizes, colors, weights } from './';
 
 const textSample =
   'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem minus cupiditate nostrum vero aliquid tenetur, ipsam nulla nisi pariatur dolorem excepturi, similique quibusdam possimus culpa architecto suscipit eum aspernatur ipsum!';
 
 storiesOf('Text', module)
   .add('default', withInfo()(() => <Text>{textSample}</Text>))
-  .add('muted', () => <Text isMuted>{textSample}</Text>)
   .add('caps', () => <Text isCaps>{textSample}</Text>)
   .add('alignment', () => (
     <React.Fragment>
@@ -28,30 +27,13 @@ storiesOf('Text', module)
       ))}
     </React.Fragment>
   ))
-  .add('designs', () => (
+  .add('colors', () => (
     <React.Fragment>
-      {designs.map((design) => (
-        <Text key={design} element="div" design={design}>
-          design {design}
+      {colors.map((color) => (
+        <Text key={color} element="div" color={color}>
+          color {color}
         </Text>
       ))}
-    </React.Fragment>
-  ))
-  .add('link', () => (
-    <React.Fragment>
-      <Text
-        element="a"
-        design="link"
-        href="https://google.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Link using Text
-      </Text>
-      <br />
-      <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-        Just a regular html link that uses global styles
-      </a>
     </React.Fragment>
   ))
   .add('weights', () => (

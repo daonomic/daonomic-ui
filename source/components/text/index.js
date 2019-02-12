@@ -6,16 +6,16 @@ import styles from './styles.css';
 
 export const alignments = ['left', 'center', 'right'];
 export const sizes = ['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl'];
-export const designs = ['muted', 'link'];
 export const weights = ['normal', 'bold'];
+export const colors = ['normal', 'muted', 'success', 'danger', 'warning'];
 
 export default class Text extends React.Component {
   static propTypes = {
     element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
     isCaps: PropTypes.bool,
-    design: PropTypes.oneOf(designs),
     size: PropTypes.oneOf(sizes),
+    color: PropTypes.oneOf(colors),
     align: PropTypes.oneOf(alignments),
     weight: PropTypes.oneOf(weights),
   };
@@ -24,6 +24,7 @@ export default class Text extends React.Component {
     element: 'span',
     align: 'left',
     size: 'm',
+    color: 'normal',
     weight: 'normal',
   };
 
@@ -34,7 +35,7 @@ export default class Text extends React.Component {
       isCaps,
       align,
       size,
-      design,
+      color,
       weight,
       ...restProps
     } = this.props;
@@ -46,8 +47,8 @@ export default class Text extends React.Component {
         styles[`root_align_${align}`],
         styles[`root_size_${size}`],
         styles[`root_weight_${weight}`],
+        styles[`root_color_${color}`],
         {
-          [styles[`root_design_${design}`]]: design,
           [styles.root_caps]: isCaps,
         },
       ),
