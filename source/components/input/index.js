@@ -64,6 +64,7 @@ export default class Input extends PureComponent {
       disabled,
       value,
       errors,
+      label, // eslint-disable-line no-unused-vars
       description, // eslint-disable-line no-unused-vars
       ...restProps
     } = this.props;
