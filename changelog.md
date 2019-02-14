@@ -1,5 +1,9 @@
 # Changelog
 
+## 16.2.1
+
+- Do not pass unnecessary `label` attribute to `Input`’s `<input />`
+
 ## 16.2.0
 
 ### Improvements
