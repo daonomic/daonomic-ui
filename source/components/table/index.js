@@ -11,10 +11,10 @@ export default class Table extends React.Component {
   };
 
   static propTypes = {
-    children: PropTypes.Node,
+    children: PropTypes.node,
     className: PropTypes.string,
     isEmpty: PropTypes.bool,
-    placeholder: PropTypes.Node,
+    placeholder: PropTypes.node,
   };
 
   renderContent = () => {
