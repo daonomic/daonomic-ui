@@ -1,5 +1,9 @@
 # Changelog
 
+## 16.2.2
+
+- Fixed `Table` prop types
+
 ## 16.2.1
 
 - Do not pass unnecessary `label` attribute to `Input`’s `<input />`
