@@ -21,19 +21,6 @@ export class DataTable extends React.Component {
     dataState: 'loaded',
   };
 
-  renderPlaceholder = () => (
-    <div className={style.placeholder}>
-      <PlaceholderIllustration className={style.illustration} />
-      {this.props.placeholder}
-    </div>
-  );
-
-  renderPreloader = () => (
-    <div className={style.preloader}>
-      <Spinner />
-    </div>
-  );
-
   render() {
     const {
       primaryKey,
@@ -48,6 +35,7 @@ export class DataTable extends React.Component {
       <div
         className={cn(className, style.root, {
           [style.root_loading]: dataState === 'loading',
+          [style.root_empty]: data.length === 0,
         })}
         {...restProps}
       >
@@ -79,11 +67,18 @@ export class DataTable extends React.Component {
           </Table.Tbody>
         </Table>
 
-        {dataState === 'loaded' &&
-          data.length === 0 &&
-          this.renderPlaceholder()}
+        {dataState === 'loaded' && data.length === 0 && (
+          <div className={style.placeholder}>
+            <PlaceholderIllustration className={style.illustration} />
+            {this.props.placeholder}
+          </div>
+        )}
 
-        {dataState === 'loading' && this.renderPreloader()}
+        {dataState === 'loading' && (
+          <div className={style.preloader}>
+            <Spinner />
+          </div>
+        )}
       </div>
     );
   }

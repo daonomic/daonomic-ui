@@ -28,13 +28,13 @@
   color: #aaa;
 }
 
+.table th {
+  border-bottom: 1px solid var(--color-borders);
+}
+
 .table td {
   vertical-align: baseline;
   box-sizing: border-box;
-  border-top: 1px solid var(--color-borders);
-}
-
-.table tr:last-child td {
   border-bottom: 1px solid var(--color-borders);
 }
 

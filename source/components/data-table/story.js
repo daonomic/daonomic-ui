@@ -34,7 +34,28 @@ const schema = [
 ];
 
 storiesOf('Data table', module)
-  .add('default', () => (
+  .add('empty', () => (
+    <div style={{ padding: '2em', background: '#fff' }}>
+      <DataTable
+        primaryKey="email"
+        schema={schema}
+        data={[]}
+        placeholder="Nothing found"
+      />
+    </div>
+  ))
+  .add('empty loading', () => (
+    <div style={{ padding: '2em', background: '#fff' }}>
+      <DataTable
+        primaryKey="email"
+        schema={schema}
+        data={[]}
+        dataState="loading"
+        placeholder="Nothing found"
+      />
+    </div>
+  ))
+  .add('loaded', () => (
     <div style={{ padding: '2em', background: '#fff' }}>
       <DataTable
         primaryKey="email"
@@ -51,16 +72,6 @@ storiesOf('Data table', module)
         primaryKey="email"
         schema={schema}
         data={demoUsers}
-        placeholder="Nothing found"
-      />
-    </div>
-  ))
-  .add('empty', () => (
-    <div style={{ padding: '2em', background: '#fff' }}>
-      <DataTable
-        primaryKey="email"
-        schema={schema}
-        data={[]}
         placeholder="Nothing found"
       />
     </div>

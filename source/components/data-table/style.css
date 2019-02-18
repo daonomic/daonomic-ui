@@ -6,13 +6,14 @@
   padding: 20px;
   text-align: center;
   color: var(--color-text-muted);
-  border-top: 1px solid var(--color-borders);
 }
 
 .illustration {
   width: auto;
   height: 80px;
   margin-bottom: 15px;
+  filter: grayscale(1);
+  opacity: 0.5;
 }
 
 .root_loading .table {
@@ -28,4 +29,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.root_empty .preloader {
+  position: static;
+  padding: 20px;
 }
