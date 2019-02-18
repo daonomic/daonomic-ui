@@ -1,5 +1,9 @@
 # Changelog
 
+## 17.0.1
+
+- Fixed broken `Tooltip` component
+
 ## 17.0.0
 
 ### Breaking changes
