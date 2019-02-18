@@ -1,56 +1,32 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import Text from '../text';
-import styles from './table.css';
+import styles from './style.css';
+import { Thead } from './components/thead';
+import { Tbody } from './components/tbody';
+import { Tr } from './components/tr';
+import { Th } from './components/th';
+import { Td } from './components/td';
 
-export default class Table extends React.Component {
-  static classNames = {
-    alignRight: styles.right,
-  };
+export class Table extends React.Component {
+  static Thead = Thead;
+  static Tbody = Tbody;
+  static Tr = Tr;
+  static Th = Th;
+  static Td = Td;
 
   static propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    isEmpty: PropTypes.bool,
-    placeholder: PropTypes.node,
   };
-
-  renderContent = () => {
-    if (this.props.isEmpty) {
-      return this.renderPlaceholder();
-    }
-
-    return this.renderTable();
-  };
-
-  renderTable = () => (
-    <table className={styles.table}>{this.props.children}</table>
-  );
-
-  renderPlaceholder = () => (
-    <Text
-      design="muted"
-      element="p"
-      align="center"
-      className={styles.placeholder}
-    >
-      {this.props.placeholder}
-    </Text>
-  );
 
   render() {
-    const {
-      className,
-      isEmpty, // eslint-disable-line no-unused-vars
-      placeholder, // eslint-disable-line no-unused-vars
-      ...restProps
-    } = this.props;
+    const { className, ...restProps } = this.props;
 
     return (
       <div {...restProps} className={cn(className, styles.root)}>
-        {this.renderContent()}
+        <table className={styles.table}>{this.props.children}</table>
       </div>
     );
   }
