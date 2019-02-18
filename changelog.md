@@ -1,5 +1,16 @@
 # Changelog
 
+## 18.0.0
+
+### Breaking changes
+
+- `DataTable`: add required `id` to schema entries
+- `DataTable`: replace `primaryKey` prop with `getRowKey`
+
+### Improvements
+
+- Improve `DataTable` design
+
 ## 17.0.2
 
 - Exported `DataTable` from root
