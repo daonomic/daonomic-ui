@@ -9,12 +9,19 @@ import style from './style.css';
 
 export class DataTable extends React.Component {
   static propTypes = {
-    primaryKey: PropTypes.string.isRequired,
-    schema: PropTypes.array.isRequired,
+    schema: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        name: PropTypes.node,
+        align: PropTypes.oneOf(['left', 'center', 'right']),
+        render: PropTypes.func.isRequired,
+      }),
+    ).isRequired,
     data: PropTypes.array.isRequired,
+    dataState: PropTypes.oneOf(['idle', 'loading', 'loaded', 'failed']),
+    getRowKey: PropTypes.func.isRequired,
     placeholder: PropTypes.node.isRequired,
     className: PropTypes.string,
-    dataState: PropTypes.oneOf(['idle', 'loading', 'loaded', 'failed']),
   };
 
   static defaultProps = {
@@ -23,10 +30,11 @@ export class DataTable extends React.Component {
 
   render() {
     const {
-      primaryKey,
       schema,
       data,
       dataState,
+      getRowKey,
+      placeholder,
       className,
       ...restProps
     } = this.props;
@@ -43,7 +51,7 @@ export class DataTable extends React.Component {
           <Table.Thead>
             <Table.Tr>
               {schema.map((row) => (
-                <Table.Th key={row.name} align={row.align || 'left'}>
+                <Table.Th key={row.id} align={row.align || 'left'}>
                   {row.name}
                 </Table.Th>
               ))}
@@ -52,10 +60,10 @@ export class DataTable extends React.Component {
 
           <Table.Tbody>
             {data.map((item) => (
-              <Table.Tr key={item[primaryKey]}>
+              <Table.Tr key={getRowKey(item)}>
                 {schema.map((row) => (
                   <Table.Td
-                    key={row.name}
+                    key={row.id}
                     align={row.align || 'left'}
                     className={style.loading}
                   >
@@ -70,7 +78,7 @@ export class DataTable extends React.Component {
         {dataState === 'loaded' && data.length === 0 && (
           <div className={style.placeholder}>
             <PlaceholderIllustration className={style.illustration} />
-            {this.props.placeholder}
+            {placeholder}
           </div>
         )}
 

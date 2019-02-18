@@ -16,17 +16,23 @@ function createDemoUser() {
 
 const demoUsers = Array.from({ length: 10 }, createDemoUser);
 const schema = [
-  { name: 'Email', render: (item) => item.email },
-  { align: 'right', name: 'Bought', render: (item) => item.bought },
-  { name: 'Status', render: (item) => item.reviewStatus },
+  { id: 'email', name: 'Email', render: (item) => item.email },
   {
+    id: 'bought',
+    name: 'Bought',
     align: 'right',
+    render: (item) => item.bought,
+  },
+  { id: 'status', name: 'Status', render: (item) => item.reviewStatus },
+  {
+    id: 'registered',
     name: 'Registered',
+    align: 'right',
     render: (item) => item.createDate.toLocaleDateString(),
   },
   {
+    id: 'actions',
     align: 'right',
-    name: '',
     render: (item) => (
       <button onClick={() => alert(`Delete user ${item.email}`)}>×</button>
     ),
@@ -37,7 +43,7 @@ storiesOf('Data table', module)
   .add('empty', () => (
     <div style={{ padding: '2em', background: '#fff' }}>
       <DataTable
-        primaryKey="email"
+        getRowKey={(item) => item.email}
         schema={schema}
         data={[]}
         placeholder="Nothing found"
@@ -47,7 +53,7 @@ storiesOf('Data table', module)
   .add('empty loading', () => (
     <div style={{ padding: '2em', background: '#fff' }}>
       <DataTable
-        primaryKey="email"
+        getRowKey={(item) => item.email}
         schema={schema}
         data={[]}
         dataState="loading"
@@ -58,7 +64,7 @@ storiesOf('Data table', module)
   .add('loaded', () => (
     <div style={{ padding: '2em', background: '#fff' }}>
       <DataTable
-        primaryKey="email"
+        getRowKey={(item) => item.email}
         schema={schema}
         data={demoUsers}
         placeholder="Nothing found"
@@ -69,7 +75,7 @@ storiesOf('Data table', module)
     <div style={{ padding: '2em', background: '#fff' }}>
       <DataTable
         dataState="loading"
-        primaryKey="email"
+        getRowKey={(item) => item.email}
         schema={schema}
         data={demoUsers}
         placeholder="Nothing found"
