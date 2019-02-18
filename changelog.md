@@ -1,5 +1,17 @@
 # Changelog
 
+## 17.0.0
+
+### Breaking changes
+
+- `Table` should be replaced with `DataTable`
+
+### Improvements
+
+- Added `PlaceholderIllustration` component
+- Added `DataTable` component
+- Added `PlaceholderIllustration` component
+
 ## 16.2.2
 
 - Fixed `Table` prop types
