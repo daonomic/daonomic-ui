@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import styles from './styles.css';
 
-export default function PageFooter({ children, className, ...restProps }) {
+export function PageFooter({ children, className, ...restProps }) {
   return (
     <footer {...restProps} className={cn(className, styles.footer)}>
       {children}

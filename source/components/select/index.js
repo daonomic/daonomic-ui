@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import nanoid from 'nanoid';
-import BaseSelect from '../base-select';
-import FieldLabel from '../field-label';
-import FieldHint from '../field-hint';
+import { BaseSelect } from '../base-select';
+import { FieldLabel } from '../field-label';
+import { FieldHint } from '../field-hint';
 
-export default class Select extends Component {
+export class Select extends Component {
   static propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,

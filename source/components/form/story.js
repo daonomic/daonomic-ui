@@ -1,11 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Form from './';
-import FieldHint from '../field-hint';
-import Select from '../select';
-import Input from '../input';
-import Checkbox from '../checkbox';
-import Button from '../button';
+import { Form } from '.';
+import { FieldHint } from '../field-hint';
+import { Select } from '../select';
+import { Input } from '../input';
+import { Checkbox } from '../checkbox';
+import { Button } from '../button';
 
 storiesOf('Form', module)
   .add('linear', () => (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { State, Store } from '@sambego/storybook-state';
-import Modal from '.';
+import { Modal } from '.';
 
 const store = new Store({
   isOpen: false,

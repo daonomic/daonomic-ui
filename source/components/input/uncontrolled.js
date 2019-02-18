@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import Input from './';
+import { Input } from '.';
 
-export default class UncontrolledInput extends PureComponent {
+export class UncontrolledInput extends PureComponent {
   static propTypes = {
     value: PropTypes.string,
     onChange: PropTypes.func,

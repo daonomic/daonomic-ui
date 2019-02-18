@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import BaseSelect from './';
+import { BaseSelect } from '.';
 
 storiesOf('BaseSelect', module)
   .add('default', () => (

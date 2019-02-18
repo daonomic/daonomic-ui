@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Overlay from './demo/overlay';
-import Panel from './';
+import { Overlay } from './demo/overlay';
+import { Panel } from '.';
 
 storiesOf('Panel', module)
   .add('default', () => (

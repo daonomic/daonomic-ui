@@ -4,7 +4,7 @@ import cn from 'classnames';
 import spinner from './resources/spinner.svg';
 import style from './style.css';
 
-export default class Spinner extends React.Component {
+export class Spinner extends React.Component {
   static propTypes = {
     className: PropTypes.string,
     size: PropTypes.number,

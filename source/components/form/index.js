@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import Field from './field';
-import Group from './group';
+import { FormField } from './field';
+import { FormGroup } from './group';
 import styles from './styles.css';
 
-export default class Form extends React.Component {
-  static Field = Field;
-  static Group = Group;
+export class Form extends React.Component {
+  static Field = FormField;
+  static Group = FormGroup;
 
   static propTypes = {
     element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),

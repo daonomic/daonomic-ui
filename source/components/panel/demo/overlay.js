@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Overlay(props) {
+export function Overlay(props) {
   return (
     <div
       style={{

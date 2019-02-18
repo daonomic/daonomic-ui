@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import { Table } from '../table';
 import { PlaceholderIllustration } from '../placeholder-illustration';
-import Spinner from '../spinner';
+import { Spinner } from '../spinner';
 import style from './style.css';
 
 export class DataTable extends React.Component {

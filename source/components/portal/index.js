@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
-export default class Portal extends React.Component {
+export class Portal extends React.Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
   };

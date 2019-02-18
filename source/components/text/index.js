@@ -9,7 +9,7 @@ export const sizes = ['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl'];
 export const weights = ['normal', 'bold'];
 export const colors = ['normal', 'muted', 'success', 'danger', 'warning'];
 
-export default class Text extends React.Component {
+export class Text extends React.Component {
   static propTypes = {
     element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,

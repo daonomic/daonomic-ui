@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import styles from './styles.css';
 
-export default class BaseIcon extends Component {
+export class BaseIcon extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,

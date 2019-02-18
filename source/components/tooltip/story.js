@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Tooltip from '.';
-import IconArrowPopout from '../icons/arrow-popout';
+import { Tooltip } from '.';
+import { IconArrowPopout } from '../icons/arrow-popout';
 
 storiesOf('Tooltip', module).add('default', () => (
   <div style={{ padding: '8em' }}>

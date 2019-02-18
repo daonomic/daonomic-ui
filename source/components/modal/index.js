@@ -2,16 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import ReactModal from 'react-modal';
-import Text from '../text';
+import { Text } from '../text';
 import styles from './styles.css';
 
-export default function Modal({
-  children,
-  className,
-  title,
-  onClose,
-  ...restProps
-}) {
+export function Modal({ children, className, title, onClose, ...restProps }) {
   return (
     <ReactModal
       contentLabel={title}

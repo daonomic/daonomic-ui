@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import FieldHint from '../field-hint';
+import { FieldHint } from '../field-hint';
 import styles from './styles.css';
 
-export default class Checkbox extends PureComponent {
+export class Checkbox extends PureComponent {
   static propTypes = {
     className: PropTypes.string,
     label: PropTypes.string,

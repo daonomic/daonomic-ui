@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import Badge, { colors, sizes } from './';
+import { Badge, colors, sizes } from '.';
 
 storiesOf('Badge', module)
   .add(

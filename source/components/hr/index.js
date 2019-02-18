@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import styles from './styles.css';
 
-export default class Hr extends Component {
+export class Hr extends Component {
   static propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,

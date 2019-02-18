@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Meter from './';
+import { Meter } from '.';
 
 storiesOf('Meter', module)
   .add('0%', () => <Meter value={0} />)

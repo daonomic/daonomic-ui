@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import styles from './styles.css';
 
-export default function Meter({ className, value }) {
+export function Meter({ className, value }) {
   return (
     <div className={cn(className, styles.root)}>
       <div className={cn(styles.bar, styles.bar_background)} />

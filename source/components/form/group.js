@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import styles from './styles.css';
 
-export default class FormGroup extends React.Component {
+export class FormGroup extends React.Component {
   static propTypes = {
     className: PropTypes.string,
     children: PropTypes.node,

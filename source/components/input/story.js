@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react';
-import Input from './';
+import { Input } from '.';
 
 const Row = ({ children }) => <div style={{ padding: '1em' }}>{children}</div>;
 

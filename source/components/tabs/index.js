@@ -42,18 +42,11 @@ function TabPanel({ className, selectedClassName, ...restProps }) {
 
 TabPanel.tabsRole = 'TabPanel';
 
-export default class Tabs extends React.Component {
-  static tabsRole = 'Tabs';
-
-  static List = TabList;
-
-  static Tab = Tab;
-
-  static Panel = TabPanel;
-
-  render() {
-    const { className, ...restProps } = this.props;
-
-    return <VendorTabs {...restProps} className={cn(style.root, className)} />;
-  }
+export function Tabs({ className, ...restProps }) {
+  return <VendorTabs {...restProps} className={cn(style.root, className)} />;
 }
+
+Tabs.tabsRole = 'Tabs';
+Tabs.List = TabList;
+Tabs.Tab = Tab;
+Tabs.Panel = TabPanel;

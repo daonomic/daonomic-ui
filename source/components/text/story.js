@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import Text, { alignments, sizes, colors, weights } from './';
+import { Text, alignments, sizes, colors, weights } from '.';
 
 const textSample =
   'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem minus cupiditate nostrum vero aliquid tenetur, ipsam nulla nisi pariatur dolorem excepturi, similique quibusdam possimus culpa architecto suscipit eum aspernatur ipsum!';

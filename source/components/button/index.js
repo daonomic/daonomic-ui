@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import styles from './styles.css';
 
-export default function Button(props) {
+export function Button(props) {
   const { element, className, size, design, fullWidth, ...attrs } = props;
   const isNotButtonOrLink = !['button', 'a'].includes(element);
 

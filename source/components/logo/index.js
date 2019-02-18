@@ -6,7 +6,7 @@ import gradientLogo from './resources/gradient.svg';
 import compactLogo from './resources/compact.svg';
 import compactWhiteLogo from './resources/compact-white.svg';
 
-export default class Logo extends React.Component {
+export class Logo extends React.Component {
   static propTypes = {
     design: PropTypes.oneOf([
       'standard',

@@ -2,13 +2,13 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import nanoid from 'nanoid';
 import cn from 'classnames';
-import FieldLabel from '../field-label';
-import FieldHint from '../field-hint';
-import Uncontrolled from './uncontrolled';
+import { FieldLabel } from '../field-label';
+import { FieldHint } from '../field-hint';
+import { UncontrolledInput } from './uncontrolled';
 import styles from './styles.css';
 
-export default class Input extends PureComponent {
-  static Uncontrolled = Uncontrolled;
+export class Input extends PureComponent {
+  static Uncontrolled = UncontrolledInput;
 
   static propTypes = {
     element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),

@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import FieldHint from './';
+import { FieldHint } from '.';
 
 storiesOf('FieldHint', module)
   .add('default', () => <FieldHint>Your e-mail</FieldHint>)

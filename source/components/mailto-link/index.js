@@ -21,7 +21,7 @@ function decode(encodedString) {
   return encodedString;
 }
 
-export default class MailtoLink extends React.Component {
+export class MailtoLink extends React.Component {
   static propTypes = {
     href: PropTypes.string.isRequired,
     element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),

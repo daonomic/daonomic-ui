@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import styles from './styles.css';
 
-function FieldHint({ className, children, type }) {
+export function FieldHint({ className, children, type }) {
   if (!children) {
     return null;
   }
@@ -24,5 +24,3 @@ FieldHint.propTypes = {
 FieldHint.defaultProps = {
   type: 'default',
 };
-
-export default FieldHint;

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import BaseIcon from '../base-icon';
+import { BaseIcon } from '../base-icon';
 
-export default class IconArrowPopout extends Component {
+export class IconArrowPopout extends Component {
   static propTypes = {
     fill: PropTypes.string,
   };
