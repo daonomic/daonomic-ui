@@ -1,5 +1,9 @@
 # Changelog
 
+## 17.0.2
+
+- Exported `DataTable` from root
+
 ## 17.0.1
 
 - Fixed broken `Tooltip` component
