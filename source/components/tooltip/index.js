@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import RcTooltip from 'rc-tooltip';
 import './styles.css';
 
-export function Tooltip() {
-  return <RcTooltip {...this.props} transitionName="rc-tooltip-shift" />;
+export function Tooltip(props) {
+  return <RcTooltip {...props} transitionName="rc-tooltip-shift" />;
 }
 
 Tooltip.propTypes = {
