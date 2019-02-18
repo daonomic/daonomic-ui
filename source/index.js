@@ -24,3 +24,4 @@ export { Pagination } from './components/pagination';
 export { Spinner } from './components/spinner';
 export { Tabs } from './components/tabs';
 export { PlaceholderIllustration } from './components/placeholder-illustration';
+export { DataTable } from './components/data-table';
