@@ -40,7 +40,7 @@ storiesOf('Button', module)
                   size={size}
                   onClick={action('click')}
                 >
-                  {design} {size} disabled
+                  {design} {size}
                 </Button>
                 <div style={{ marginTop: '1em' }} />
                 <Button

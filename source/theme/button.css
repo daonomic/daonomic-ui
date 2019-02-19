@@ -23,10 +23,12 @@
   --button-border-active-primary: none;
   --button-border-disabled-primary: none;
 
-  --button-border-secondary: 2px solid color(#2849ff alpha(20%));
-  --button-border-hover-secondary: 2px solid color(#2849ff alpha(40%));
-  --button-border-active-secondary: 2px solid color(#2849ff alpha(30%));
-  --button-border-disabled-secondary: 2px solid color(#2849ff alpha(20%));
+  --button-border-secondary: 2px solid color(var(--color-primary) alpha(50%));
+  --button-border-hover-secondary: 2px solid var(--color-primary);
+  --button-border-active-secondary: 2px solid
+    color(var(--color-primary) alpha(30%));
+  --button-border-disabled-secondary: 2px solid
+    color(var(--color-primary) alpha(20%));
 
   --button-border-secondary-inverse: 2px solid color(#eee alpha(20%));
   --button-border-hover-secondary-inverse: 2px solid color(#eee alpha(40%));

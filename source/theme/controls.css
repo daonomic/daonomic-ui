@@ -2,8 +2,7 @@
   --control-height-s: 28px;
   --control-height-m: 36px;
 
-  --control-focus-shadow: 0 0 0 3px color(var(--color-primary) alpha(25%));
-  --control-invalid-shadow: 0 0 0 3px color(var(--color-danger) alpha(25%));
+  --control-shadow-focus: 0 0 0 3px color(var(--color-primary) alpha(25%));
   --control-background: #fff;
 
   --control-label-height: 21px;

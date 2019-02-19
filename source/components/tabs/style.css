@@ -68,7 +68,7 @@
 }
 
 .tab:focus {
-  box-shadow: var(--control-focus-shadow);
+  box-shadow: var(--control-shadow-focus);
 }
 
 .tab_selected,

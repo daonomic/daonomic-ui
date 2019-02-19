@@ -47,7 +47,7 @@
 }
 
 .root:not(.root_disabled):focus {
-  box-shadow: var(--control-focus-shadow);
+  box-shadow: var(--control-shadow-focus);
 }
 
 .root_design_primary {
