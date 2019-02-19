@@ -1,5 +1,11 @@
 # Changelog
 
+## 19.2.0
+
+### Improvements
+
+- Updated `Modal` design
+
 ## 19.1.0
 
 ### Improvements
