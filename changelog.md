@@ -1,5 +1,18 @@
 # Changelog
 
+## 19.0.0
+
+### Breaking changes
+
+- Removed `--control-invalid-shadow` custom property
+- Renamed `--control-focus-shadow` custom property to `--control-shadow-focus`
+
+### Improvements
+
+- Updated secondary button design
+- Updated `ArrowPopout` icon
+- Updated `BaseSelect` design
+
 ## 18.0.0
 
 ### Breaking changes
