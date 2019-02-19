@@ -15,7 +15,7 @@ export function Modal({ children, className, title, onClose, ...restProps }) {
       onRequestClose={onClose}
     >
       <header className={styles.header}>
-        <Text element="h2" size="xl">
+        <Text element="h2" size="xxl" weight="bold">
           {title}
         </Text>
         <button className={styles.close} onClick={onClose}>
