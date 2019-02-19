@@ -1,5 +1,11 @@
 # Changelog
 
+## 19.1.0
+
+### Improvements
+
+- Exported `IconArrowPopout` from root
+
 ## 19.0.0
 
 ### Breaking changes
