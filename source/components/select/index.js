@@ -10,7 +10,7 @@ export class Select extends Component {
     children: PropTypes.node,
     className: PropTypes.string,
     label: PropTypes.node,
-    placeholder: PropTypes.node,
+    placeholder: PropTypes.string,
     description: PropTypes.node,
     errors: PropTypes.oneOfType([
       PropTypes.string,

@@ -1,5 +1,5 @@
 :root {
-  --select-border-radius: 5px;
+  --select-border-radius: var(--control-height-m);
   --select-padding-left: 1em;
   --select-padding-right: 2em;
 }
@@ -21,7 +21,8 @@
   opacity: 0.5;
   background-image: url('./resources/arrow.svg');
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: 0.5em center;
+  background-size: 0.625em 0.4375em;
   border-top-right-radius: var(--select-border-radius);
   border-bottom-right-radius: var(--select-border-radius);
 }
@@ -43,15 +44,14 @@
   border-radius: var(--select-border-radius);
   cursor: pointer;
   outline: 0;
-  border: 1px solid var(--color-borders);
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  border: 2px solid var(--color-borders);
   appearance: none;
-  transition: box-shadow 0.2s;
+  transition-duration: 0.2s;
+  transition-property: border-color;
 }
 
 .select_invalid {
   border-color: var(--color-danger);
-  box-shadow: var(--control-invalid-shadow);
 }
 
 .select_disabled {
@@ -64,7 +64,7 @@
 /* Focus */
 .select:not(.select_invalid):not(.select_disabled):focus,
 .select:not(.select_invalid):not(.select_disabled):hover {
-  box-shadow: var(--control-focus-shadow);
+  border-color: var(--color-primary);
   transition: none;
 }
 
