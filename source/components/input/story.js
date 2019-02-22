@@ -74,7 +74,7 @@ storiesOf('Input', module)
   .add('disabled', () =>
     ['input', 'textarea'].map((element) => (
       <Row key={element}>
-        <Input
+        <Input.Uncontrolled
           disabled
           element={element}
           label="E-mail"
@@ -85,12 +85,12 @@ storiesOf('Input', module)
   )
   .add('type=number', () => (
     <Row>
-      <Input type="number" label="Amount" value="50" />
+      <Input.Uncontrolled type="number" label="Amount" value="50" />
     </Row>
   ))
   .add('custom label', () => (
     <Row>
-      <Input
+      <Input.Uncontrolled
         type="number"
         label={<span style={{ color: 'green' }}>Amount</span>}
         value="50"

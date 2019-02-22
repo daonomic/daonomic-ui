@@ -26,3 +26,4 @@ export { Tabs } from './components/tabs';
 export { PlaceholderIllustration } from './components/placeholder-illustration';
 export { DataTable } from './components/data-table';
 export { IconArrowPopout } from './components/icons/arrow-popout';
+export { MaskedInput } from './components/masked-input';
