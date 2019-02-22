@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { State, Store } from '@sambego/storybook-state';
+import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import { MaskedInput } from '.';
 
@@ -23,6 +24,7 @@ storiesOf('Masked input', module)
           label="Start date"
           value={state.dateTimeValue}
           onChange={(date) => {
+            action('Change date')(date);
             store.set({ dateTimeValue: date });
           }}
         />
@@ -35,7 +37,10 @@ storiesOf('Masked input', module)
         <MaskedInput.Number
           label="Amount"
           value={state.numberValue}
-          onChange={(event) => store.set({ numberValue: event.target.value })}
+          onChange={(value) => {
+            action('Change number')(value);
+            store.set({ numberValue: value });
+          }}
         />
       )}
     </State>

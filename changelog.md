@@ -1,5 +1,9 @@
 # Changelog
 
+## 19.3.1
+
+- Fixed `MaskedInput.Number` component
+
 ## 19.3.0
 
 ### Improvements
