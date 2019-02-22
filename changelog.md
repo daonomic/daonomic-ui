@@ -1,5 +1,11 @@
 # Changelog
 
+## 19.3.0
+
+### Improvements
+
+- Added `MaskedInput` component
+
 ## 19.2.0
 
 ### Improvements
