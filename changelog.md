@@ -1,5 +1,9 @@
 # Changelog
 
+## 19.3.2
+
+- Set min height for `DataTable` content
+
 ## 19.3.1
 
 - Fixed `MaskedInput.Number` component
