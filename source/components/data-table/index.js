@@ -76,15 +76,19 @@ export class DataTable extends React.Component {
         </Table>
 
         {dataState === 'loaded' && data.length === 0 && (
-          <div className={style.placeholder}>
-            <PlaceholderIllustration className={style.illustration} />
-            {placeholder}
+          <div className={style.content}>
+            <div className={style.placeholder}>
+              <PlaceholderIllustration className={style.illustration} />
+              {placeholder}
+            </div>
           </div>
         )}
 
         {dataState === 'loading' && (
-          <div className={style.preloader}>
-            <Spinner />
+          <div className={style.content}>
+            <div className={style.preloader}>
+              <Spinner />
+            </div>
           </div>
         )}
       </div>

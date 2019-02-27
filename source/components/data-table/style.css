@@ -2,6 +2,13 @@
   position: relative;
 }
 
+.content {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .placeholder {
   padding: 20px;
   text-align: center;
@@ -21,6 +28,7 @@
 }
 
 .preloader {
+  flex: 1 1 auto;
   position: absolute;
   top: 0;
   left: 0;
@@ -34,4 +42,8 @@
 .root_empty .preloader {
   position: static;
   padding: 20px;
+}
+
+.root:not(.root_empty) .content {
+  min-height: 0;
 }
