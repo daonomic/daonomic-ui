@@ -47,6 +47,7 @@ storiesOf('Data table', module)
         schema={schema}
         data={[]}
         placeholder="Nothing found"
+        errorPlaceholder="Failed to load data"
       />
     </div>
   ))
@@ -58,6 +59,19 @@ storiesOf('Data table', module)
         data={[]}
         dataState="loading"
         placeholder="Nothing found"
+        errorPlaceholder="Failed to load data"
+      />
+    </div>
+  ))
+  .add('failed', () => (
+    <div style={{ padding: '2em', background: '#fff' }}>
+      <DataTable
+        dataState="failed"
+        getRowKey={(item) => item.email}
+        schema={schema}
+        data={[]}
+        placeholder="Nothing found"
+        errorPlaceholder="Failed to load data"
       />
     </div>
   ))
@@ -68,6 +82,7 @@ storiesOf('Data table', module)
         schema={schema}
         data={demoUsers}
         placeholder="Nothing found"
+        errorPlaceholder="Failed to load data"
       />
     </div>
   ))
@@ -79,6 +94,7 @@ storiesOf('Data table', module)
         schema={schema}
         data={demoUsers}
         placeholder="Nothing found"
+        errorPlaceholder="Failed to load data"
       />
     </div>
   ));

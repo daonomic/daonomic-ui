@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import { Table } from '../table';
 import { PlaceholderIllustration } from '../placeholder-illustration';
+import { IconFail } from '../icons/fail';
 import { Spinner } from '../spinner';
 import style from './style.css';
 
@@ -21,6 +22,7 @@ export class DataTable extends React.Component {
     dataState: PropTypes.oneOf(['idle', 'loading', 'loaded', 'failed']),
     getRowKey: PropTypes.func.isRequired,
     placeholder: PropTypes.node.isRequired,
+    errorPlaceholder: PropTypes.node.isRequired,
     className: PropTypes.string,
   };
 
@@ -35,6 +37,7 @@ export class DataTable extends React.Component {
       dataState,
       getRowKey,
       placeholder,
+      errorPlaceholder,
       className,
       ...restProps
     } = this.props;
@@ -88,6 +91,15 @@ export class DataTable extends React.Component {
           <div className={style.content}>
             <div className={style.preloader}>
               <Spinner />
+            </div>
+          </div>
+        )}
+
+        {dataState === 'failed' && (
+          <div className={style.content}>
+            <div className={style.error}>
+              <IconFail className={style['error-icon']} size={48} />
+              <p className={style['error-text']}>{errorPlaceholder}</p>
             </div>
           </div>
         )}

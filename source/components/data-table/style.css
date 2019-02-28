@@ -47,3 +47,12 @@
 .root:not(.root_empty) .content {
   min-height: 0;
 }
+
+.error {
+  color: var(--color-danger);
+}
+
+.error-icon {
+  display: block;
+  margin: 0 auto 1em;
+}
