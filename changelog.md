@@ -1,5 +1,18 @@
 # Changelog
 
+## 20.0.0
+
+### Breaking changes
+
+- Removed `fill` prop on `IconArrowPopout`
+- Added required prop `errorPlaceholder` to `DataTable`
+
+### Improvements
+
+- Added prop `size` to all icons
+- Added `IconFail` component
+- Added support for failed data state in `DataTable`
+
 ## 19.3.2
 
 - Set min height for `DataTable` content
