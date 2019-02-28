@@ -1,5 +1,9 @@
 # Changelog
 
+## 20.0.1
+
+- Fixed icons responsiveness
+
 ## 20.0.0
 
 ### Breaking changes
