@@ -14,18 +14,19 @@ export class BaseIcon extends Component {
     const { children, className, size = 24, ...restProps } = this.props;
 
     return (
-      <div className={style.root}>
-        <svg
-          {...restProps}
-          className={cn(className, style.icon)}
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          style={{ maxWidth: size, maxHeight: size }}
-        >
-          {children}
-        </svg>
+      <div className={style.root} style={{ maxWidth: size, maxHeight: size }}>
+        <div className={style.inner}>
+          <svg
+            {...restProps}
+            className={cn(className, style.icon)}
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            {children}
+          </svg>
+        </div>
       </div>
     );
   }

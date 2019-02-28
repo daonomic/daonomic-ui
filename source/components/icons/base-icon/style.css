@@ -1,6 +1,10 @@
 .root {
-  position: relative;
   display: inline-block;
+  width: 100%;
+}
+
+.inner {
+  position: relative;
   width: 100%;
   padding-bottom: 100%;
 }
