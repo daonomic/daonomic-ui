@@ -7,10 +7,11 @@ export class BaseIcon extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
+    size: PropTypes.number,
   };
 
   render() {
-    const { children, className, ...restProps } = this.props;
+    const { children, className, size = 24, ...restProps } = this.props;
 
     return (
       <svg
@@ -20,6 +21,7 @@ export class BaseIcon extends Component {
         width="24"
         height="24"
         viewBox="0 0 24 24"
+        style={{ width: size, height: size }}
       >
         {children}
       </svg>
