@@ -1,5 +1,9 @@
 # Changelog
 
+## 20.0.2
+
+- Fixed `IconFail`
+
 ## 20.0.1
 
 - Fixed icons responsiveness
