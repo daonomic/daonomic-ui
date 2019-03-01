@@ -1,5 +1,9 @@
 # Changelog
 
+## 20.0.4
+
+- Fixed `BaseIcon` props passing
+
 ## 20.0.3
 
 - Fixed icons responsiveness
