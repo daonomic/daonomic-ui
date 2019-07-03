@@ -4,22 +4,28 @@ import { MaskedInput } from '.';
 
 const thousandsSeparatorSymbol = ',';
 
-const numberMask = createNumberMask({
-  prefix: '',
-  suffix: '',
-  includeThousandsSeparator: true,
-  thousandsSeparatorSymbol,
-});
+const getNumberMask = (numberMaskConfig) =>
+  createNumberMask({
+    prefix: '',
+    suffix: '',
+    includeThousandsSeparator: true,
+    thousandsSeparatorSymbol,
+    ...numberMaskConfig,
+  });
 
 function getRawValue(maskedValue) {
   return maskedValue.replace(new RegExp(thousandsSeparatorSymbol, 'g'), '');
 }
 
-export function NumberMaskedInput({ onChange, ...restProps }) {
+export function NumberMaskedInput({
+  onChange,
+  numberMaskConfig,
+  ...restProps
+}) {
   return (
     <MaskedInput
       {...restProps}
-      mask={numberMask}
+      mask={getNumberMask(numberMaskConfig)}
       onChange={(event) => onChange(getRawValue(event.target.value))}
     />
   );

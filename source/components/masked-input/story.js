@@ -37,6 +37,9 @@ storiesOf('Masked input', module)
         <MaskedInput.Number
           label="Amount"
           value={state.numberValue}
+          numberMaskConfig={{
+            allowDecimal: true,
+          }}
           onChange={(value) => {
             action('Change number')(value);
             store.set({ numberValue: value });
